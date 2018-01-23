@@ -11,5 +11,6 @@ FactoryBot.define do
   factory :thread do
     title 'First post'
     content 'I am planning a trip to Tahoe'
+    association(:user)
   end
 end
