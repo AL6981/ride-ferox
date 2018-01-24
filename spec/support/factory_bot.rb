@@ -5,7 +5,6 @@ FactoryBot.define do
     sequence(:email) {|n| "user#{n}@example.com" }
     password 'password'
     password_confirmation 'password'
-    location 'Boston, MA'
   end
 
   factory :thread do

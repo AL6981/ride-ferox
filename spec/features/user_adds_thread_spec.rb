@@ -1,16 +1,22 @@
 require 'rails_helper'
 
 feature 'user can add thread' do
-  let(:thread_1) { FactoryBot.create(:thread) }
-  let(:thread_2) { FactoryBot.create(:thread, title: '') }
-  let(:thread_3) { FactoryBot.create(:thread, description: '') }
+
+  before(:each) do
+    user1 = FactoryBot.create(:user)
+    sign_in_as(user1)
+  end
+
+  let(:thread_1) { FactoryBot.build(:thread) }
+  let(:thread_2) { FactoryBot.build(:thread, title: '') }
+  let(:thread_3) { FactoryBot.build(:thread, description: '') }
 
   scenario 'user submits completed thread' do
 
-    visit new_thread_path
+    visit new_thread_path(thread_1)
 
-    fill_in 'Name', with: thread_1.name
-    fill_in 'Description', with: thread_1.description
+    fill_in 'Title', with: thread_1.title
+    fill_in 'Content', with: thread_1.content
 
     click_button 'Add New Thread'
 
@@ -23,19 +29,19 @@ feature 'user can add thread' do
     visit new_thread_path
 
     fill_in 'Title', with: thread_2.name
-    fill_in 'Description', with: thread_2.description
+    fill_in 'Content', with: thread_2.description
 
     click_button 'Add New Thread'
-    expect(page).to have_content('Name cannot be blank!')
+    expect(page).to have_content('Title cannot be blank!')
   end
 
   scenario 'user can not submit blank thread description' do
     visit new_threads_path
 
-    fill_in 'Name', with: thread_3.name
-    fill_in 'Description', with: thread_3.description
+    fill_in 'Title', with: thread_3.name
+    fill_in 'Content', with: thread_3.description
 
     click_button 'Add New Thread'
-    expect(page).to have_content('Description cannot be blank!')
+    expect(page).to have_content('Content cannot be blank!')
   end
 end

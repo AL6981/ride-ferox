@@ -10,16 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180123003640) do
+ActiveRecord::Schema.define(version: 20180124003712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "threads", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "tags"
+    t.text "content", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_threads_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "username"
-    t.string "location", null: false
     t.string "moto"
     t.string "userimage"
     t.bigint "rox_count", default: 0, null: false
