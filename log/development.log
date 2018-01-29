@@ -355,3 +355,308 @@ ThreadError (must be called with a block):
 app/controllers/threads_controller.rb:9:in `initialize'
 app/controllers/threads_controller.rb:9:in `new'
 app/controllers/threads_controller.rb:9:in `new'
+Started GET "/" for 127.0.0.1 at 2018-01-24 18:25:52 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2914ms (Views: 2886.6ms | ActiveRecord: 24.4ms)
+
+
+Started GET "/threads" for 127.0.0.1 at 2018-01-24 18:26:08 -0500
+Processing by ThreadsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads/new" for 127.0.0.1 at 2018-01-24 18:28:05 -0500
+Processing by ThreadsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 25ms (ActiveRecord: 1.8ms)
+
+
+  
+ThreadError (must be called with a block):
+  
+app/controllers/threads_controller.rb:9:in `initialize'
+app/controllers/threads_controller.rb:9:in `new'
+app/controllers/threads_controller.rb:9:in `new'
+Started GET "/threads" for 127.0.0.1 at 2018-01-24 18:29:56 -0500
+Processing by ThreadsController#index as HTML
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 50ms (ActiveRecord: 6.3ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads" for 127.0.0.1 at 2018-01-24 18:31:16 -0500
+Processing by ThreadsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 70ms (ActiveRecord: 11.7ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads" for 127.0.0.1 at 2018-01-24 18:31:33 -0500
+Processing by ThreadsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 13ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-01-29 14:10:59 -0500
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ThreadsController#index as HTML
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-01-29 14:11:30 -0500
+Completed 401 Unauthorized in 40682ms (ActiveRecord: 22.8ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:6:in `index'
+Processing by ThreadsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 45ms (ActiveRecord: 10.5ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-01-29 14:15:35 -0500
+Processing by ThreadsController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 44ms (ActiveRecord: 2.2ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-01-29 14:18:58 -0500
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads" for 127.0.0.1 at 2018-01-29 14:19:05 -0500
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads/new" for 127.0.0.1 at 2018-01-29 14:19:14 -0500
+Processing by ThreadsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 58ms (ActiveRecord: 12.5ms)
+
+
+  
+NoMethodError (undefined method `admin?' for #<User:0x007ff778b94340>):
+  
+app/controllers/threads_controller.rb:35:in `authorize_user?'
+Started GET "/threads/new" for 127.0.0.1 at 2018-01-29 14:20:14 -0500
+Processing by ThreadsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 58ms (ActiveRecord: 12.9ms)
+
+
+  
+NoMethodError (undefined method `admin?' for #<User:0x007ff77897e060>):
+  
+app/controllers/threads_controller.rb:35:in `authorize_user?'
+Started GET "/threads/new" for 127.0.0.1 at 2018-01-29 14:20:17 -0500
+Processing by ThreadsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `admin?' for #<User:0x007ff778a97f50>):
+  
+app/controllers/threads_controller.rb:35:in `authorize_user?'
+Started GET "/threads/new" for 127.0.0.1 at 2018-01-29 14:21:22 -0500
+Processing by ThreadsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 55ms (ActiveRecord: 1.8ms)
+
+
+  
+NoMethodError (undefined method `admin?' for #<User:0x007ff7758f9228>):
+  
+app/controllers/threads_controller.rb:35:in `authorize_user?'
+Started GET "/threads/new" for 127.0.0.1 at 2018-01-29 14:21:24 -0500
+Processing by ThreadsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 20ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `admin?' for #<User:0x007ff77438f3b0>):
+  
+app/controllers/threads_controller.rb:35:in `authorize_user?'
+Started GET "/threads/new" for 127.0.0.1 at 2018-01-29 14:22:45 -0500
+Processing by ThreadsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 72ms (ActiveRecord: 13.7ms)
+
+
+  
+NameError (undefined local variable or method `role' for #<User:0x007ff773ec61a8>):
+  
+app/models/user.rb:10:in `admin?'
+app/controllers/threads_controller.rb:35:in `authorize_user?'
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1653252255123890610)[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAddRoleToUsers (20180129192405)
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (104.2ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying DEFAULT 'member' NOT NULL[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180129192405"]]
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1653252255123890610)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1653252255123890610)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAddRoleToUsers (20180129192405)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.1ms)[0m  [1m[35mALTER TABLE "users" DROP "role"[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20180129192405"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1653252255123890610)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1653252255123890610)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAddRoleToUsers (20180129192405)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.5ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying DEFAULT 'member' NOT NULL[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180129192405"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(1653252255123890610)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/threads/new" for 127.0.0.1 at 2018-01-29 14:25:06 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ThreadsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_user? rendered or redirected
+Completed 302 Found in 52ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 14:25:06 -0500
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads" for 127.0.0.1 at 2018-01-29 14:25:57 -0500
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads" for 127.0.0.1 at 2018-01-29 14:27:55 -0500
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads" for 127.0.0.1 at 2018-01-29 14:27:57 -0500
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads" for 127.0.0.1 at 2018-01-29 14:29:00 -0500
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads" for 127.0.0.1 at 2018-01-29 14:33:19 -0500
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads" for 127.0.0.1 at 2018-01-29 14:33:57 -0500
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/threads" for 127.0.0.1 at 2018-01-29 14:34:10 -0500
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-01-29 14:34:17 -0500
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-01-29 14:34:57 -0500
+Processing by ThreadsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `all' for Thread:Class):
+  
+app/controllers/threads_controller.rb:5:in `index'

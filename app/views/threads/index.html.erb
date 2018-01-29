@@ -1,0 +1,11 @@
+<h1>Threads</h1>
+
+<ul>
+  <% @threads.each do |thread| %>
+    <li><%= thread.title %></li>
+  <% end %>
+</ul>
+
+<%if !current_user.nil? %>
+  <%= link_to "Add new thread", new_thread_path %>
+<% end %>

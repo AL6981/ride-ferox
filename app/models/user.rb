@@ -5,4 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :threads
+
+  def admin?
+    role == "admin"
+  end
+
+  def member?
+    role == "member"
+  end
 end

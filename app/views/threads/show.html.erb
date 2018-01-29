@@ -1,7 +1,5 @@
-<h1>Threads</h1>
+<h1><%=@thread.title%></h1>
 
-<% @threads.each do |thread| %>
-  <%= thread.title %></br>
-  <%=thread.content %>
-<% end %>
-  
+  <div>
+    <%=@thread.content %>
+  </div>
