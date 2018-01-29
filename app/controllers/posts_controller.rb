@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authorize_user?, except: [:index, :show]
+  before_action :authenticate_user?, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    if @post.update_attributes(superpower_params)
+    if @post.update_attributes(post_params)
       flash[:notice] = 'Post successfully updated'
       redirect_to post_path(@post)
     else
@@ -45,15 +45,16 @@ class PostsController < ApplicationController
     flash[:success] = 'Post successfully deleted'
     redirect_to posts_path
   end
+
   protected
 
   def post_params
     params.require(:post).permit(:title, :content, :tags)
   end
 
-  def authorize_user?
-    if !user_signed_in? || !current_user.admin?
-      flash[:notice] = 'Unauthorized access'
+  def authenticate_user?
+    if !user_signed_in? && current_user.id == @post.user_id
+      flash[:notice] = 'Unauthorized access - are you signed in?'
       redirect_back(fallback_location: root_path) and return
     end
   end
