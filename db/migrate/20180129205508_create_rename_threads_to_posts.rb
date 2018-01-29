@@ -1,0 +1,5 @@
+class CreateRenameThreadsToPosts < ActiveRecord::Migration[5.1]
+  def change
+    rename_table :threads, :posts
+  end
+end
