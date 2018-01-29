@@ -1,15 +1,15 @@
 module Admin
-  class UsersController < ApplicationController
+  class PostsController < ApplicationController
     before_action :authorize_user
 
     def index
-      @users = User.all
+      @posts = Post.all
     end
 
     def destroy
-      User.find(params[:id]).destroy
-      flash[:success] = 'Success'
-      redirect_to admin_users_path
+      Post.find(params[:id]).destroy
+      flash[:success] = 'Post successfully deleted'
+      redirect_to admin_posts_path
     end
 
     protected

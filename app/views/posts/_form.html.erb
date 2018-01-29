@@ -1,8 +1,8 @@
-<%= form_for @thread do |f| %>
+<%= form_for @post do |f| %>
 
-<% if @thread.errors.size > 0 %>
+<% if @post.errors.size > 0 %>
   <ul>
-    <% @thread.errors.full_messages.each do |msg| %>
+    <% @post.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
   </ul>
@@ -23,6 +23,6 @@
   <%= f.text_area :content %>
 </div>
 
-  <%= f.submit 'Add Thread' %>
+  <%= f.submit 'Add Post' %>
 
 <% end %>
