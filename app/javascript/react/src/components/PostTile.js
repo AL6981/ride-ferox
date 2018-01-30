@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const PostTile = (props) => {
   return(
     <div className="post-tile">
-      props.title
+      <Link to={`/posts/${props.id}`}>{props.title}</Link>
       <hr/>
     </div>
   )

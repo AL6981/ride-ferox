@@ -1,13 +1,15 @@
 import React from 'react';
+import { Route, Router, browserHistory } from 'react-router';
 import PostsIndexContainer from './src/containers/PostsIndexContainer';
 import PostShowContainer from './src/containers/PostShowContainer';
 
 const App = props => {
   return(
-    <div className='post-index'>
-    <h3> Posts </h3>
-      <PostsIndexContainer />
-    </div>
+    <Router history={browserHistory}>
+      <Route path='/' component={PostsIndexContainer}/>
+      <Route path='/posts' component={PostsIndexContainer}/>
+      <Route path='/post/:id' component={PostShowContainer}/>
+    </Router>
   )
 }
 

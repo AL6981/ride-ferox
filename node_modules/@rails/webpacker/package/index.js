@@ -4,8 +4,10 @@
 const { resolve } = require('path')
 const { existsSync } = require('fs')
 const Environment = require('./environment')
+const config = require('./config')
+const loaders = require('./rules')
 
-function createEnvironment() {
+const createEnvironment = () => {
   const path = resolve(__dirname, 'environments', `${process.env.NODE_ENV}.js`)
   const constructor = existsSync(path) ? require(path) : Environment
   return new constructor()
@@ -13,4 +15,6 @@ function createEnvironment() {
 
 const environment = createEnvironment()
 
-module.exports = { environment, Environment }
+module.exports = {
+  environment, config, loaders, Environment
+}

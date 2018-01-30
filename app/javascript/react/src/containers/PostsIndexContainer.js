@@ -12,7 +12,7 @@ class PostsIndexContainer extends Component {
 
   componentDidMount() {
     console.log('component mounted')
-    fetch("/api/v1/PostsController")
+    fetch("/api/v1/posts")
     .then(response => response.json())
     .then(body => {
       this.setState({posts: body})
@@ -27,17 +27,16 @@ class PostsIndexContainer extends Component {
           key={post.id}
           id={post.id}
           title={post.title}
-          content={post.content}
         />
       )
     })
 
     return(
       <div className="row">
+        <h4>Check out what's here!</h4>
         <div className="small-8 small-centered columns">
-            <hr/>
-            <h4>Check out what's here!</h4>
-            {posts}
+          {posts}
+          <hr/>
         </div>
       </div>
     )
