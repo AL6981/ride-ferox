@@ -11,6 +11,7 @@ class PostsIndexContainer extends Component {
   }
 
   componentDidMount() {
+    console.log('component mounted')
     fetch("/api/v1/PostsController")
     .then(response => response.json())
     .then(body => {
@@ -35,6 +36,7 @@ class PostsIndexContainer extends Component {
       <div className="row">
         <div className="small-8 small-centered columns">
             <hr/>
+            <h4>Check out what's here!</h4>
             {posts}
         </div>
       </div>

@@ -1728,3 +1728,613 @@ ActionView::Template::Error (The asset "app.js" is not present in the asset pipe
     6:   <%= javascript_include_tag 'app' %>
   
 app/views/homes/index.html.erb:6:in `_app_views_homes_index_html_erb___3980825729073736319_70189080306120'
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:05:46 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (204.1ms)
+Completed 401 Unauthorized in 220ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "app.js" is not present in the asset pipeline.):
+    3:   `config/routes.rb`
+    4: </p>
+    5: 
+    6:   <%= javascript_include_tag 'app' %>
+  
+app/views/homes/index.html.erb:6:in `_app_views_homes_index_html_erb__3653709210276597579_70264845321400'
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:06:04 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  [1m[36mUser Load (18.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 8957ms (Views: 8904.0ms | ActiveRecord: 50.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:16:30 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 8508ms (Views: 8482.3ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:17:18 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (10.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 1cdf9953fb85683193ba
+Version: webpack 3.10.0
+Time: 3317ms
+                              Asset      Size  Chunks                    Chunk Names
+application-f8ea0d7aa3cf1c005b13.js   1.98 MB       0  [emitted]  [big]  application
+                      manifest.json  68 bytes          [emitted]         
+  [79] ./app/javascript/packs/application.js 1.01 kB {0} [built]
+    + 177 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve 'App' in '/Users/amylynn/challenges/ride-ferox/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-22
+
+
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 7187ms (Views: 7167.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:17:44 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (33.5ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 4d34541e4a1e71db1bf0
+Version: webpack 3.10.0
+Time: 3045ms
+                              Asset      Size  Chunks                    Chunk Names
+application-30a64f26db876aefa6ff.js   1.98 MB       0  [emitted]  [big]  application
+                      manifest.json  68 bytes          [emitted]         
+  [79] ./app/javascript/packs/application.js 1.01 kB {0} [built]
+    + 177 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve './App' in '/Users/amylynn/challenges/ride-ferox/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-24
+
+
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 6916ms (Views: 6868.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:19:42 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 187ms (Views: 177.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:20:21 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (11.5ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: bcd8491f73c6ebfd3ad1
+Version: webpack 3.10.0
+Time: 3044ms
+                              Asset      Size  Chunks                    Chunk Names
+application-e18bb8e10ec8ace4faa1.js   1.98 MB       0  [emitted]  [big]  application
+                      manifest.json  68 bytes          [emitted]         
+  [79] ./app/javascript/packs/application.js 1.02 kB {0} [built]
+    + 177 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve './react/App' in '/Users/amylynn/challenges/ride-ferox/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-30
+
+
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 6817ms (Views: 6796.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:20:41 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: a1479f78f3f85e0f728b
+Version: webpack 3.10.0
+Time: 3065ms
+                              Asset      Size  Chunks                    Chunk Names
+application-028eb12449dfcba1687c.js   1.98 MB       0  [emitted]  [big]  application
+                      manifest.json  68 bytes          [emitted]         
+  [79] ./app/javascript/packs/application.js 1.02 kB {0} [built]
+ [178] ./app/javascript/react/App.js 381 bytes {0} [built] [failed] [1 error]
+    + 177 hidden modules
+
+ERROR in ./app/javascript/react/App.js
+Module build failed: Duplicate declaration "ReviewsContainer"
+
+  2 | import { Router, browserHistory, Route, IndexRoute } from 'react-router';
+  3 | import ReviewsContainer from '../containers/PostsIndexContainer'
+> 4 | import ReviewsContainer from '../containers/PostShowContainer'
+    |        ^
+  5 | 
+  6 | const App = props => {
+  7 |   return(
+
+ @ ./app/javascript/packs/application.js 14:0-31
+
+
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 5361ms (Views: 5349.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:21:29 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 7c24b1bbd9f0cae06f1b
+Version: webpack 3.10.0
+Time: 3183ms
+                              Asset      Size  Chunks                    Chunk Names
+application-9a637cac6b35ed38d627.js   1.98 MB       0  [emitted]  [big]  application
+                      manifest.json  68 bytes          [emitted]         
+  [80] ./app/javascript/packs/application.js 1.02 kB {0} [built]
+ [178] ./app/javascript/react/App.js 589 bytes {0} [built]
+    + 177 hidden modules
+
+ERROR in ./app/javascript/react/App.js
+Module not found: Error: Can't resolve '../containers/PostShowContainer' in '/Users/amylynn/challenges/ride-ferox/app/javascript/react'
+ @ ./app/javascript/react/App.js 4:0-64
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/react/App.js
+Module not found: Error: Can't resolve '../containers/PostsIndexContainer' in '/Users/amylynn/challenges/ride-ferox/app/javascript/react'
+ @ ./app/javascript/react/App.js 3:0-68
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/react/App.js
+Module not found: Error: Can't resolve 'react-router' in '/Users/amylynn/challenges/ride-ferox/app/javascript/react'
+ @ ./app/javascript/react/App.js 2:0-73
+ @ ./app/javascript/packs/application.js
+
+
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 5968ms (Views: 5958.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:27:25 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (16.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: a62a7ecb8e3696c1473c
+Version: webpack 3.10.0
+Time: 6812ms
+                              Asset      Size  Chunks                    Chunk Names
+application-447011d5713d140938a4.js   2.55 MB       0  [emitted]  [big]  application
+                      manifest.json  68 bytes          [emitted]         
+ [112] ./app/javascript/packs/application.js 1.02 kB {0} [built]
+ [210] ./app/javascript/react/App.js 589 bytes {0} [built]
+    + 238 hidden modules
+
+ERROR in ./app/javascript/react/App.js
+Module not found: Error: Can't resolve '../containers/PostShowContainer' in '/Users/amylynn/challenges/ride-ferox/app/javascript/react'
+ @ ./app/javascript/react/App.js 4:0-64
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/react/App.js
+Module not found: Error: Can't resolve '../containers/PostsIndexContainer' in '/Users/amylynn/challenges/ride-ferox/app/javascript/react'
+ @ ./app/javascript/react/App.js 3:0-68
+ @ ./app/javascript/packs/application.js
+
+
+  [1m[36mUser Load (31.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 11430ms (Views: 11373.8ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:28:17 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.7ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: d308248c112a1b607c21
+Version: webpack 3.10.0
+Time: 6405ms
+                              Asset      Size  Chunks                    Chunk Names
+application-49ea8f6129a6e4d351de.js   2.55 MB       0  [emitted]  [big]  application
+                      manifest.json  68 bytes          [emitted]         
+ [112] ./app/javascript/packs/application.js 1.02 kB {0} [built]
+ [210] ./app/javascript/react/App.js 587 bytes {0} [built]
+    + 238 hidden modules
+
+ERROR in ./app/javascript/react/App.js
+Module not found: Error: Can't resolve './containers/PostShowContainer' in '/Users/amylynn/challenges/ride-ferox/app/javascript/react'
+ @ ./app/javascript/react/App.js 4:0-63
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/react/App.js
+Module not found: Error: Can't resolve './containers/PostsIndexContainer' in '/Users/amylynn/challenges/ride-ferox/app/javascript/react'
+ @ ./app/javascript/react/App.js 3:0-67
+ @ ./app/javascript/packs/application.js
+
+
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 11058ms (Views: 11033.8ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:30:34 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (10.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: ce562e8289efaa54c756
+Version: webpack 3.10.0
+Time: 5276ms
+                              Asset      Size  Chunks                    Chunk Names
+application-6e758d2714a70070dd6f.js   2.56 MB       0  [emitted]  [big]  application
+                      manifest.json  68 bytes          [emitted]         
+ [113] ./app/javascript/packs/application.js 1.02 kB {0} [built]
+ [211] ./app/javascript/react/App.js 591 bytes {0} [built]
+ [240] ./app/javascript/react/src/containers/PostsIndexContainer.js 2.96 kB {0} [built]
+    + 239 hidden modules
+
+ERROR in ./app/javascript/react/App.js
+Module not found: Error: Can't resolve './containers/PostShowContainer' in '/Users/amylynn/challenges/ride-ferox/app/javascript/react'
+ @ ./app/javascript/react/App.js 4:0-63
+ @ ./app/javascript/packs/application.js
+
+
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 10753ms (Views: 10737.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:31:00 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (17.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 10801ms (Views: 10770.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:33:38 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 447ms (Views: 424.5ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/bundle.js" for 127.0.0.1 at 2018-01-29 19:33:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/bundle.js"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:34:48 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 422ms (Views: 406.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:37:54 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (14.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 10020ms (Views: 10003.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/packs/application-9e04689c4a3487ba58e9.js%20line%2076%20%3E%20eval" for 127.0.0.1 at 2018-01-29 19:38:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/packs/application-9e04689c4a3487ba58e9.js%20line%2076%20%3E%20eval"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:39:20 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (10.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 9562ms (Views: 9537.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:42:04 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 785ms (Views: 746.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:43:45 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 10061ms (Views: 10032.4ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:47:17 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (25.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  [1m[36mUser Load (27.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 12383ms (Views: 12339.4ms | ActiveRecord: 27.6ms)
+
+
+Started GET "/api/v1/PostsController" for 127.0.0.1 at 2018-01-29 19:47:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/PostsController"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:48:38 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (13.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 11305ms (Views: 11256.6ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/api/v1/PostsController" for 127.0.0.1 at 2018-01-29 19:48:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/PostsController"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:52:09 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.7ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  [1m[36mUser Load (11.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 10304ms (Views: 10284.4ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/api/v1/PostsController" for 127.0.0.1 at 2018-01-29 19:52:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/PostsController"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-01-29 19:54:23 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (18.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 9722ms (Views: 9683.6ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/api/v1/PostsController" for 127.0.0.1 at 2018-01-29 19:54:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/PostsController"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/PostsController" for 127.0.0.1 at 2018-01-29 19:57:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/PostsController"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
