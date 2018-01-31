@@ -15,7 +15,7 @@ import App from '../react/App'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <App />,
+    <App/>,
     document.getElementById('app')
   );
 })
