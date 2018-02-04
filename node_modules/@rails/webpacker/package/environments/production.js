@@ -1,34 +1,44 @@
 const webpack = require('webpack')
 const CompressionPlugin = require('compression-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const Environment = require('../environment')
 
 module.exports = class extends Environment {
   constructor() {
     super()
 
-    this.plugins.set('ModuleConcatenation', new webpack.optimize.ModuleConcatenationPlugin())
+    this.plugins.append('ModuleConcatenation', new webpack.optimize.ModuleConcatenationPlugin())
 
-    this.plugins.set('UglifyJs', new webpack.optimize.UglifyJsPlugin({
+    this.plugins.append('UglifyJs', new UglifyJsPlugin({
+      parallel: true,
+      cache: true,
       sourceMap: true,
-      compress: {
-        warnings: false
-      },
-      output: {
-        comments: false
+      uglifyOptions: {
+        ie8: false,
+        ecma: 8,
+        warnings: false,
+        mangle: {
+          safari10: true
+        },
+        compress: {
+          warnings: false,
+          comparisons: false
+        },
+        output: {
+          ascii_only: true
+        }
       }
     }))
 
-    this.plugins.set('Compression', new CompressionPlugin({
+    this.plugins.append('Compression', new CompressionPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
       test: /\.(js|css|html|json|ico|svg|eot|otf|ttf)$/
     }))
-  }
 
-  toWebpackConfig() {
-    const result = super.toWebpackConfig()
-    result.devtool = 'nosources-source-map'
-    result.stats = 'normal'
-    return result
+    this.config.merge({
+      devtool: 'nosources-source-map',
+      stats: 'normal'
+    })
   }
 }
