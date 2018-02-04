@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :posts
+    resources :comments
     root "homepages#index"
     get "*path", to: "homepages#index"
   end
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :posts do
-        resources :comments
+        resources :comments, only: [:create, :edit, :update, :destroy]
       end
     end
   end

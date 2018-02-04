@@ -56,16 +56,14 @@ class PostShowContainer extends React.Component {
             description={this.state.description}
           />
         </div>
-        <div className="row">
-          <div className="comments large-10 columns">
-            <CommentsContainer
-              comments={this.state.comments}
-              postId={postId}
-            />
-            <CommentsFormContainer
-              addNewComment={this.addNewComment}
-            />
-          </div>
+        <div className="">
+          <CommentsContainer
+            comments={this.state.comments}
+            postId={postId}
+          />
+          <CommentsFormContainer
+            addNewComment={this.addNewComment}
+          />
         </div>
       </div>
     )

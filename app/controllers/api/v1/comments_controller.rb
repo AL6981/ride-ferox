@@ -1,5 +1,11 @@
 class Api::V1::CommentsController < ApiController
 
+  def index
+  end
+
+  def show
+  end
+
   def create
     post = Post.find(params[:post_id])
     parsed_comment = JSON.parse(request.body.read)

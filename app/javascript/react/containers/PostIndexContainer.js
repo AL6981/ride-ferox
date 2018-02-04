@@ -3,6 +3,7 @@ import PostTile from '../components/PostTile'
 
 class PostIndexContainer extends Component {
   constructor(props) {
+    debugger
     super(props);
     this.state = {
       posts: []
@@ -10,6 +11,7 @@ class PostIndexContainer extends Component {
   }
 
   componentDidMount() {
+    console.log('component mounted')
     fetch('/api/v1/posts')
     .then(response => response.json())
     .then(body => {

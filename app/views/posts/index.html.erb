@@ -1,11 +1,2 @@
-<h1>Posts</h1>
-
-<ul>
-  <% @posts.each do |post| %>
-    <li><%= link_to post.title, post_path(post.id) %></br></li>
-  <% end %>
-</ul>
-
-<%if !current_user.nil? %>
-  <%= link_to "Add new post", new_post_path %>
-<% end %>
+<div id="app"></div>
+<%= javascript_pack_tag 'application' %>

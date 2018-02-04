@@ -19,4 +19,3 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 console.log('React appears to be working, at least.')
-console.log(`${homeImages}`)
