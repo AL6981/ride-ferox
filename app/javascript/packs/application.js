@@ -8,11 +8,15 @@
 // layout file, like app/views/layouts/application.html.erb
 import React from 'react'
 import ReactDOM from 'react-dom'
+import homeImages from '../react/constants/homeImages'
 import App from '../react/containers/App'
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(
+    <App homeImages={homeImages}/>,
+    document.getElementById('app')
+  );
+})
 
-console.log('Hello World from Webpacker')
+console.log('React appears to be working, at least.')
+console.log(`${homeImages}`)
