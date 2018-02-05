@@ -1,3 +1,17 @@
 .home-tile {
   border: 2px solid black;
 }
+
+
+.comments-container {
+  border: 2px solid black;
+  height: 10px;
+}
+
+.p-title {
+    border: 2px solid black;
+}
+
+.p-content {
+    border: 2px solid black;
+}

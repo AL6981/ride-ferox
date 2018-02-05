@@ -3,10 +3,6 @@ import React from 'react';
 const CommentTile = props => {
   return(
     <div>
-      <div>
-        <i className="fa fa-bolt fa-2x" aria-hidden="true"></i>
-      </div>
-      <br />
       <div className="comment-body">
         {props.body}
       </div>

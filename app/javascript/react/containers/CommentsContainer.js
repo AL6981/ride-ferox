@@ -1,7 +1,6 @@
 import React from 'react';
 import CommentTile from '../components/CommentTile';
 
-
 const CommentsContainer = props => {
   let comments = props.comments.map(comment => {
     return(

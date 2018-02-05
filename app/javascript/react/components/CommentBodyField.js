@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommentBodyField = (props) => {
   return (
-    <label >
+    <label>
       <textarea
         placeholder='... add comment'
         type='text'

@@ -3,6 +3,7 @@ import { Route, Router, browserHistory } from 'react-router';
 import HomeIndexContainer from './HomeIndexContainer'
 import PostIndexContainer from './PostIndexContainer'
 import PostShowContainer from './PostShowContainer'
+import PostsFormContainer from './PostsFormContainer'
 
 const App = props => {
   return (

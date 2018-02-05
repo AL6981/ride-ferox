@@ -33,16 +33,15 @@ class PostShowContainer extends React.Component {
     fetch(`/api/v1/posts/${postId}/comments`,
       {
       credentials: 'same-origin',
-      header: {
-       'Content-Type': 'application/json',
-       'X-Requested-With': 'XMLHttpRequest'
+      headers: {
+       'Content-Type': 'application/json'
       },
       method: 'POST',
-      body: JSON.stringify(formPayload)
+      body: JSON.stringify({ comment: formPayload })
     })
     .then(response => response.json())
     .then(body => {
-      this.setState({comments: body.comments})
+      this.setState({comments: body})
     })
   }
 
@@ -50,23 +49,19 @@ class PostShowContainer extends React.Component {
     let postId = this.props.params.id
     return(
       <div>
-        <div>
-          <PostDetailTile
-            name={this.state.name}
-            description={this.state.description}
-          />
+        <PostDetailTile
+          title={this.state.title}
+          content={this.state.content}
+        />
+        <h3>Comments</h3>
+        <div className="comments-container">
+        <CommentsContainer
+          comments={this.state.comments}
+        />
         </div>
-        <div className="row">
-          <div className="comments large-10 columns">
-            <CommentsContainer
-              comments={this.state.comments}
-              postId={postId}
-            />
-            <CommentsFormContainer
-              addNewComment={this.addNewComment}
-            />
-          </div>
-        </div>
+        <CommentsFormContainer
+          addNewComment={this.addNewComment}
+        />
       </div>
     )
   }

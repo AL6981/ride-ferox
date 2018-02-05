@@ -1,27 +1,33 @@
-class PostsController < ApplicationController
-  before_action :authenticate_user?, only: [:edit, :update, :destroy]
+class Api::V1::PostsController < ApiController
 
   def index
-    @posts = Post.all
+    render json: Post.all
   end
 
   def show
     @post = Post.find(params[:id])
+    render json: {
+      post: @post,
+      comments: @post.comments
+    }
   end
 
   def new
-    @post = Post.new
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.user = current_user
 
-    if @post.save
-      flash[:notice] = 'Post added successfully'
-      redirect_to post_path(@post)
+    post = Post.new(post_params)
+    post.user = current_user
+
+    if current_user.nil?
+      render status: 401
+    elsif post.save
+      flash[:notice] = 'Post Added Successfully'
+      render json: post.id
     else
-      render :new
+      flash[:alert] = post.errors.full_messages.join(", ")
+      render json: post.id
     end
   end
 
@@ -49,7 +55,7 @@ class PostsController < ApplicationController
   protected
 
   def post_params
-    params.require(:post).permit(:title, :content, :tags)
+    params.require(:post).permit(:title, :content)
   end
 
   def authenticate_user?

@@ -34,27 +34,18 @@ class CommentsFormContainer extends Component {
 
   render() {
     return(
-      <div className="row">
-        <div className="small-12 medium-12 large-12 columns">
-          <form className="new-comment-form panel">
-            <fieldset>
-              <div className="legend">Add Comment</div>
-              <CommentBodyField
-                body={this.state.commentBody}
-                label="Write a Comment"
-                handleFormBodyChange={this.handleFormBodyChange}
-              />
-
-              <div className="comment-form-button">
-                <div className="button-group round even-2">
-                  <button className="clear-button" id="clear-button" onClick={this.handleClearForm}>Clear</button>
-                  <input className="button" id="comment-submit" type="submit" value="Submit" onClick={this.handleFormSubmit}/>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </div>
+      <form className="new-comment-form panel">
+        <fieldset>
+          <div className="legend">Add Comment</div>
+          <CommentBodyField
+            body={this.state.commentBody}
+            label="Write a Comment"
+            handleFormBodyChange={this.handleFormBodyChange}
+          />
+          <button className="clear-button" id="clear-button" onClick={this.handleClearForm}>Clear</button>
+          <input className="button" id="comment-submit" type="submit" value="Submit" onClick={this.handleFormSubmit}/>
+        </fieldset>
+      </form>
     )
   }
 }
