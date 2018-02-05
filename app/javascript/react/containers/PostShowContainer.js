@@ -33,12 +33,11 @@ class PostShowContainer extends React.Component {
     fetch(`/api/v1/posts/${postId}/comments`,
       {
       credentials: 'same-origin',
-      header: {
+      headers: {
        'Content-Type': 'application/json'
-       // 'X-Requested-With': 'XMLHttpRequest'
       },
       method: 'POST',
-      body: JSON.stringify(formPayload)
+      body: JSON.stringify({ comment: formPayload })
     })
     .then(response => response.json())
     .then(body => {

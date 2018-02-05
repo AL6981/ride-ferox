@@ -16,8 +16,8 @@ class Api::V1::PostsController < ApiController
   end
 
   def create
-    parsed_post = JSON.parse(request.content.read)
-    post = Post.new(title: parsed_post["title"], content: parsed_post["content"])
+
+    post = Post.new(post_params)
     post.user = current_user
 
     if current_user.nil?
@@ -54,6 +54,9 @@ class Api::V1::PostsController < ApiController
 
   protected
 
+  def post_params
+    params.require(:post).permit(:title, :content)
+  end
 
   def authenticate_user?
     if !user_signed_in? && current_user.id == @post.user_id

@@ -16,7 +16,6 @@ class PostIndexContainer extends Component {
     .then(response =>
       response.json())
     .then(body => {
-      debugger;
       this.setState({posts: body})
     })
   }
@@ -25,7 +24,7 @@ class PostIndexContainer extends Component {
     fetch(`/api/v1/posts`,
       {
       credentials: 'same-origin',
-      header: {
+      headers: {
        'Content-Type': 'application/json',
        'X-Requested-With': 'XMLHttpRequest'
       },
@@ -34,13 +33,11 @@ class PostIndexContainer extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState({posts: body.posts})
+      this.setState({posts: body})
     })
   }
 
   render() {
-    // debugger;
-    console.log(this.state.posts)
     let posts = this.state.posts.map(post => {
       return(
         <PostTile
