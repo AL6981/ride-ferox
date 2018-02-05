@@ -55,11 +55,8 @@ class PostsFormContainer extends Component {
             label="Write a Post"
             handleFormContentChange={this.handleFormContentChange}
           />
-
-
-              <button className="clear-button" id="clear-button" onClick={this.handleClearForm}>Clear</button>
-              <input className="button" id="post-submit" type="submit" value="Submit" onClick={this.handleFormSubmit}/>
-
+          <button className="clear-button" id="clear-button" onClick={this.handleClearForm}>Clear</button>
+          <input className="button" id="post-submit" type="submit" value="Submit" onClick={this.handleFormSubmit}/>
         </fieldset>
       </form>
 

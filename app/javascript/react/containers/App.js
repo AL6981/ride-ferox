@@ -9,9 +9,8 @@ const App = props => {
   return (
       <Router history={browserHistory}>
         <Route path='/' component={() => (<HomeIndexContainer homeImages={props.homeImages} />)}/>
-        <Route path='/api/v1/posts' component={PostIndexContainer}/>
-        <Route path='/api/v1/posts/:id' component={PostShowContainer} />
-        <Route path='/api/v1/posts/new' component={PostsFormContainer} />
+        <Route path='/posts' component={PostIndexContainer}/>
+        <Route path='/posts/:id' component={PostShowContainer} />
       </Router>
   )
 }

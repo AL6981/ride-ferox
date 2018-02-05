@@ -13,7 +13,6 @@ class Api::V1::PostsController < ApiController
   end
 
   def new
-    render json: Post.new
   end
 
   def create
