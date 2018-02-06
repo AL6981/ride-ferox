@@ -55,8 +55,8 @@ class PostsFormContainer extends Component {
             handleFormContentChange={this.handleFormContentChange}
           />
           <div>
-            <input className="button" type="submit" value="Clear" onClick={this.handleClearForm} />
-            <input className="fa fa-sync-alt fa-2x" type="submit" value="Submit" onClick={this.handleFormSubmit}/>
+            <button className="fa fa-redo-alt fa-2x" type="submit" onClick={this.handleClearForm}>Clear</button>
+            <button className="fa fa-sync-alt fa-2x" type="submit" value="Submit" onClick={this.handleFormSubmit}>Share</button>
           </div>
       </form>
 
