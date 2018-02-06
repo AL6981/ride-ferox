@@ -50,7 +50,7 @@ class PostIndexContainer extends Component {
 
     return(
       <div>
-        <h3>FeRox Forum</h3>
+        <div className="forum-title">FeRox Forum</div>
         <div className="post-container">
           <div className="post-tile-container">
             {posts}
