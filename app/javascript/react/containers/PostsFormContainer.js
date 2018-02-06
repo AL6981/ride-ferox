@@ -43,7 +43,7 @@ class PostsFormContainer extends Component {
 
   render() {
     return(
-      <form className="new-post-form">
+      <div className="new-post-form">
           <div className="legend">Share with your Sisters</div>
           <PostTitleField
             title={this.state.postTitle}
@@ -58,7 +58,7 @@ class PostsFormContainer extends Component {
             <button className="fa fa-redo-alt fa-2x" type="submit" onClick={this.handleClearForm}>Clear</button>
             <button className="fa fa-sync-alt fa-2x" type="submit" value="Submit" onClick={this.handleFormSubmit}>Share</button>
           </div>
-      </form>
+      </div>
 
     )
   }
