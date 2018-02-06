@@ -26,15 +26,3 @@
 .landscape img {
   height: 100%;
 }
-.comments-container {
-  border: 2px solid black;
-  height: 10px;
-}
-
-.p-title {
-    border: 2px solid black;
-}
-
-.p-content {
-    border: 2px solid black;
-}

@@ -6,6 +6,7 @@
   background-position: center;
   border: 10px ridge grey;
   border-radius: 5px;
+  font-family: 'Courgette', cursive;
 }
 
 .nav-logo {
@@ -20,46 +21,19 @@
   grid-column: span 6;
   text-align: center;
   align-self: center;
-  font-family: 'Ubuntu', sans-serif;
   order: 2;
 }
 
 .nav-links {
   grid-column: span 2;
   align-self: center;
-  font-family: 'Ubuntu', sans-serif;
   order: 3;
   margin-left: 30px;
 }
 
-.nav-si {
-  border: 3px solid grey;
-  border-radius: 5px;
+.nav-button {
+  font-family: 'Courgette', cursive;
   margin-top: 15px;
-  text-align: center;
-  align-self: center;
-}
-
-.nav-su {
-  border: 3px solid grey;
-  border-radius: 5px;
-  margin: 5px;
-  text-align: center;
-  align-self: center;
-}
-
-.nav-so {
-  border: 3px solid grey;
-  border-radius: 5px;
-  margin: 5px;
-  text-align: center;
-  align-self: center;
-}
-
-.nav-admin {
-  border: 3px solid grey;
-  border-radius: 5px;
-  margin: 5px;
   text-align: center;
   align-self: center;
 }

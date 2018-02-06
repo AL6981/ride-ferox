@@ -50,9 +50,11 @@ class PostIndexContainer extends Component {
 
     return(
       <div>
-        <h3>Post list</h3>
+        <h3>FeRox Forum</h3>
         <div className="post-container">
-          {posts}
+          <div className="post-tile-container">
+            {posts}
+          </div>
         </div>
         <PostsFormContainer
           addNewPost={this.addNewPost}

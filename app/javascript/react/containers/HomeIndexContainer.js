@@ -16,8 +16,9 @@ const HomeIndexContainer = props => {
   return(
     <div>
       <div className="link-tabs">
-        <h6 className="mapping-tab-link">Map</h6>
-        <Link to={`/posts`} className="far fa-map fa-2x">Forum</Link>
+        <i className="fa fa-map fa-2x"/>
+        <Link className="fa fa-comments fa-2x" to={`/posts`} />
+        <i className="fa fa-sliders fa-2x"/>
       </div>
       <div className="home-container">
         {homeImages}
