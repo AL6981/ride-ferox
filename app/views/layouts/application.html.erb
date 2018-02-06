@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Ferox</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-  
+  <head>
+    <title>Ferox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag "vendor/modernizr" %>
-  
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  
-  <nav class="top-bar">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="/">Ferox</a></h1>
-      </li>
-    </ul>
+    <%= csrf_meta_tags %>
+  </head>
 
-    <section class="top-bar-section">
-      <ul class="right">
-        <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
-      </ul>
-    </section>
-  </nav>
+  <body>
+     <nav class="nav-container">
+       <div class="nav-name">
+         <%= link_to image_tag("", alt: "Ride Outside the Lines"), root_path %>
+       </div>
+       <div class="nav-logo">
+         <%= link_to image_tag("FeRoxlogo", alt: "logo"), root_path %>
+       </div>
+       <div class="nav-links">
+         <%- if current_user -%>
+           <% if current_user.admin? %>
+             <div class="nav-admin"><%= link_to 'Admin', admin_root_path %></div>
+           <% end %>
+           <div class="nav-so"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></div>
+         <%- else -%>
+           <div class="nav-su"><%= link_to 'Sign Up', new_user_registration_path %></div>
+           <div class="nav-si"><%= link_to 'Sign In', new_user_session_path %></div>
+         <%- end -%>
+       </div>
+     </nav>
 
-  <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
-    </div>
-  <%- end -%>
+    <%- flash.each do |key, value| -%>
+      <div class="flash flash-<%= key %>">
+        <%= value %>
+      </div>
+    <%- end -%>
 
-  <%= yield %>
+    <%= yield %>
 
-  <%= javascript_include_tag 'application' %>
-  <%= yield :extra_footer %>
-</body>
+    <%= javascript_include_tag 'application' %>
+    <%= yield :extra_footer %>
+  </body>
 </html>
