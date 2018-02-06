@@ -1,8 +1,31 @@
-.home-tile {
-  border: 2px solid black;
+.home-container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(6, 1fr);
+  border: 10px ridge grey;
 }
 
+.home-tile {
+  grid-column: span 2;
+    align-self: stretch;
+    align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+    border: 5px solid white;
+    border-radius: 5px;
+}
 
+.home-tile img {
+  display: block;
+}
+
+.portrait img {
+  width: 100%;
+}
+
+.landscape img {
+  height: 100%;
+}
 .comments-container {
   border: 2px solid black;
   height: 10px;
