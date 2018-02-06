@@ -43,9 +43,8 @@ class PostsFormContainer extends Component {
 
   render() {
     return(
-      <form className="new-post-form panel">
-        <fieldset>
-          <div className="legend">Add Post</div>
+      <form className="new-post-form">
+          <div className="legend">Share with your Sisters</div>
           <PostTitleField
             title={this.state.postTitle}
             handleFormTitleChange={this.handleFormTitleChange}
@@ -55,9 +54,10 @@ class PostsFormContainer extends Component {
             label="Write a Post"
             handleFormContentChange={this.handleFormContentChange}
           />
-          <button className="clear-button" id="clear-button" onClick={this.handleClearForm}>Clear</button>
-          <input className="button" id="post-submit" type="submit" value="Submit" onClick={this.handleFormSubmit}/>
-        </fieldset>
+          <div>
+            <input className="button" type="submit" value="Clear" onClick={this.handleClearForm} />
+            <input className="fa fa-sync-alt fa-2x" type="submit" value="Submit" onClick={this.handleFormSubmit}/>
+          </div>
       </form>
 
     )

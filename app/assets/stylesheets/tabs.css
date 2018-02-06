@@ -1,14 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Dosis:600,200|Great+Vibes);
-*, *:after, *:before {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-* {margin:0;padding:0;border: 0 none;position: relative;}
-[class="fa"]:before {font-family: 'fontawesome', sans-serif;}
 
 
-a {color: grey}
-a:hover {color: black}
+
+/* a {color: grey}
+a:hover {color: black} */
 
 .link-tabs {
   display: grid;
@@ -16,11 +10,14 @@ a:hover {color: black}
   margin-top: 10px;
 }
 
-.far.fa-map.fa-2x {
-  grid-column: 7 / 8;
+.fa-map {
+  grid-column: 6 / 7;
   align-self: center;
+  margin-bottom: 3px;
 }
 
-.mapping-tab-link {
-  grid-column: 6 / 7;
+.fa-comments {
+  grid-column: 7 / 8;
+  align-self: center;
+  margin-bottom: 3px;
 }
