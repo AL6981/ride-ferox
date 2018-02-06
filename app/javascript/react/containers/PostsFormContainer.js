@@ -43,7 +43,7 @@ class PostsFormContainer extends Component {
 
   render() {
     return(
-      <form className="new-post-form">
+      <div className="new-post-form">
           <div className="legend">Share with your Sisters</div>
           <PostTitleField
             title={this.state.postTitle}
@@ -55,10 +55,10 @@ class PostsFormContainer extends Component {
             handleFormContentChange={this.handleFormContentChange}
           />
           <div>
-            <input className="button" type="submit" value="Clear" onClick={this.handleClearForm} />
+            <input className="fa fa-redo fa-2x" type="submit" value="Clear" onClick={this.handleClearForm} />
             <input className="fa fa-sync-alt fa-2x" type="submit" value="Submit" onClick={this.handleFormSubmit}/>
           </div>
-      </form>
+      </div>
 
     )
   }

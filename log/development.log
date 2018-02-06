@@ -9812,3 +9812,298 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 416ms (Views: 412.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:41:45 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (87.4ms)
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:41:46 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (47.3ms)
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:41:46 -0500
+Processing by HomesController#index as HTML
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:41:46 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (133.6ms)
+  Rendered homes/index.html.erb within layouts/application (168.7ms)
+Completed 401 Unauthorized in 1163ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+Completed 200 OK in 2669ms (Views: 2649.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1472ms (Views: 1467.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1574ms (Views: 1567.3ms | ActiveRecord: 0.0ms)
+
+
+    4:     <title>Ferox</title>
+    5:     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    6:     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    7:     <%= stylesheet_link_tag 'application', media: 'all' %>
+    8:     <%= javascript_include_tag "vendor/modernizr" %>
+    9:     <%= csrf_meta_tags %>
+   10:   </head>
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4241856716283457431_70094885227020'
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:43:16 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (74.5ms)
+Completed 200 OK in 2272ms (Views: 2184.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:43:28 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 317ms (Views: 313.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:45:31 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 1025ms (Views: 1007.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:45:52 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 230ms (Views: 215.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:45:53 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 618ms (Views: 609.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:46:39 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 1068ms (Views: 1048.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:46:52 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 260ms (Views: 256.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:49:02 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 856ms (Views: 829.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:49:12 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 498ms (Views: 488.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:49:21 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 362ms (Views: 357.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:49:35 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 626ms (Views: 612.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:50:46 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 975ms (Views: 960.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:51:01 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 556ms (Views: 525.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:51:11 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 329ms (Views: 321.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:52:11 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 926ms (Views: 915.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:52:17 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 488ms (Views: 473.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:54:52 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 469ms (Views: 460.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:54:56 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 167ms (Views: 162.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:55:36 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 438ms (Views: 414.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:56:20 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 1278ms (Views: 1262.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:56:27 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 446ms (Views: 442.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:56:43 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 962ms (Views: 947.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 12:56:50 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 371ms (Views: 366.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-06 13:00:37 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (56.7ms)
+Completed 200 OK in 825ms (Views: 813.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-06 13:01:05 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (50.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (5.44ms)
+Completed 200 OK in 298ms (Views: 225.4ms | ActiveRecord: 50.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-02-06 13:10:51 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"posts"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (70.4ms)
+Completed 200 OK in 848ms (Views: 826.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-06 13:10:56 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (22.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (5.19ms)
+Completed 200 OK in 161ms (Views: 136.6ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-02-06 13:10:57 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"posts"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 588ms (Views: 574.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-06 13:11:00 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (52.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (6.86ms)
+Completed 200 OK in 99ms (Views: 42.1ms | ActiveRecord: 52.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-02-06 13:13:32 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"posts"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (83.3ms)
+Completed 200 OK in 1727ms (Views: 1705.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-06 13:13:38 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (16.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (7.58ms)
+Completed 200 OK in 83ms (Views: 60.5ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-02-06 13:13:48 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"posts"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 574ms (Views: 561.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-06 13:13:51 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (8.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (15.29ms)
+Completed 200 OK in 45ms (Views: 33.5ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-02-06 13:19:01 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"posts"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 939ms (Views: 929.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-06 13:19:06 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (4.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (14.45ms)
+Completed 200 OK in 40ms (Views: 33.9ms | ActiveRecord: 4.4ms)
+
+
