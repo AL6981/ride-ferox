@@ -21,9 +21,20 @@
 /*  font-family: 'Lato', sans-serif; */
 
 a {
-  color: white;
+  color: #528FD5;
 }
 
 a:hover {
   color: #BF5194;
+}
+
+.flash.flash-notice {
+  color:  #BF5194;
+  font-family: 'Courgette', cursive;
+  margin-left: 10px;
+}
+.flash.flash-alert {
+  color:  #BF5194;
+  font-family: 'Courgette', cursive;
+  margin-left: 10px;
 }

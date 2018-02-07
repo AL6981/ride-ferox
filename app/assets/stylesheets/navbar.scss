@@ -1,4 +1,6 @@
 .nav-container {
+  max-width: 1413px;
+  max-height: 810px;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
@@ -29,11 +31,16 @@
   align-self: center;
   order: 3;
   margin-left: 30px;
+
 }
 
 .nav-button {
   font-family: 'Courgette', cursive;
   margin-top: 15px;
   text-align: center;
-  align-self: center;
+  align-self: right;
+  a {
+    color: white;
+  }
+  margin-top: 20px;
 }
