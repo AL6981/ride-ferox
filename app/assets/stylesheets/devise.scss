@@ -1,0 +1,35 @@
+
+.h2 {
+  font-family: 'Courgette', cursive;
+  color: #BF5194;
+  text-align: center;
+}
+
+.devise-form {
+  margin-left: 40px;
+  margin-right: 40px;
+  p {
+  font-family: 'Lato', sans-serif;
+  }
+
+  .field {
+    padding: 3px;
+    margin-bottom: 3px;
+    font-family: 'Lato', sans-serif;
+    border: 2px solid #BF5194;
+    background-color: #CCCCCC;
+    label {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  .actions {
+    font-family: 'Lato', sans-serif;
+  }
+
+  a {
+    color: #528FD5;
+    margin-left: 40px;
+  }
+}

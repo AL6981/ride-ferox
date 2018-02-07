@@ -1,0 +1,81 @@
+// User Show Page Styling
+
+.user-show-container {
+	display: grid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.user-show-tile {
+	grid-column: 3 / 10;
+  align-content: center;
+  color: #BF5194;
+  font-family: 'Courgette', cursive;
+  font-size: 2em;
+  padding: 10px;
+  margin-left: 40px;
+}
+
+.user-show-content {
+	font-family: 'Lato', sans-serif;
+  border: 1px solid #BF5194;
+  min-height: 4rem;
+  justify-content: flex-start;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+h5 {
+	color: #BF5194;
+	font-family: 'Courgette', cursive;
+	justify-content: center;
+  margin-left: 40px;
+}
+
+.comment-dark-container {
+  background-color: #AAAAAA;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.comment-lite-container {
+  background-color: #444444;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+//New Comment Form Styling
+
+.user-show-username {
+	align-content: center;
+	margin-left: 40px;
+	font-family: 'Courgette', cursive;
+	color: #BF5194;
+	font-size: 1.5em;
+	padding-bottom: 5px;
+}
+
+.user-show-location {
+	font-family: 'Courgette', cursive;
+  color: #BF5194;
+	font-style: italic;
+}
+
+.user-show-moto {
+	grid-column-start: span 1;
+	min-width: 40px;
+	min-height: 40px;
+	border: 1px solid #444444;
+	font-family: 'Lato', sans-serif;
+}

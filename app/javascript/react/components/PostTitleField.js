@@ -2,7 +2,7 @@ import React from 'react';
 
 const PostTitleField = (props) => {
   return (
-    <label >
+    <label className="form-field">
       <input
         placeholder='... add title'
         type='text'

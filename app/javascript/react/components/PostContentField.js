@@ -2,7 +2,7 @@ import React from 'react';
 
 const PostContentField = (props) => {
   return (
-    <label >
+    <label className="form-field">
       <textarea
         placeholder='... add content'
         type='text'
