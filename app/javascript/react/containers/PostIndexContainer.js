@@ -21,7 +21,8 @@ class PostIndexContainer extends Component {
   }
 
   addNewPost(formPayload) {
-    fetch(`/api/v1/posts`,
+    debugger
+    fetch('/api/v1/posts',
       {
       credentials: 'same-origin',
       headers: {
@@ -50,15 +51,16 @@ class PostIndexContainer extends Component {
 
     return(
       <div>
-        <div className="forum-title">FeRox Forum</div>
         <div className="post-container">
-          <div className="post-tile-container">
-            {posts}
+          <div className="forum-title">FeRox Forum</div>
+            <div className="post-tile-container">
+              <h5>Recent Postings</h5>
+              {posts}
+            </div>
           </div>
-        </div>
-        <PostsFormContainer
-          addNewPost={this.addNewPost}
-        />
+          <PostsFormContainer
+            addNewPost={this.addNewPost}
+          />
       </div>
     )
   }

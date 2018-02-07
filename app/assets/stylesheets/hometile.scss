@@ -7,16 +7,21 @@
 
 .home-tile {
   grid-column: span 2;
-    align-self: stretch;
-    align-items: stretch;
-    justify-content: stretch;
-    overflow: hidden;
-    border: 5px solid white;
-    border-radius: 5px;
+  align-self: stretch;
+  align-items: stretch;
+  justify-content: stretch;
+  overflow: hidden;
+  border: 5px solid white;
+  border-radius: 5px;
 }
 
 .home-tile img {
   display: block;
+  opacity: 0.6;
+}
+
+.home-tile:hover img{
+  opacity: 1.0;
 }
 
 .portrait img {

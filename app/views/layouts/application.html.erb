@@ -3,7 +3,7 @@
   <head>
     <title>Ferox</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Lato:400,400i" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -20,11 +20,11 @@
        <div class="nav-links">
          <%- if current_user -%>
            <% if current_user.admin? %>
-             <div class="nav-button"><%= link_to 'Admin', admin_root_path %></div>
+             <div class="nav-button"><%= link_to 'Admin', admin_root_path, class: "fa fa-lock fa-2x" %></div>
            <% end %>
-           <div class="nav-button"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></div>
+           <div class="nav-button"><%= link_to 'Logout', destroy_user_session_path, class: "fa fa-sign-out fa-2x", method: :delete %></div>
          <%- else -%>
-           <div class="nav-button"><%= link_to 'Join FeRox', new_user_registration_path, class: "fa fa-users fa-2x" %></div>
+           <div class="nav-button"><%= link_to 'Join', new_user_registration_path, class: "fa fa-users fa-2x" %></div>
            <div class="nav-button"><%= link_to 'Login', new_user_session_path, class: "fa fa-sign-in fa-2x" %></div>
          <%- end -%>
        </div>

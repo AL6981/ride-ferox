@@ -16,3 +16,14 @@
  *= require font-awesome
 
  */
+
+
+/*  font-family: 'Lato', sans-serif; */
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #BF5194;
+}

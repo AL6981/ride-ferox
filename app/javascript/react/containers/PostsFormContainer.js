@@ -44,22 +44,25 @@ class PostsFormContainer extends Component {
   render() {
     return(
       <div className="new-post-form">
-          <div className="legend">Share with your Sisters</div>
-          <PostTitleField
-            title={this.state.postTitle}
-            handleFormTitleChange={this.handleFormTitleChange}
-          />
-          <PostContentField
-            content={this.state.postContent}
-            label="Write a Post"
-            handleFormContentChange={this.handleFormContentChange}
-          />
-          <div>
-            <button className="fa fa-redo-alt fa-2x" type="submit" onClick={this.handleClearForm}>Clear</button>
-            <button className="fa fa-sync-alt fa-2x" type="submit" value="Submit" onClick={this.handleFormSubmit}>Share</button>
+        <div className="fields-container">
+          <div className="form-field-title">Submit a New Post</div>
+            <div className="form-border">
+              <PostTitleField
+                title={this.state.postTitle}
+                handleFormTitleChange={this.handleFormTitleChange}
+              />
+              <PostContentField
+                content={this.state.postContent}
+                label="Write a Post"
+                handleFormContentChange={this.handleFormContentChange}
+              />
+            </div>
+            <div>
+              <button type="submit" onClick={this.handleClearForm}>Clear</button>
+              <button className="button-sml" type="submit" value="Submit" onClick={this.handleFormSubmit}>Share</button>
+            </div>
           </div>
       </div>
-
     )
   }
 }

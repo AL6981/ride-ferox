@@ -1,0 +1,113 @@
+// Ferox Forum Styling
+
+.post-container {
+	display: grid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.forum-title {
+	grid-column: 5 / 9;
+	color: #BF5194;
+	font-family: 'Courgette', cursive;
+  font-size: 2em;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 10px;
+}
+
+// Individual Post Styling
+
+.post-tile-container {
+  grid-column-start: span 5;
+  margin-left: 40px;
+}
+
+h5 {
+	color: #BF5194;
+	font-family: 'Courgette', cursive;
+	justify-content: center;
+}
+
+.fa.fa-motorcycle {
+  padding-right: 3px;
+}
+
+#dark-bike {
+  color: #AAAAAA;
+}
+
+#lite-bike {
+  color: #444444;
+}
+
+.tile-dark-container {
+  background-color: #AAAAAA;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+	a {
+		color: #528FD5;
+	}
+}
+
+.tile-lite-container {
+  background-color: #444444;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+	a {
+		color: #528FD5;
+	}
+}
+
+//New Post Form Styling
+
+.new-post-form {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	button {
+		background-color: transparent;
+		font-family: 'Courgette', cursive;
+		color: #BF5194;
+		border: 1px solid #BF5194;
+		border-radius: 5px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		button:hover {
+			color: #528FD5;
+		}
+	}
+  margin-left: 40px;
+}
+
+.fields-container {
+	grid-column-start: span 5;
+	margin-left: 40px;
+	font-family: 'Courgette', cursive;
+	color: #BF5194;
+	font-size: 1.5em;
+	padding-bottom: 5px;
+}
+
+.form-border {
+	border: 1px solid #BF5194;
+	border-radius: 5px;
+	padding-top: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #AAAAAA;
+}
+
+.form-field {
+	font-family: 'Lato', sans-serif;
+}

@@ -46,22 +46,29 @@ class PostShowContainer extends React.Component {
   }
 
   render() {
+
     let postId = this.props.params.id
     return(
       <div>
-        <PostDetailTile
-          title={this.state.title}
-          content={this.state.content}
-        />
-        <h3>Comments</h3>
-        <div className="comments-container">
-        <CommentsContainer
-          comments={this.state.comments}
-        />
+        <div className="show-container">
+          <div className="show-tile">
+            <PostDetailTile
+              title={this.state.title}
+              content={this.state.content}
+            />
+          </div>
         </div>
-        <CommentsFormContainer
-          addNewComment={this.addNewComment}
-        />
+        <h5>Comments</h5>
+        <div className="comments-container">
+            <CommentsContainer
+              comments={this.state.comments}
+            />
+        </div>
+        <div className="comments-form-container">
+            <CommentsFormContainer
+              addNewComment={this.addNewComment}
+            />
+        </div>
       </div>
     )
   }
