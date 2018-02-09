@@ -21,7 +21,6 @@ class PostIndexContainer extends Component {
   }
 
   addNewPost(formPayload) {
-    debugger
     fetch('/api/v1/posts',
       {
       credentials: 'same-origin',
