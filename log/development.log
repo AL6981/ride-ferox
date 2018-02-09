@@ -13653,3 +13653,432 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 500ms (Views: 391.8ms | ActiveRecord: 87.0ms)
 
 
+Google geocoding. address: 140 Market St, San Francisco, CA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22140%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22140%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22street_number%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Market+Street%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Market+St%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22route%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Financial+District%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Financial+District%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22neighborhood%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22San+Francisco%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22SF%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22San+Francisco+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22San+Francisco+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22California%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22CA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%2294105%22%2C%0A+++++++++++++++%22short_name%22+%3A+%2294105%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22postal_code%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22140+Market+St%2C+San+Francisco%2C+CA+94105%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+37.793711%2C%0A+++++++++++++++%22lng%22+%3A+-122.3958948%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22RANGE_INTERPOLATED%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+37.7950599802915%2C%0A++++++++++++++++++%22lng%22+%3A+-122.3945458197085%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+37.7923620197085%2C%0A++++++++++++++++++%22lng%22+%3A+-122.3972437802915%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22EisxNDAgTWFya2V0IFN0LCBTYW4gRnJhbmNpc2NvLCBDQSA5NDEwNSwgVVNB%22%2C%0A+++++++++%22types%22+%3A+%5B+%22street_address%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+Google geocoding. address: 140 Market St, San Francisco, CA, args []
+Google geocoding. Result: %7B%0A+++%22error_message%22+%3A+%22You+have+exceeded+your+daily+request+quota+for+this+API.+We+recommend+registering+for+a+key+at+the+Google+Developers+Console%3A+https%3A%2F%2Fconsole.developers.google.com%2Fapis%2Fcredentials%3Fproject%3D_%22%2C%0A+++%22results%22+%3A+%5B%5D%2C%0A+++%22status%22+%3A+%22OVER_QUERY_LIMIT%22%0A%7D%0A
+Google geocoding. address: Boston, MA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Massachusetts%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22MA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Boston%2C+MA%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+42.3600825%2C%0A+++++++++++++++%22lng%22+%3A+-71.0588801%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJGzE9DS1l44kRoOhiASS_fHg%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-09 13:10:45 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (24.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (5.34ms)
+Completed 200 OK in 140ms (Views: 91.7ms | ActiveRecord: 32.7ms)
+
+
+Started GET "/api/v1/posts/1" for 127.0.0.1 at 2018-02-09 13:10:47 -0500
+Processing by Api::V1::PostsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (22.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (73.2ms)
+Completed 200 OK in 127ms (Views: 61.9ms | ActiveRecord: 28.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 13:12:45 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (27.2ms)
+  [1m[36mUser Load (49.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 6459ms (Views: 6370.6ms | ActiveRecord: 79.0ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-09 13:13:01 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (4.43ms)
+Completed 200 OK in 32ms (Views: 25.5ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-02-09 13:58:37 -0500
+  
+SyntaxError (/Users/amylynn/challenges/ride-ferox/app/models/user.rb:18: syntax error, unexpected '[', expecting ')'
+  def geo_location(params[:location])
+                          ^
+/Users/amylynn/challenges/ride-ferox/app/models/user.rb:23: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/models/user.rb:18: syntax error, unexpected '[', expecting ')'
+app/models/user.rb:23: syntax error, unexpected keyword_end, expecting end-of-input
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-02-09 13:59:57 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ply/Ku7LPJW8RDBXJoVIfWOeCwLWc/w0FB9KHOLME8lb6ll5nH8N8eLaX1Wie14ZZakLtsqKAXD3/A9O+l7IxA=="}
+  [1m[36mUser Load (25.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 369ms (ActiveRecord: 186.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 13:59:58 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 177ms (Views: 171.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-09 14:00:03 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 188ms (Views: 177.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-02-09 14:00:06 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 143ms (Views: 139.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-02-09 14:00:42 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7j/RsejCe114QKcQtORYGNGZK73yFW4tT4m3XWO4XWtOBLjPYwxikqWLlQz0cxME1Ha0h0/tOOMZe1xzPgv3g==", "user"=>{"email"=>"geotest@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"RoadTest", "moto"=>"Bike", "location"=>"Boston, MA"}, "commit"=>"Sign up"}
+Unpermitted parameters: :username, :moto, :location
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (29.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "geotest@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (37.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "geotest@email.com"], ["encrypted_password", "$2a$11$RageQXLBCUlsnXNC/loynOkI/JOYT4dA28dGywcDrioJFIZaTF/CW"], ["created_at", "2018-02-09 19:00:42.928506"], ["updated_at", "2018-02-09 19:00:42.928506"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (28.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-02-09 19:00:42.974602"], ["last_sign_in_at", "2018-02-09 19:00:42.974602"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2018-02-09 19:00:42.976481"], ["id", 3]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 379ms (ActiveRecord: 106.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 14:00:43 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 123ms (Views: 110.9ms | ActiveRecord: 8.5ms)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-02-09 14:04:14 -0500
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-02-09 14:04:14 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"X5mvHCc3rF9AR7aEI/JUkPy1J29UBuSqViojlrDTKFHtGUK53RiUOH8wmkxS8Am8jKKZE77xBfFvceg6CaXm+g=="}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 31ms (ActiveRecord: 15.2ms)
+
+
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"X5mvHCc3rF9AR7aEI/JUkPy1J29UBuSqViojlrDTKFHtGUK53RiUOH8wmkxS8Am8jKKZE77xBfFvceg6CaXm+g=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 14:04:14 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 144ms (Views: 140.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-02-09 14:04:17 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 170ms (Views: 129.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-02-09 14:04:48 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B+G/WRjlrmQA7/U+6iLmgp0kuo8QuR6LTpc+ZcTugIe1YVL84sqWAz+Y2fabILuu7TME8/pO/9B3zPXJfZhOLA==", "user"=>{"email"=>"geotest@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"testname", "moto"=>"bike", "location"=>"Boston, MA"}, "commit"=>"Sign up"}
+Unpermitted parameters: :username, :moto, :location
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (7.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "geotest@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "geotest@email.com"], ["encrypted_password", "$2a$11$yOhIVIVMtpg4tEJY6XNS0OREH0if1h0GouaMPNMzoYUs7chYGqaf2"], ["created_at", "2018-02-09 19:04:48.862590"], ["updated_at", "2018-02-09 19:04:48.862590"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-02-09 19:04:48.873348"], ["last_sign_in_at", "2018-02-09 19:04:48.873348"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2018-02-09 19:04:48.875043"], ["id", 4]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 253ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 14:04:48 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (26.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 231ms (Views: 226.5ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-02-09 14:05:53 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tHp7wjZsJ0B4Ix8eKQT+Bx1D+aUYg93iSqnqnBwkP74G+pZnzEMfJ0dUM9ZYBqMrbVRH2fJ0PLlz8iEwpVLxFQ=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 37ms (ActiveRecord: 20.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 14:05:54 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 269ms (Views: 260.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-02-09 14:05:57 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 578ms (Views: 522.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-02-09 14:06:21 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c1fJIU9Ng1T0726vvS8sfgOrKuJptOvpf4Z3EazaMFPB1ySEtWK7M8uYQmfMLXFSc7yUnoNDCrJG3by9Faz++A==", "user"=>{"email"=>"geotest@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"testname", "moto"=>"bike", "location"=>"Boston, MA"}, "commit"=>"Sign up"}
+Unpermitted parameters: :username, :moto, :location
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (5.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "geotest@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "geotest@email.com"], ["encrypted_password", "$2a$11$zicIvPiDrg5TYYuJLz2zOuu3KtMmkv81VWuS00TPn068r8l5UYGmu"], ["created_at", "2018-02-09 19:06:21.521042"], ["updated_at", "2018-02-09 19:06:21.521042"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-02-09 19:06:21.527439"], ["last_sign_in_at", "2018-02-09 19:06:21.527439"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2018-02-09 19:06:21.528902"], ["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 236ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 14:06:21 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 150ms (Views: 145.2ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Google geocoding. address: Boston, MA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Massachusetts%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22MA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Boston%2C+MA%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+42.3600825%2C%0A+++++++++++++++%22lng%22+%3A+-71.0588801%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJGzE9DS1l44kRoOhiASS_fHg%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6900909870902587890)[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAddColumnsToUser (20180209192442)
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (56.7ms)[0m  [1m[35mALTER TABLE "users" ADD "lat" decimal(9,6)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "lng" decimal(9,6)[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180209192442"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6900909870902587890)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6900909870902587890)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAddColumnsToUser (20180209192442)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (36.8ms)[0m  [1m[35mALTER TABLE "users" DROP "lng"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" DROP "lat"[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20180209192442"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6900909870902587890)[0m
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6900909870902587890)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAddColumnsToUser (20180209192442)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "users" ADD "lat" decimal(9,6)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "lng" decimal(9,6)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180209192442"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6900909870902587890)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-02-09 14:27:39 -0500
+  [1m[35m (13.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Xgzc9P3mZBzg5HseR2qJgx6cYKI2ipKq7LOMtCPHuy3sjDFRB8lce9+TV9Y2aNSvbove3tx9c/HV6EcYmrF1hg=="}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 50ms (ActiveRecord: 33.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 14:27:40 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 207ms (Views: 201.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-02-09 14:27:44 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 198ms (Views: 141.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-02-09 14:28:10 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QaHl1gHkezBidxihjdlHbnHLwNChHLPr5kEuhY9aCxvzIQhz+8tDV10ANGn82xpCAdx+rEvrUrDfGuUpNizFsA==", "user"=>{"email"=>"geotest@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"name", "moto"=>"bike", "location"=>"Boston, MA"}, "commit"=>"Sign up"}
+Unpermitted parameters: :username, :moto, :location
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Multi geocoding. address: , args []
+Google geocoding. address: , args []
+Us geocoding. address: , args []
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "geotest@email.com"], ["LIMIT", 1]]
+  [1m[35m (7.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 19813ms (Views: 127.0ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-02-09 14:34:04 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4T8vcMASEDglonSG0xdEButkVeV1d6AoujVUhEg74QpTv8LVOj0oXxrVWE6iFRkqm3PrmZ+AQXODbp8o8U0voQ==", "user"=>{"email"=>"newgeo@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"test", "moto"=>"bike", "location"=>"Boston, MA"}, "commit"=>"Sign up"}
+Unpermitted parameters: :username, :moto, :location
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Multi geocoding. address: , args []
+Google geocoding. address: , args []
+Us geocoding. address: , args []
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "newgeo@email.com"], ["LIMIT", 1]]
+  [1m[35m (6.5ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 21078ms (Views: 189.4ms | ActiveRecord: 90.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-02-09 14:36:15 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XuKNeviO95A9CJF4oevXHv+px6SMbTX8FOOjX81hlr3sYmDfAqHP9wJ/vbDQ6Yoyj7552Gaa1KctuGjzdBdYFg==", "user"=>{"email"=>"newgeo@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"test", "moto"=>"bike", "location"=>"Boston, MA"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Multi geocoding. address: Boston, MA, args []
+Google geocoding. address: Boston, MA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Massachusetts%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22MA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Boston%2C+MA%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+42.3600825%2C%0A+++++++++++++++%22lng%22+%3A+-71.0588801%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJGzE9DS1l44kRoOhiASS_fHg%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "newgeo@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (42.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "moto", "created_at", "updated_at", "location", "lat", "lng") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "newgeo@email.com"], ["encrypted_password", "$2a$11$T4i8dGI/JmMmFDOcq.UvTuqaWNE0a0tJDgd/oJ3imgpemKSMr1VDi"], ["username", "test"], ["moto", "bike"], ["created_at", "2018-02-09 19:36:16.493837"], ["updated_at", "2018-02-09 19:36:16.493837"], ["location", "Boston, MA"], ["lat", "42.360083"], ["lng", "-71.05888"]]
+  [1m[35m (14.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (27.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-02-09 19:36:16.562740"], ["last_sign_in_at", "2018-02-09 19:36:16.562740"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2018-02-09 19:36:16.565328"], ["id", 6]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 712ms (ActiveRecord: 135.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 14:36:16 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 431ms (Views: 423.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-02-09 14:36:25 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (14.0ms)
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 430ms (Views: 416.3ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-02-09 14:36:27 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 2, email: "member@email.com", username: "Grip", moto: nil, userimage: nil, rox_count: 0, created_at: "2018-02-07 18:00:04", updated_at: "2018-02-07 21:35:27", role: "member", location: nil, lat: nil, lng: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.88ms)
+Completed 200 OK in 103ms (Views: 99.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/users/6" for 127.0.0.1 at 2018-02-09 14:36:34 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.57ms)
+Completed 200 OK in 55ms (Views: 31.9ms | ActiveRecord: 7.1ms)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Multi geocoding. address: Boston, MA, args []
+Google geocoding. address: Boston, MA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Massachusetts%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22MA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Boston%2C+MA%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+42.3600825%2C%0A+++++++++++++++%22lng%22+%3A+-71.0588801%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJGzE9DS1l44kRoOhiASS_fHg%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mUser Load (41.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (users.lat IS NOT NULL AND users.lng IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.7393229110414309)*COS(-1.2402114205248773)*COS(RADIANS(users.lat))*COS(RADIANS(users.lng))+
+          COS(0.7393229110414309)*SIN(-1.2402114205248773)*COS(RADIANS(users.lat))*SIN(RADIANS(users.lng))+
+          SIN(0.7393229110414309)*SIN(RADIANS(users.lat))))*3963.1899999999996)
+          ASC[0m
+Multi geocoding. address: Beverly Hills, CA, args []
+Google geocoding. address: Beverly Hills, CA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Beverly+Hills%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Beverly+Hills%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Los+Angeles+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Los+Angeles+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22California%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22CA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Beverly+Hills%2C+CA%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.112432%2C%0A++++++++++++++++++%22lng%22+%3A+-118.3720269%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.0526658%2C%0A++++++++++++++++++%22lng%22+%3A+-118.4270409%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+34.0736204%2C%0A+++++++++++++++%22lng%22+%3A+-118.4003563%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.112432%2C%0A++++++++++++++++++%22lng%22+%3A+-118.3720269%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.0526658%2C%0A++++++++++++++++++%22lng%22+%3A+-118.4270409%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJq0fR1gS8woAR0R4I_XnDx9Y%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (users.lat IS NOT NULL AND users.lng IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.5946968640547072)*COS(-2.0664760529694113)*COS(RADIANS(users.lat))*COS(RADIANS(users.lng))+
+          COS(0.5946968640547072)*SIN(-2.0664760529694113)*COS(RADIANS(users.lat))*SIN(RADIANS(users.lng))+
+          SIN(0.5946968640547072)*SIN(RADIANS(users.lat))))*3963.1899999999996)
+          ASC[0m
+Multi geocoding. address: Beverly Hills, CA, args []
+Google geocoding. address: Beverly Hills, CA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Beverly+Hills%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Beverly+Hills%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Los+Angeles+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Los+Angeles+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22California%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22CA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Beverly+Hills%2C+CA%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.112432%2C%0A++++++++++++++++++%22lng%22+%3A+-118.3720269%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.0526658%2C%0A++++++++++++++++++%22lng%22+%3A+-118.4270409%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+34.0736204%2C%0A+++++++++++++++%22lng%22+%3A+-118.4003563%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.112432%2C%0A++++++++++++++++++%22lng%22+%3A+-118.3720269%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.0526658%2C%0A++++++++++++++++++%22lng%22+%3A+-118.4270409%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJq0fR1gS8woAR0R4I_XnDx9Y%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (users.lat IS NOT NULL AND users.lng IS NOT NULL) ORDER BY 
+          (ACOS(least(1,COS(0.5946968640547072)*COS(-2.0664760529694113)*COS(RADIANS(users.lat))*COS(RADIANS(users.lng))+
+          COS(0.5946968640547072)*SIN(-2.0664760529694113)*COS(RADIANS(users.lat))*SIN(RADIANS(users.lng))+
+          SIN(0.5946968640547072)*SIN(RADIANS(users.lat))))*3963.1899999999996)
+          ASC[0m
+Multi geocoding. address: Beverly Hills, CA, args []
+Google geocoding. address: Beverly Hills, CA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Beverly+Hills%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Beverly+Hills%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Los+Angeles+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Los+Angeles+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22California%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22CA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Beverly+Hills%2C+CA%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.112432%2C%0A++++++++++++++++++%22lng%22+%3A+-118.3720269%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.0526658%2C%0A++++++++++++++++++%22lng%22+%3A+-118.4270409%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+34.0736204%2C%0A+++++++++++++++%22lng%22+%3A+-118.4003563%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.112432%2C%0A++++++++++++++++++%22lng%22+%3A+-118.3720269%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.0526658%2C%0A++++++++++++++++++%22lng%22+%3A+-118.4270409%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJq0fR1gS8woAR0R4I_XnDx9Y%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+Multi geocoding. address: Beverly Hills, CA, args []
+Google geocoding. address: Beverly Hills, CA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Beverly+Hills%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Beverly+Hills%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Los+Angeles+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Los+Angeles+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22California%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22CA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Beverly+Hills%2C+CA%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.112432%2C%0A++++++++++++++++++%22lng%22+%3A+-118.3720269%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.0526658%2C%0A++++++++++++++++++%22lng%22+%3A+-118.4270409%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+34.0736204%2C%0A+++++++++++++++%22lng%22+%3A+-118.4003563%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.112432%2C%0A++++++++++++++++++%22lng%22+%3A+-118.3720269%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+34.0526658%2C%0A++++++++++++++++++%22lng%22+%3A+-118.4270409%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJq0fR1gS8woAR0R4I_XnDx9Y%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (users.lat IS NOT NULL AND users.lng IS NOT NULL) AND (users.lat>33.9290505471464 AND users.lat<34.21819025285359 AND users.lng>-118.57489029264096 AND users.lng<-118.22582230735908) AND ((
+          (ACOS(least(1,COS(0.5946968640547072)*COS(-2.0664760529694113)*COS(RADIANS(users.lat))*COS(RADIANS(users.lng))+
+          COS(0.5946968640547072)*SIN(-2.0664760529694113)*COS(RADIANS(users.lat))*SIN(RADIANS(users.lng))+
+          SIN(0.5946968640547072)*SIN(RADIANS(users.lat))))*3963.1899999999996)
+          <= 10))[0m
+Multi geocoding. address: Boston, MA, args []
+Google geocoding. address: Boston, MA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Massachusetts%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22MA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Boston%2C+MA%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+42.3600825%2C%0A+++++++++++++++%22lng%22+%3A+-71.0588801%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJGzE9DS1l44kRoOhiASS_fHg%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+Multi geocoding. address: Boston, MA, args []
+Google geocoding. address: Boston, MA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Massachusetts%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22MA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Boston%2C+MA%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+42.3600825%2C%0A+++++++++++++++%22lng%22+%3A+-71.0588801%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJGzE9DS1l44kRoOhiASS_fHg%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (users.lat IS NOT NULL AND users.lng IS NOT NULL) AND (users.lat>42.21551264714642 AND users.lat<42.504652352853604 AND users.lng>-71.2545286557246 AND users.lng<-70.86323154427538) AND ((
+          (ACOS(least(1,COS(0.7393229110414309)*COS(-1.2402114205248773)*COS(RADIANS(users.lat))*COS(RADIANS(users.lng))+
+          COS(0.7393229110414309)*SIN(-1.2402114205248773)*COS(RADIANS(users.lat))*SIN(RADIANS(users.lng))+
+          SIN(0.7393229110414309)*SIN(RADIANS(users.lat))))*3963.1899999999996)
+          <= 10))[0m
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-02-09 14:47:31 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (59.3ms)
+  [1m[36mUser Load (190.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 1313ms (Views: 1093.6ms | ActiveRecord: 190.7ms)
+
+
