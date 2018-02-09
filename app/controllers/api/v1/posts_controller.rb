@@ -24,10 +24,10 @@ class Api::V1::PostsController < ApiController
       render status: 401
     elsif post.save
       flash[:notice] = 'Post Added Successfully'
-      render json: post.id
+      render json: post
     else
       flash[:alert] = post.errors.full_messages.join(", ")
-      render json: post.id
+      render json: post
     end
   end
 

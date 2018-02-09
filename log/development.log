@@ -13523,3 +13523,133 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 132ms (Views: 125.2ms | ActiveRecord: 4.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-09 11:09:41 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (62.0ms)
+  [1m[36mUser Load (132.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 918ms (Views: 768.5ms | ActiveRecord: 132.1ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-09 11:09:52 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (13.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (6.19ms)
+Completed 200 OK in 35ms (Views: 18.9ms | ActiveRecord: 13.4ms)
+
+
+Started POST "/api/v1/posts" for 127.0.0.1 at 2018-02-09 11:10:01 -0500
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"title"=>"Another New Post", "content"=>"ldknfkaeflqkejf", "post"=>{"title"=>"Another New Post", "content"=>"ldknfkaeflqkejf"}}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (18.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (15.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Another New Post"], ["content", "ldknfkaeflqkejf"], ["user_id", 1], ["created_at", "2018-02-09 16:10:01.271851"], ["updated_at", "2018-02-09 16:10:01.271851"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.08ms)
+Completed 200 OK in 64ms (Views: 1.2ms | ActiveRecord: 43.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-02-09 11:10:10 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"posts"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 356ms (Views: 351.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-09 11:10:12 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (13.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (3.44ms)
+Completed 200 OK in 21ms (Views: 7.3ms | ActiveRecord: 13.5ms)
+
+
+Started POST "/api/v1/posts" for 127.0.0.1 at 2018-02-09 11:10:54 -0500
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"title"=>"akjsflejfr", "content"=>"kjqehfkjqehf", "post"=>{"title"=>"akjsflejfr", "content"=>"kjqehfkjqehf"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (9.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "akjsflejfr"], ["content", "kjqehfkjqehf"], ["user_id", 1], ["created_at", "2018-02-09 16:10:54.932367"], ["updated_at", "2018-02-09 16:10:54.932367"]]
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.21ms)
+Completed 200 OK in 41ms (Views: 2.8ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 11:12:03 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 276ms (Views: 269.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-02-09 11:14:47 -0500
+Started GET "/posts" for 127.0.0.1 at 2018-02-09 11:14:48 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"posts"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 785ms (Views: 308.3ms | ActiveRecord: 472.8ms)
+
+
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"posts"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 213ms (Views: 203.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-09 11:14:51 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (4.51ms)
+Completed 200 OK in 88ms (Views: 59.6ms | ActiveRecord: 20.8ms)
+
+
+Started POST "/api/v1/posts" for 127.0.0.1 at 2018-02-09 11:15:07 -0500
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"title"=>"Work post", "content"=>"alskdfhaoeihfjqew", "post"=>{"title"=>"Work post", "content"=>"alskdfhaoeihfjqew"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Work post"], ["content", "alskdfhaoeihfjqew"], ["user_id", 1], ["created_at", "2018-02-09 16:15:07.987689"], ["updated_at", "2018-02-09 16:15:07.987689"]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Post (0.75ms)
+Completed 200 OK in 31ms (Views: 1.9ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/api/v1/posts/1" for 127.0.0.1 at 2018-02-09 11:16:01 -0500
+Processing by Api::V1::PostsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (16.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (8.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (79.69ms)
+Completed 200 OK in 215ms (Views: 99.7ms | ActiveRecord: 45.2ms)
+
+
+Started POST "/api/v1/posts/1/comments" for 127.0.0.1 at 2018-02-09 11:16:11 -0500
+Processing by Api::V1::CommentsController#create as */*
+  Parameters: {"comment"=>{"body"=>"Does this work"}, "post_id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (5.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (28.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Does this work"], ["user_id", 1], ["post_id", 1], ["created_at", "2018-02-09 16:16:11.743856"], ["updated_at", "2018-02-09 16:16:11.743856"]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 1]]
+No serializer found for resource: #<Comment id: 1, body: "Everyone I know is riding out.", user_id: 1, post_id: 1, created_at: "2018-02-06 03:18:25", updated_at: "2018-02-06 03:18:25">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comment::ActiveRecord_Associations_CollectionProxy (1.96ms)
+Completed 200 OK in 99ms (Views: 20.9ms | ActiveRecord: 43.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 11:16:44 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (38.7ms)
+  [1m[36mUser Load (87.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 500ms (Views: 391.8ms | ActiveRecord: 87.0ms)
+
+

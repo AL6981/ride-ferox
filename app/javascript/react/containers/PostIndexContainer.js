@@ -33,7 +33,7 @@ class PostIndexContainer extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState({posts: body})
+      this.setState({posts: this.state.posts.concat(body)})
     })
   }
 
