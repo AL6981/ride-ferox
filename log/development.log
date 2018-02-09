@@ -13427,3 +13427,99 @@ Migrating to CreateAddLocation (20180207181010)
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "location" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2018-02-07 22:10:41.547260"], ["location", "Chelsea, MA"], ["id", 1]]
   [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2018-02-09 09:35:41 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 6061ms (Views: 6056.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-09 09:38:07 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (119.9ms)
+Completed 200 OK in 1216ms (Views: 579.0ms | ActiveRecord: 98.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-09 09:38:17 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/2Dxn2gvAOYjxxXItQ+nvR186gTO0e2Ml62O9YVQZJH3dVembBBfSna7YjsbBc0KBZ4mzSOlutEVQTz5+7Xb9g==", "user"=>{"email"=>"admin@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (65.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  [1m[35m (8.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (35.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-02-09 14:38:17.655946"], ["last_sign_in_at", "2018-02-07 18:53:10.377176"], ["sign_in_count", 5], ["updated_at", "2018-02-09 14:38:17.671492"], ["id", 1]]
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 473ms (ActiveRecord: 134.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 09:38:17 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (124.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 453ms (Views: 322.1ms | ActiveRecord: 124.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 09:38:20 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (100.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 659ms (Views: 551.1ms | ActiveRecord: 100.7ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-09 09:38:29 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (26.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (2.45ms)
+Completed 200 OK in 121ms (Views: 64.5ms | ActiveRecord: 42.0ms)
+
+
+Started POST "/api/v1/posts" for 127.0.0.1 at 2018-02-09 09:38:38 -0500
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"title"=>"New Post", "content"=>"Stuff", "post"=>{"title"=>"New Post", "content"=>"Stuff"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (30.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "New Post"], ["content", "Stuff"], ["user_id", 1], ["created_at", "2018-02-09 14:38:38.323181"], ["updated_at", "2018-02-09 14:38:38.323181"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Integer (0.15ms)
+Completed 200 OK in 91ms (Views: 16.4ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-02-09 09:38:40 -0500
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"posts"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 89.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-09 09:38:42 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (3.23ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/posts/1" for 127.0.0.1 at 2018-02-09 09:38:44 -0500
+Processing by Api::V1::PostsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (4.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (67.39ms)
+Completed 200 OK in 147ms (Views: 56.0ms | ActiveRecord: 49.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-09 09:38:50 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 125.2ms | ActiveRecord: 4.5ms)
+
+
