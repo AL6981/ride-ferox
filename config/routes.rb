@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  
+
 
   resources :posts, only: [] do
     resources :comments, only: []
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      resources :maps, only: [:index, :create]
       resources :users, only: [:index, :show]
       resources :posts do
         resources :comments, only: [:show, :create, :edit, :update, :destroy]
