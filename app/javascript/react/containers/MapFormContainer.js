@@ -31,18 +31,20 @@ class MapFormContainer extends Component {
 
   render(){
     return (
-      <div>
+      <div className="map-form-border">
         <input
           placeholder='... add starting location'
           type='text'
           value={this.state.startingLocation}
           onChange={this.handleStartChange}
+          className="start-form"
         />
         <input
           placeholder='... add ending location'
           type='text'
           value={this.state.endingLocation}
           onChange={this.handleEndChange}
+          className="end-form"
         />
         <button className="button-sml" type="submit" value="Submit" onClick={this.handleFormSubmit}>Map Route</button>
       </div>

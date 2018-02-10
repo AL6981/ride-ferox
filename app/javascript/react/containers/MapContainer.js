@@ -79,8 +79,7 @@ class MapContainer extends Component {
   render(){
     return(
       <div>
-        <div>
-          <h1>Map</h1>
+        <div className="map-title">FeRox Route Planner
           <div id='map'></div>
         </div>
         <div>
