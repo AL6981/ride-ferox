@@ -10,7 +10,7 @@ class MapContainer extends Component {
      ending: ''
     }
     this.initMap=this.initMap.bind(this)
-    this.reInitMap=this.reInitMap.bind(this)
+    this.calcRoute=this.calcRoute.bind(this)
     this.handleCoordChange=this.handleCoordChange.bind(this)
     this.buildMap=this.buildMap.bind(this)
     this.reBuildMap=this.reBuildMap.bind(this)
@@ -36,21 +36,32 @@ class MapContainer extends Component {
     if (this.state.starting != '' && this.state.ending != '') {
       let start = this.state.starting;
       let end = this.state.ending;
+      let directionsDisplay = new google.maps.DirectionsRenderer();
       let map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
-        center: {lat: 42.3611, lng: -71.0570}
+        zoom: 12,
+        center: start
       });
+      directionsDisplay.setMap(map);
       let startMarker = new google.maps.Marker({
         position: start,
         map: map
       });
-debugger
       let endMarker = new google.maps.Marker({
         position: end,
         map: map
       });
-debugger
-      console.log('working?')
+      let directionsService = new google.maps.DirectionsService();
+      let request = {
+      origin: start,
+      destination: end,
+      travelMode: 'DRIVING'
+      };
+      directionsService.route(request, function(result, status) {
+        if (status == 'OK') {
+          directionsDisplay.setDirections(result);
+        }
+        debugger
+      });
     } else {
       let map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
@@ -59,19 +70,11 @@ debugger
     }
   }
 
-  reInitMap() {
+  calcRoute() {
     let start = this.state.starting
     let end = this.state.ending
 
-    let startMarker = new google.maps.Marker({
-      position: {start}
-    });
-    let endMarker = new google.maps.Marker({
-      position: {end}
-    });
 
-    startMarker.setMap(map);
-    endMarker.setMap(map);
   }
 
   handleCoordChange(formPayload){
@@ -93,8 +96,8 @@ debugger
         ending: body.results[0].geometry.location
       })
     })
-    console.log(this.state.starting)
     this.buildMap()
+    this.calcRoute()
   }
 
   render(){
