@@ -1,18 +1,27 @@
-#map {
+.map-container {
+	display: grid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  .map-title {
+    justify-content: center;
+    align-content: center;
+    grid-column: span 5;
+    color: #BF5194;
+    font-family: 'Courgette', cursive;
+    font-size: 2em;
+    padding: 10px;
+  }
+}
+
+.map {
   border: 1px solid darkgrey;
-  width: 400px;
   height: 400px;
-  margin-left: 40px;
   margin-bottom: 20px;
 }
 
-.map-title {
-  align-content: center;
-  color: #BF5194;
-  font-family: 'Courgette', cursive;
-  font-size: 2em;
-  padding: 10px;
-}
 
 .map-form-border {
   border: 1px solid #BF5194;
@@ -20,6 +29,7 @@
 	padding-top: 15px;
 	padding-left: 5px;
 	padding-right: 5px;
+  width: 200px;
   margin-left: 40px;
   margin-right: 40px;
   margin-bottom: 20px;
@@ -35,7 +45,4 @@
 		padding-bottom: 5px;
 		padding-top: 5px;
 	}
-}
-.start-form {
-
 }

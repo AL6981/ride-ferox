@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import PostTile from '../components/PostTile';
 import PostsFormContainer from './PostsFormContainer';
 
@@ -50,6 +51,11 @@ class PostIndexContainer extends Component {
 
     return(
       <div>
+        <div className="link-tabs">
+          <Link className="fa fa-map fa-2x" to={`/maps`}/>
+          <Link className="fa fa-comments fa-2x" to={`/posts`} />
+          <i className="fa fa-sliders fa-2x"/>
+        </div>
         <div className="post-container">
           <div className="forum-title">FeRox Forum</div>
             <div className="post-tile-container">
