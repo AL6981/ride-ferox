@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import UserDetailComponent from '../components/UserDetailComponent';
 
 class UserShowContainer extends React.Component {
@@ -25,9 +26,13 @@ class UserShowContainer extends React.Component {
   }
 
   render() {
-
-
     return(
+      <div>
+      <div className="link-tabs">
+        <Link className="fa fa-map fa-2x" to={`/maps`}/>
+        <Link className="fa fa-comments fa-2x" to={`/posts`} />
+        <Link className="fa fa-users fa-2x" to={`/users`} />
+      </div>
       <div className="user-show-container">
         <div className="user-show-tile">
           <UserDetailComponent
@@ -38,6 +43,7 @@ class UserShowContainer extends React.Component {
           />
         </div>
       </div>
+    </div>
     )
   }
 }

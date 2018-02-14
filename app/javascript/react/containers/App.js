@@ -6,6 +6,7 @@ import PostShowContainer from './PostShowContainer';
 import PostsFormContainer from './PostsFormContainer';
 import UserIndexContainer from './UserIndexContainer';
 import UserShowContainer from './UserShowContainer';
+import MapContainer from './MapContainer';
 
 const App = props => {
   return (
@@ -15,6 +16,7 @@ const App = props => {
         <Route path='/posts/:id' component={PostShowContainer} />
         <Route path='/users' component={UserIndexContainer}/>
         <Route path='/users/:id' component={UserShowContainer} />
+        <Route path='/maps' component={MapContainer} />
       </Router>
   )
 }

@@ -15,7 +15,6 @@ const CommentTile = props => {
     <div className="comment-fields-container">
       <div className={postcn}>
         {props.body}
-        <a className="button" href={`/posts/${props.postId}/comments/${props.id}/edit`}>Edit</a>
       </div>
     </div>
   )

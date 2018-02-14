@@ -25,16 +25,16 @@ a {
 }
 
 a:hover {
-  color: #BF5194;
+  color: #694CE2;
 }
 
 .flash.flash-notice {
-  color:  #BF5194;
+  color:  #694CE2;
   font-family: 'Courgette', cursive;
   margin-left: 10px;
 }
 .flash.flash-alert {
-  color:  #BF5194;
+  color:  #694CE2;
   font-family: 'Courgette', cursive;
   margin-left: 10px;
 }

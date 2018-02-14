@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
 
+  acts_as_mappable :auto_geocode=>{:field=>:location, :error_message=>'Could not geocode address'}
+
   def admin?
     role == "admin"
   end
@@ -14,4 +16,5 @@ class User < ApplicationRecord
   def member?
     role == "member"
   end
+
 end

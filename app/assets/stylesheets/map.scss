@@ -1,72 +1,61 @@
-.panel > div {
-  border-radius: 0 !important;
-}
-
-$panel-width:  500px;
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-#app,
-#app {
-  width: 100%;
-  height: 100%;
-}
-
-#app__interface {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  width: $panel-width;
-  z-index: 99;
-  margin-left: -($panel-width / 2);
-}
-
-#map {
-  width: 100%;
-  height: 100%;
-}
-
-form .input-group {
-  width: 310px;
-}
-
-.panel {
-  width: $panel-width;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.weather {
-  position: relative;
-  border-top: 1px solid #ddd;
+.map-container {
+	display: grid;
   padding-top: 20px;
   padding-bottom: 20px;
-
-  p {
-    max-width: 80%;
-  }
+  margin-left: 20px;
+  margin-right: 20px;
+  grid-template-columns: 1fr;
 }
 
-.weather__icon {
-  position: absolute;
-  right: 15px;
-  bottom: 20px;
-  width: 50px;
-  height: 50px;
-  margin-left: -25px;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0px 1px 0px #ddd;
+.map-title {
+	text-align: center;
+	color: #694CE2;
+	text-shadow:
+	 0 1px 0 #ccc,
+   0 2px 0 #c9c9c9,
+   0 3px 0 #bbb,
+   0 4px 0 #b9b9b9,
+   0 5px 0 #aaa,
+   0 6px 1px rgba(0,0,0,.1),
+   0 0 5px rgba(0,0,0,.1),
+   0 1px 3px rgba(0,0,0,.3),
+   0 3px 5px rgba(0,0,0,.2),
+   0 5px 10px rgba(0,0,0,.25),
+   0 10px 10px rgba(0,0,0,.2),
+   0 20px 20px rgba(0,0,0,.15);
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	font-size: 2em;
+	padding: 10px;
+}
 
-  & > img {
-    width: 40px;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 5px;
-    opacity: 0.4;
-  }
+.map {
+  border: 1px solid darkgrey;
+  height: 600px;
+  margin-bottom: 20px;
+}
+
+
+.map-form-border {
+  border: 3px ridge #528FD5;
+	border-radius: 5px;
+	padding-top: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+	background-color: #AAAAAA;
+  button {
+		background-color: white;
+		font-family: 'Lato', sans-serif;
+		font-weight: 600;
+		color: #694CE2;
+		border: 2px solid #528FD5;
+		border-radius: 5px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
 }

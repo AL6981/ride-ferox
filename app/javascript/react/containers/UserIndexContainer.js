@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import UserTile from '../components/UserTile';
 
 class UserIndexContainer extends Component {
@@ -30,13 +31,20 @@ class UserIndexContainer extends Component {
     })
 
     return(
-      <div className="user-container">
-        <div className="users-title">FeRox Community Members</div>
-          <div className="user-tile-container">
-            <h5>Member List</h5>
-              {users}
-          </div>
-          <h5>Chat with another Roxxer</h5>
+      <div>
+        <div className="link-tabs">
+          <Link className="fa fa-map fa-2x" to={`/maps`}/>
+          <Link className="fa fa-comments fa-2x" to={`/posts`} />
+          <Link className="fa fa-users fa-2x" to={`/users`} />
+        </div>
+        <div className="user-container">
+          <div className="users-title">FeRox Community Members</div>
+            <div className="user-tile-container">
+              <h5>Member List</h5>
+                {users}
+            </div>
+            <h5>Chat with another Roxxer</h5>
+        </div>
       </div>
     )
   }

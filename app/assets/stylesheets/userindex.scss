@@ -6,30 +6,47 @@
   padding-bottom: 20px;
   margin-left: 40px;
   margin-right: 40px;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .users-title {
-	grid-column: 5 / 9;
-	color: #BF5194;
-	font-family: 'Courgette', cursive;
+	text-align: center;
+	color: #694CE2;
+	text-shadow:
+	 0 1px 0 #ccc,
+   0 2px 0 #c9c9c9,
+   0 3px 0 #bbb,
+   0 4px 0 #b9b9b9,
+   0 5px 0 #aaa,
+   0 6px 1px rgba(0,0,0,.1),
+   0 0 5px rgba(0,0,0,.1),
+   0 1px 3px rgba(0,0,0,.3),
+   0 3px 5px rgba(0,0,0,.2),
+   0 5px 10px rgba(0,0,0,.25),
+   0 10px 10px rgba(0,0,0,.2),
+   0 20px 20px rgba(0,0,0,.15);
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
   font-size: 2em;
   margin-left: 40px;
   margin-right: 40px;
   padding: 10px;
 }
 
-// Individual Post Styling
+// Individual User Styling
 
 .user-tile-container {
-  grid-column-start: span 5;
+  width: 300px;
+	justify-content: start;
   margin-left: 40px;
 }
 
 h5 {
-	color: #BF5194;
-	font-family: 'Courgette', cursive;
+	color: #694CE2;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
 	justify-content: center;
+	margin-top: 20px;
 }
 
 .fa.fa-motorcycle {
