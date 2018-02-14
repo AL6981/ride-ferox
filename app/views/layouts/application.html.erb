@@ -10,6 +10,7 @@
   </head>
 
   <body>
+
      <nav class="nav-container">
        <div class="nav-name">
          <%= link_to image_tag("rideoutside.png", alt: "Ride Outside the Lines"), root_path %>
@@ -24,7 +25,8 @@
            <% end %>
            <div class="nav-button"><%= link_to 'Logout', destroy_user_session_path, class: "fa fa-sign-out fa-3x", method: :delete %></div>
          <%- else -%>
-           <div class="nav-button"><%= link_to 'Join', new_user_registration_path, class: "fa fa-user-plus fa-3x" %></div>
+           <div class="nav-button"><%= link_to 'Join', user_facebook_omniauth_authorize_path, class: "fa fa-user-plus fa-3x" %></div>
+
            <div class="nav-button"><%= link_to 'Login', new_user_session_path, class: "fa fa-sign-in fa-3x" %></div>
          <%- end -%>
        </div>

@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -59,3 +59,4 @@ gem 'webpacker', '~> 3.0.2'
 gem 'active_model_serializers'
 gem "font-awesome-rails"
 gem 'geokit-rails'
+gem 'omniauth-facebook'

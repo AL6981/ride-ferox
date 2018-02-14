@@ -18203,3 +18203,803 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 86ms (Views: 83.3ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6900909870902587890)[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddOmniauthToUsers (20180214162508)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (39.3ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" character varying[0m
+  [1m[35m (25.9ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_provider" ON "users"  ("provider")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" character varying[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_uid" ON "users"  ("uid")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180214162508"]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6900909870902587890)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-02-14 11:36:32 -0500
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/amylynn/challenges/ride-ferox/app/controllers/application_controller.rb:4: syntax error, unexpected '\n', expecting =>):
+  
+app/controllers/application_controller.rb:4: syntax error, unexpected '\n', expecting =>
+app/controllers/homes_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-02-14 11:37:11 -0500
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 146ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenicate_user!' for #<HomesController:0x007ffa07020518>
+Did you mean?  authenticate_user!):
+  
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-14 11:38:18 -0500
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 175ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenicate_user!' for #<HomesController:0x007ffa03782f58>
+Did you mean?  authenticate_user!):
+  
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-14 11:38:22 -0500
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 117ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenicate_user!' for #<HomesController:0x007ffa0608ecd0>
+Did you mean?  authenticate_user!):
+  
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-14 11:38:39 -0500
+  
+SyntaxError (/Users/amylynn/challenges/ride-ferox/app/controllers/application_controller.rb:4: syntax error, unexpected '\n', expecting =>):
+  
+app/controllers/application_controller.rb:4: syntax error, unexpected '\n', expecting =>
+app/controllers/homes_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-02-14 11:38:41 -0500
+  
+SyntaxError (/Users/amylynn/challenges/ride-ferox/app/controllers/application_controller.rb:4: syntax error, unexpected '\n', expecting =>):
+  
+app/controllers/application_controller.rb:4: syntax error, unexpected '\n', expecting =>
+app/controllers/homes_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-02-14 11:38:55 -0500
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 199ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenicate_user!' for #<HomesController:0x007ffa060e80f0>
+Did you mean?  authenticate_user!):
+  
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-14 11:38:59 -0500
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 119ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenicate_user!' for #<HomesController:0x007ffa04258748>
+Did you mean?  authenticate_user!):
+  
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-14 11:39:07 -0500
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-14 11:39:07 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 6685ms (Views: 6585.3ms | ActiveRecord: 34.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-14 11:43:50 -0500
+  
+ArgumentError (Invalid route name, already in use: 'user_facebook_omniauth_authorize' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:4:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-14 11:44:06 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 185ms (Views: 132.0ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-14 11:44:09 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 252ms (Views: 249.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-02-14 11:44:18 -0500
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-02-14 11:56:43 -0500
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-02-14 11:57:18 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 241ms (Views: 228.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-02-14 12:48:41 -0500
+Started GET "/" for 127.0.0.1 at 2018-02-14 12:55:17 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 30ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-14 12:55:18 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 4217ms (Views: 4138.6ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-02-14 12:55:28 -0500
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-14 12:56:40 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 3897ms (Views: 3830.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-02-14 12:56:48 -0500
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-02-14 12:58:55 -0500
+Started GET "/" for 127.0.0.1 at 2018-02-14 12:59:09 -0500
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-14 12:59:09 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (8.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 226ms (Views: 220.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-02-14 12:59:20 -0500
+Started GET "/" for 127.0.0.1 at 2018-02-14 13:01:40 -0500
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-14 13:01:40 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 200ms (Views: 184.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-02-14 13:01:43 -0500
+Started GET "/users/auth/facebook/callback?code=AQAznL5SZDWQaG99tUpykGPpwKmkvXrzz5Zs9TEskrYB82gkb-jMZD9OJwFeyp5u-Sn9NRq3sRgWbtYNnv5y08F1hypwTtTWXVQ4WFnr3eCpBfc9gWgc-JSUpzK4I-5kzfnpfUt9F4etbG8WUVDduj-ntX-fbId37kXp24WRrb1ppGM1KVYx_lzguSNQrkMds7KcHaH8dqTPr0VJoe-K65CTMfW0qYsmOAOAXeVhGDoKFMd0ZQL0qKW7nV9xXHWGPO5A9UvPGEO274zXh10FOOpdVcycMOLvxEfICheSU6BpMdp3LlKlTdIGz6Rrph4Ht-8&state=8114ef2cb322bf4415ff0b784f976d56dac566070cc8ec3d" for 127.0.0.1 at 2018-02-14 13:02:02 -0500
+  
+ActionController::RoutingError (uninitialized constant Users):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:415:in `call_app!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:369:in `callback_phase'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:75:in `callback_phase'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.2) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/auth/facebook/callback?code=AQAznL5SZDWQaG99tUpykGPpwKmkvXrzz5Zs9TEskrYB82gkb-jMZD9OJwFeyp5u-Sn9NRq3sRgWbtYNnv5y08F1hypwTtTWXVQ4WFnr3eCpBfc9gWgc-JSUpzK4I-5kzfnpfUt9F4etbG8WUVDduj-ntX-fbId37kXp24WRrb1ppGM1KVYx_lzguSNQrkMds7KcHaH8dqTPr0VJoe-K65CTMfW0qYsmOAOAXeVhGDoKFMd0ZQL0qKW7nV9xXHWGPO5A9UvPGEO274zXh10FOOpdVcycMOLvxEfICheSU6BpMdp3LlKlTdIGz6Rrph4Ht-8&state=8114ef2cb322bf4415ff0b784f976d56dac566070cc8ec3d" for 127.0.0.1 at 2018-02-14 13:03:18 -0500
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"code"=>"AQAznL5SZDWQaG99tUpykGPpwKmkvXrzz5Zs9TEskrYB82gkb-jMZD9OJwFeyp5u-Sn9NRq3sRgWbtYNnv5y08F1hypwTtTWXVQ4WFnr3eCpBfc9gWgc-JSUpzK4I-5kzfnpfUt9F4etbG8WUVDduj-ntX-fbId37kXp24WRrb1ppGM1KVYx_lzguSNQrkMds7KcHaH8dqTPr0VJoe-K65CTMfW0qYsmOAOAXeVhGDoKFMd0ZQL0qKW7nV9xXHWGPO5A9UvPGEO274zXh10FOOpdVcycMOLvxEfICheSU6BpMdp3LlKlTdIGz6Rrph4Ht-8", "state"=>"8114ef2cb322bf4415ff0b784f976d56dac566070cc8ec3d"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-14 13:03:19 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 174ms (Views: 120.0ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-02-14 13:03:31 -0500
+Started GET "/users/auth/facebook/callback?code=AQAVZqwPmgB4vtFM71BtcCJOlTIdi2dO5Oz62Wfy8cEX2OHGA-RPKccPmF_wuVwVhbetwXVXqAdg80WkkiGsgHLadxAYAEKIOhJo6JlwETv29uT3BmbSaaa7nVYslhAljyyfy-HY-pmP_4BgHXoT1SmBHry3_Rp9axZFs9CY1jZUOcwAfPUJifhTUOk1LpIZX7gIJ6EKToeYfLrDTTGm-h6mmXiTMYSUlYNKzGBs4uFeucRcpuIevtEYdgqSOw9VGmjjoKNFFXvZDt6Eaw5GJYLDAFGwCXAkmLR_l9Ie5VyrFO16XG2Ibe5-9kQIeDRNFuw&state=7d590499e73b1aac4552e19d7aa303030191cdf05cab007c" for 127.0.0.1 at 2018-02-14 13:03:31 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAVZqwPmgB4vtFM71BtcCJOlTIdi2dO5Oz62Wfy8cEX2OHGA-RPKccPmF_wuVwVhbetwXVXqAdg80WkkiGsgHLadxAYAEKIOhJo6JlwETv29uT3BmbSaaa7nVYslhAljyyfy-HY-pmP_4BgHXoT1SmBHry3_Rp9axZFs9CY1jZUOcwAfPUJifhTUOk1LpIZX7gIJ6EKToeYfLrDTTGm-h6mmXiTMYSUlYNKzGBs4uFeucRcpuIevtEYdgqSOw9VGmjjoKNFFXvZDt6Eaw5GJYLDAFGwCXAkmLR_l9Ie5VyrFO16XG2Ibe5-9kQIeDRNFuw", "state"=>"7d590499e73b1aac4552e19d7aa303030191cdf05cab007c"}
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10156094418872512"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+Multi geocoding. address: , args []
+Google geocoding. address: , args []
+Us geocoding. address: , args []
+  [1m[36mUser Exists (13.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "roguerider7@aol.com"], ["LIMIT", 1]]
+  [1m[35m (11.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Multi geocoding. address: , args []
+Google geocoding. address: , args []
+Us geocoding. address: , args []
+Caught an error during Us geocoding call: Failed to open TCP connection to geocoder.us:80 (getaddrinfo: nodename nor servname provided, or not known)
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/net/http.rb:906:in `rescue in block in connect'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/net/http.rb:903:in `block in connect'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/timeout.rb:93:in `block in timeout'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/timeout.rb:103:in `timeout'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/net/http.rb:902:in `connect'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/net/http.rb:887:in `do_start'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/net/http.rb:876:in `start'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-1.11.0/lib/geokit/net_adapter/net_http.rb:22:in `do_get'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-1.11.0/lib/geokit/geocoders.rb:163:in `do_get'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-1.11.0/lib/geokit/geocoders.rb:140:in `block in call_geocoder_service'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/timeout.rb:93:in `block in timeout'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/timeout.rb:33:in `block in catch'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/timeout.rb:33:in `catch'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/timeout.rb:33:in `catch'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/timeout.rb:108:in `timeout'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-1.11.0/lib/geokit/geocoders.rb:140:in `call_geocoder_service'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-1.11.0/lib/geokit/geocoders.rb:191:in `process'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-1.11.0/lib/geokit/geocoders/us_geocoder.rb:12:in `do_geocode'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-1.11.0/lib/geokit/geocoders.rb:90:in `geocode'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-1.11.0/lib/geokit/multi_geocoder.rb:34:in `block in do_geocode'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-1.11.0/lib/geokit/multi_geocoder.rb:31:in `each'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-1.11.0/lib/geokit/multi_geocoder.rb:31:in `do_geocode'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-1.11.0/lib/geokit/geocoders.rb:90:in `geocode'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/geokit-rails-2.3.0/lib/geokit-rails/acts_as_mappable.rb:369:in `auto_geocode_address'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:413:in `block in make_lambda'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:178:in `block (2 levels) in halting_and_conditional'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:601:in `block (2 levels) in default_terminator'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:600:in `catch'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:600:in `block in default_terminator'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:179:in `block in halting_and_conditional'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `block in invoke_before'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `each'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:507:in `invoke_before'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:130:in `run_callbacks'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:827:in `_run_validation_callbacks'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activemodel-5.1.4/lib/active_model/validations/callbacks.rb:110:in `run_validations!'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activemodel-5.1.4/lib/active_model/validations.rb:335:in `valid?'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/validations.rb:65:in `valid?'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/validations.rb:82:in `perform_validations'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/validations.rb:44:in `save'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/attribute_methods/dirty.rb:35:in `save'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/transactions.rb:308:in `block (2 levels) in save'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/transactions.rb:384:in `block in with_transaction_returning_status'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+/Users/amylynn/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/transactions.rb:381:in `with_transaction_returning_status'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/transactions.rb:308:in `block in save'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/transactions.rb:323:in `rollback_active_record_state!'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/transactions.rb:307:in `save'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/suppressor.rb:42:in `save'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/devise-4.4.0/lib/devise/models/trackable.rb:35:in `update_tracked_fields!'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/devise-4.4.0/lib/devise/hooks/trackable.rb:9:in `block in <top (required)>'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/warden-1.2.7/lib/warden/hooks.rb:15:in `block in _run_callbacks'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/warden-1.2.7/lib/warden/hooks.rb:10:in `each'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/warden-1.2.7/lib/warden/hooks.rb:10:in `_run_callbacks'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/warden-1.2.7/lib/warden/manager.rb:52:in `_run_callbacks'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/warden-1.2.7/lib/warden/proxy.rb:180:in `set_user'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/devise-4.4.0/lib/devise/controllers/sign_in_out.rb:47:in `sign_in'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/devise-4.4.0/lib/devise/controllers/helpers.rb:239:in `sign_in_and_redirect'
+/Users/amylynn/challenges/ride-ferox/app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:186:in `process_action'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:131:in `run_callbacks'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_controller/metal/rescue.rb:20:in `process_action'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:124:in `process'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.4/lib/action_view/rendering.rb:30:in `process'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_controller/metal.rb:189:in `dispatch'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_controller/metal.rb:253:in `dispatch'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/routing/mapper.rb:46:in `serve'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `each'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/journey/router.rb:33:in `serve'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/omniauth-1.8.1/lib/omniauth/strategy.rb:415:in `call_app!'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/omniauth-1.8.1/lib/omniauth/strategy.rb:369:in `callback_phase'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/omniauth-oauth2-1.5.0/lib/omniauth/strategies/oauth2.rb:75:in `callback_phase'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/omniauth-facebook-4.0.0/lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/omniauth-facebook-4.0.0/lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/omniauth-facebook-4.0.0/lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/omniauth-1.8.1/lib/omniauth/strategy.rb:236:in `callback_call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/omniauth-1.8.1/lib/omniauth/strategy.rb:188:in `call!'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/omniauth-1.8.1/lib/omniauth/strategy.rb:168:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/warden-1.2.7/lib/warden/manager.rb:36:in `block in call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/warden-1.2.7/lib/warden/manager.rb:35:in `catch'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/warden-1.2.7/lib/warden/manager.rb:35:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/rack-2.0.3/lib/rack/etag.rb:25:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/rack-2.0.3/lib/rack/conditional_get.rb:25:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/rack-2.0.3/lib/rack/head.rb:12:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:232:in `context'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:226:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/migration.rb:556:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/rack/logger.rb:36:in `call_app'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `block in call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/static.rb:125:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/webpacker-3.0.2/lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/rack-proxy-0.6.3/lib/rack/proxy.rb:57:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/engine.rb:522:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/puma-3.11.2/lib/puma/configuration.rb:225:in `call'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/puma-3.11.2/lib/puma/server.rb:624:in `handle_request'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/puma-3.11.2/lib/puma/server.rb:438:in `process_client'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/puma-3.11.2/lib/puma/server.rb:302:in `block in run'
+/Users/amylynn/.rvm/gems/ruby-2.4.1/gems/puma-3.11.2/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "roguerider7@aol.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 20680ms (ActiveRecord: 42.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-14 13:03:52 -0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 95ms (Views: 91.0ms | ActiveRecord: 0.6ms)
+
+
