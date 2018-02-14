@@ -2,34 +2,48 @@
 
 .post-container {
 	display: grid;
+	justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-left: 40px;
   margin-right: 40px;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .forum-title {
-	grid-column: 5 / 9;
-	color: #BF5194;
-	font-family: 'Courgette', cursive;
+	text-align: center;
+	color: #694CE2;
+	text-shadow:
+	 0 1px 0 #ccc,
+   0 2px 0 #c9c9c9,
+   0 3px 0 #bbb,
+   0 4px 0 #b9b9b9,
+   0 5px 0 #aaa,
+   0 6px 1px rgba(0,0,0,.1),
+   0 0 5px rgba(0,0,0,.1),
+   0 1px 3px rgba(0,0,0,.3),
+   0 3px 5px rgba(0,0,0,.2),
+   0 5px 10px rgba(0,0,0,.25),
+   0 10px 10px rgba(0,0,0,.2),
+   0 20px 20px rgba(0,0,0,.15);
+  font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
   font-size: 2em;
-  margin-left: 40px;
-  margin-right: 40px;
   padding: 10px;
 }
 
 // Individual Post Styling
 
 .post-tile-container {
-  grid-column-start: span 5;
   margin-left: 40px;
+  margin-right: 40px;
 }
 
-h5 {
-	color: #BF5194;
-	font-family: 'Courgette', cursive;
-	justify-content: center;
+.tile-title {
+	color: #694CE2;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	text-align: center;
 }
 
 .fa.fa-motorcycle {
@@ -72,12 +86,14 @@ h5 {
 
 .new-post-form {
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
+	grid-template-columns: 1fr;
+	justify-content: center;
 	button {
 		background-color: transparent;
-		font-family: 'Courgette', cursive;
-		color: #BF5194;
-		border: 1px solid #BF5194;
+		font-family: 'Josefin Sans', sans-serif;
+		font-weight: 600;
+		color: #694CE2;
+		border: 2px solid #528FD5;
 		border-radius: 5px;
 		padding-left: 8px;
 		padding-right: 8px;
@@ -88,19 +104,20 @@ h5 {
 		}
 	}
   margin-left: 40px;
+  margin-right: 80px;
 }
 
 .fields-container {
-	grid-column-start: span 5;
 	margin-left: 40px;
-	font-family: 'Courgette', cursive;
-	color: #BF5194;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	color: #694CE2;
 	font-size: 1.5em;
 	padding-bottom: 5px;
 }
 
 .form-border {
-	border: 1px solid #BF5194;
+	border: 3px ridge #528FD5;
 	border-radius: 5px;
 	padding-top: 15px;
 	padding-left: 5px;

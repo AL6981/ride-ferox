@@ -7,10 +7,11 @@ class MapContainer extends Component {
     super(props)
     this.state={
      starting: '',
-     ending: ''
+     ending: '',
+     userLocations: ''
     }
     this.initMap=this.initMap.bind(this)
-    this.calcRoute=this.calcRoute.bind(this)
+    this.reInitMap=this.reInitMap.bind(this)
     this.handleCoordChange=this.handleCoordChange.bind(this)
     this.buildMap=this.buildMap.bind(this)
     this.reBuildMap=this.reBuildMap.bind(this)
@@ -18,6 +19,13 @@ class MapContainer extends Component {
 
   componentDidMount() {
     this.buildMap()
+  }
+
+  initMap() {
+    let map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: {lat: 42.3611, lng: -71.0570}
+    });
   }
 
   buildMap(){
@@ -32,7 +40,7 @@ class MapContainer extends Component {
     console.log('reBuildmap!')
   }
 
-  initMap() {
+  reInitMap() {
     if (this.state.starting != '' && this.state.ending != '') {
       let start = this.state.starting;
       let end = this.state.ending;
@@ -42,14 +50,6 @@ class MapContainer extends Component {
         center: start
       });
       directionsDisplay.setMap(map);
-      let startMarker = new google.maps.Marker({
-        position: start,
-        map: map
-      });
-      let endMarker = new google.maps.Marker({
-        position: end,
-        map: map
-      });
       let directionsService = new google.maps.DirectionsService();
       let request = {
       origin: start,
@@ -60,21 +60,16 @@ class MapContainer extends Component {
         if (status == 'OK') {
           directionsDisplay.setDirections(result);
         }
-        debugger
       });
-    } else {
-      let map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
-        center: {lat: 42.3611, lng: -71.0570}
-      });
+      fetch('api/v1/users'
+      )
+      .then(response => response.json())
+      .then(body => {
+        this.setState({
+          userLocations: body
+        })
+      })
     }
-  }
-
-  calcRoute() {
-    let start = this.state.starting
-    let end = this.state.ending
-
-
   }
 
   handleCoordChange(formPayload){
@@ -96,8 +91,7 @@ class MapContainer extends Component {
         ending: body.results[0].geometry.location
       })
     })
-    this.buildMap()
-    this.calcRoute()
+    this.reBuildMap()
   }
 
   render(){
@@ -106,15 +100,15 @@ class MapContainer extends Component {
         <div className="link-tabs">
           <Link className="fa fa-map fa-2x" to={`/maps`}/>
           <Link className="fa fa-comments fa-2x" to={`/posts`} />
-          <i className="fa fa-sliders fa-2x"/>
+          <Link className="fa fa-users fa-2x" to={`/users`} />
         </div>
         <div className="map-container">
         <div className="map-title">FeRox Route Planner</div>
         <div className="wrap-map">
-          <div className="map" id='map'></div>
           <MapFormContainer
           handleCoordChange={this.handleCoordChange}
           />
+          <div className="map" id='map'></div>
         </div>
         </div>
       </div>

@@ -52,34 +52,32 @@ class PostShowContainer extends React.Component {
         <div className="link-tabs">
           <Link className="fa fa-map fa-2x" to={`/maps`}/>
           <Link className="fa fa-comments fa-2x" to={`/posts`} />
-          <i className="fa fa-sliders fa-2x"/>
+          <Link className="fa fa-users fa-2x" to={`/users`} />
         </div>
-        let postId = this.props.params.id
-          <div>
-            <div className="show-container">
-              <div className="show-tile">
-                <PostDetailTile
-                  title={this.state.title}
-                  content={this.state.content}
-                />
-              </div>
-            </div>
-            <h5>Comments</h5>
-            <div className="comments-container">
-                <CommentsContainer
-                  comments={this.state.comments}
-                />
-            </div>
-            <div className="comments-form-container">
-                <CommentsFormContainer
-                  addNewComment={this.addNewComment}
-                />
+        <div>
+          <div className="show-container">
+            <div className="show-tile">
+              <PostDetailTile
+                title={this.state.title}
+                content={this.state.content}
+              />
             </div>
           </div>
+          <h5>Comments:</h5>
+          <div className="comments-container">
+              <CommentsContainer
+                comments={this.state.comments}
+              />
+          </div>
+          <div className="comments-form-container">
+              <CommentsFormContainer
+                addNewComment={this.addNewComment}
+              />
+          </div>
         </div>
+      </div>
     )
   }
 }
-
 
 export default PostShowContainer;

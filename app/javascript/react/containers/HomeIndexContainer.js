@@ -18,7 +18,7 @@ const HomeIndexContainer = props => {
       <div className="link-tabs">
         <Link className="fa fa-map fa-2x" to={`/maps`}/>
         <Link className="fa fa-comments fa-2x" to={`/posts`} />
-        <i className="fa fa-sliders fa-2x"/>
+        <Link className="fa fa-users fa-2x" to={`/users`} />
       </div>
       <div className="home-container">
         {homeImages}

@@ -6,35 +6,55 @@
   padding-bottom: 20px;
   margin-left: 40px;
   margin-right: 40px;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr;
 }
 
-.user-show-tile {
-	grid-column: 3 / 10;
+.user-show-username {
+	text-align: center;
   align-content: center;
-  color: #BF5194;
-  font-family: 'Courgette', cursive;
+  color: #694CE2;
+	text-shadow:
+	 0 1px 0 #ccc,
+   0 2px 0 #c9c9c9,
+   0 3px 0 #bbb,
+   0 4px 0 #b9b9b9,
+   0 5px 0 #aaa,
+   0 6px 1px rgba(0,0,0,.1),
+   0 0 5px rgba(0,0,0,.1),
+   0 1px 3px rgba(0,0,0,.3),
+   0 3px 5px rgba(0,0,0,.2),
+   0 5px 10px rgba(0,0,0,.25),
+   0 10px 10px rgba(0,0,0,.2),
+   0 20px 20px rgba(0,0,0,.15);
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
   font-size: 2em;
   padding: 10px;
-  margin-left: 40px;
 }
 
-.user-show-content {
+.user-show-location {
+	text-align: center;
+	color: #528FD5;
+	font-weight: bold;
 	font-family: 'Lato', sans-serif;
-  border: 1px solid #BF5194;
-  min-height: 4rem;
-  justify-content: flex-start;
-  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.user-show-moto {
+	text-align: center;
+	color: #694CE2;
+	font-family: 'Lato', sans-serif;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
 
 h5 {
-	color: #BF5194;
-	font-family: 'Courgette', cursive;
+	color: #694CE2;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
 	justify-content: center;
-  margin-left: 40px;
 }
 
 .comment-dark-container {
@@ -56,26 +76,3 @@ h5 {
 }
 
 //New Comment Form Styling
-
-.user-show-username {
-	align-content: center;
-	margin-left: 40px;
-	font-family: 'Courgette', cursive;
-	color: #BF5194;
-	font-size: 1.5em;
-	padding-bottom: 5px;
-}
-
-.user-show-location {
-	font-family: 'Courgette', cursive;
-  color: #BF5194;
-	font-style: italic;
-}
-
-.user-show-moto {
-	grid-column-start: span 1;
-	min-width: 40px;
-	min-height: 40px;
-	border: 1px solid #444444;
-	font-family: 'Lato', sans-serif;
-}
