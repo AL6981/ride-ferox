@@ -117,3 +117,38 @@ directionsService.route(request, function(result, status) {
 #BF5194   pink
 
   <i className="fa fa-sliders fa-3x"/>
+
+
+application_controller line 2
+  before_action :configure_sign_up_params, if: :devise_controller?
+
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '{1265185803624896}',
+        cookie     : true,
+        xfbml      : true,
+        version    : '{9239cac0df5726a63ed9f4da0931a3fa}'
+      });
+
+      FB.AppEvents.logPageView();
+
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1265185803624896&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
