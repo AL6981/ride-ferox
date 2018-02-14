@@ -8969,11 +8969,11 @@ Completed 401 Unauthorized in 757ms (ActiveRecord: 0.0ms)
 
 
   
-ActionView::Template::Error (The asset "fa fa-sign-in fa-2x" is not present in the asset pipeline.):
+ActionView::Template::Error (The asset "fa fa-sign-in fa-3x" is not present in the asset pipeline.):
     24:            <div class="nav-button"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></div>
     25:          <%- else -%>
     26:            <div class="nav-button"><%= link_to 'Sign Up', new_user_registration_path %></div>
-    27:            <div class="nav-button"><%= link_to image_tag("fa fa-sign-in fa-2x"), new_user_session_path %></div>
+    27:            <div class="nav-button"><%= link_to image_tag("fa fa-sign-in fa-3x"), new_user_session_path %></div>
     28:          <%- end -%>
     29:        </div>
     30:      </nav>
@@ -8991,7 +8991,7 @@ ActionView::Template::Error (undefined method `i_tag' for #<#<Class:0x007f8078c7
     24:            <div class="nav-button"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></div>
     25:          <%- else -%>
     26:            <div class="nav-button"><%= link_to 'Sign Up', new_user_registration_path %></div>
-    27:            <div class="nav-button"><%= link_to i_tag("fa fa-sign-in fa-2x"), new_user_session_path %></div>
+    27:            <div class="nav-button"><%= link_to i_tag("fa fa-sign-in fa-3x"), new_user_session_path %></div>
     28:          <%- end -%>
     29:        </div>
     30:      </nav>
@@ -9009,7 +9009,7 @@ ActionView::Template::Error (undefined method `i_tag' for #<#<Class:0x007f8078c7
     24:            <div class="nav-button"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></div>
     25:          <%- else -%>
     26:            <div class="nav-button"><%= link_to 'Sign Up', new_user_registration_path %></div>
-    27:            <div class="nav-button"><%= link_to i_tag("fa fa-sign-in fa-2x"), new_user_session_path %></div>
+    27:            <div class="nav-button"><%= link_to i_tag("fa fa-sign-in fa-3x"), new_user_session_path %></div>
     28:          <%- end -%>
     29:        </div>
     30:      </nav>
@@ -9122,7 +9122,7 @@ Completed 401 Unauthorized in 156ms (ActiveRecord: 0.0ms)
 
   
 SyntaxError (/Users/amylynn/challenges/ride-ferox/app/views/layouts/application.html.erb:27: syntax error, unexpected tIDENTIFIER, expecting ')'
-Sign In' new_user_session_path, class: "fa fa-sign-in fa-2x"
+Sign In' new_user_session_path, class: "fa fa-sign-in fa-3x"
                               ^):
   
 app/views/layouts/application.html.erb:27: syntax error, unexpected tIDENTIFIER, expecting ')'
@@ -9142,7 +9142,7 @@ Completed 401 Unauthorized in 85ms (ActiveRecord: 0.0ms)
 
   
 SyntaxError (/Users/amylynn/challenges/ride-ferox/app/views/layouts/application.html.erb:26: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
-_user_registration_path class: "fa fa-users fa-2x" );@output
+_user_registration_path class: "fa fa-users fa-3x" );@output
                               ^):
   
 app/views/layouts/application.html.erb:26: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
@@ -17845,3 +17845,361 @@ Google geocoding. address: 140 Market St, San Francisco, CA, args []
 Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22140%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22140%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22street_number%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Market+Street%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Market+St%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22route%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Financial+District%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Financial+District%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22neighborhood%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22San+Francisco%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22SF%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22San+Francisco+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22San+Francisco+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22California%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22CA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%2294105%22%2C%0A+++++++++++++++%22short_name%22+%3A+%2294105%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22postal_code%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22140+Market+St%2C+San+Francisco%2C+CA+94105%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+37.793711%2C%0A+++++++++++++++%22lng%22+%3A+-122.3958948%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22RANGE_INTERPOLATED%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+37.7950599802915%2C%0A++++++++++++++++++%22lng%22+%3A+-122.3945458197085%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+37.7923620197085%2C%0A++++++++++++++++++%22lng%22+%3A+-122.3972437802915%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22EisxNDAgTWFya2V0IFN0LCBTYW4gRnJhbmNpc2NvLCBDQSA5NDEwNSwgVVNB%22%2C%0A+++++++++%22types%22+%3A+%5B+%22street_address%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
 Google geocoding. address: 140 Market St, San Francisco, CA, args []
 Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22140%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22140%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22street_number%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Market+Street%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Market+St%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22route%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Financial+District%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Financial+District%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22neighborhood%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22San+Francisco%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22SF%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22San+Francisco+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22San+Francisco+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22California%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22CA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%2294105%22%2C%0A+++++++++++++++%22short_name%22+%3A+%2294105%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22postal_code%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22140+Market+St%2C+San+Francisco%2C+CA+94105%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+37.793711%2C%0A+++++++++++++++%22lng%22+%3A+-122.3958948%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22RANGE_INTERPOLATED%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+37.7950599802915%2C%0A++++++++++++++++++%22lng%22+%3A+-122.3945458197085%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+37.7923620197085%2C%0A++++++++++++++++++%22lng%22+%3A+-122.3972437802915%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22EisxNDAgTWFya2V0IFN0LCBTYW4gRnJhbmNpc2NvLCBDQSA5NDEwNSwgVVNB%22%2C%0A+++++++++%22types%22+%3A+%5B+%22street_address%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:22:44 -0500
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (74.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 5712ms (Views: 5589.2ms | ActiveRecord: 113.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:24:16 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (20.5ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 692ms (Views: 677.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:24:38 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (39.5ms)
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 745ms (Views: 723.4ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:25:35 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (28.9ms)
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 828ms (Views: 805.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:25:45 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 435ms (Views: 430.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:26:33 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 323ms (Views: 319.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:27:03 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 489ms (Views: 479.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:27:59 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (12.3ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 236ms (Views: 226.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:28:28 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 109.8ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-02-14 09:29:47 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OxnQURazd3tqMzdFGTP7SjDZQIZwX18N2XCRci2K68cus9BUcLNWa8zjfDQlcI20i69rK0qSjgeXYeFOtbDBGA=="}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (24.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 99ms (ActiveRecord: 28.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:29:47 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 116ms (Views: 113.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:29:56 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 80ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-02-14 09:30:23 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 126ms (Views: 123.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-02-14 09:30:52 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZeDOwCjBeU7OuwJnPdbe7ooVqMfDc/znTJkCjbRLIn7lpDsFotoqFkmexiktIpkQ0gMfbj9EersMYsaXnKAcSw==", "user"=>{"email"=>"roguerider7@aol.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"Rogue Rider", "moto"=>"1988 Harley", "location"=>"Shapleigh, ME"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Multi geocoding. address: Shapleigh, ME, args []
+Google geocoding. address: Shapleigh, ME, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Shapleigh%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Shapleigh%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Sanford%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Sanford%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_3%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22York+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22York+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Maine%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22ME%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%2204076%22%2C%0A+++++++++++++++%22short_name%22+%3A+%2204076%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22postal_code%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Shapleigh%2C+ME+04076%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+43.627607%2C%0A++++++++++++++++++%22lng%22+%3A+-70.7803749%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+43.470261%2C%0A++++++++++++++++++%22lng%22+%3A+-70.9083969%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+43.5406359%2C%0A+++++++++++++++%22lng%22+%3A+-70.84811639999999%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+43.627607%2C%0A++++++++++++++++++%22lng%22+%3A+-70.7803749%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+43.470261%2C%0A++++++++++++++++++%22lng%22+%3A+-70.9083969%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJIxtwvwXFskwRQ0Vf8mMy4Lk%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mUser Exists (41.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "roguerider7@aol.com"], ["LIMIT", 1]]
+  [1m[35mSQL (78.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "moto", "created_at", "updated_at", "location", "lat", "lng") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "roguerider7@aol.com"], ["encrypted_password", "$2a$11$jiIALk4riOiG6AoEUqqeGuGxmwGg242gyhGf9e3A57s2p3hbpRTn2"], ["username", "Rogue Rider"], ["moto", "1988 Harley"], ["created_at", "2018-02-14 14:30:53.161587"], ["updated_at", "2018-02-14 14:30:53.161587"], ["location", "Shapleigh, ME"], ["lat", "43.540636"], ["lng", "-70.848116"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (47.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-02-14 14:30:53.249752"], ["last_sign_in_at", "2018-02-14 14:30:53.249752"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2018-02-14 14:30:53.251478"], ["id", 7]]
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1213ms (ActiveRecord: 181.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:30:53 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 100ms (Views: 90.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-02-14 09:31:23 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 2, email: "member@email.com", username: "Grip", moto: nil, userimage: nil, rox_count: 0, created_at: "2018-02-07 18:00:04", updated_at: "2018-02-07 21:35:27", role: "member", location: nil, lat: nil, lng: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (8.05ms)
+Completed 200 OK in 98ms (Views: 88.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-14 09:31:36 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (21.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (4.65ms)
+Completed 200 OK in 109ms (Views: 41.4ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/api/v1/posts/1" for 127.0.0.1 at 2018-02-14 09:31:41 -0500
+Processing by Api::V1::PostsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (8.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (21.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (63.34ms)
+Completed 200 OK in 140ms (Views: 50.6ms | ActiveRecord: 46.7ms)
+
+
+Started POST "/api/v1/posts/1/comments" for 127.0.0.1 at 2018-02-14 09:31:49 -0500
+Processing by Api::V1::CommentsController#create as */*
+  Parameters: {"comment"=>{"body"=>"I can't wait!"}, "post_id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "I can't wait!"], ["user_id", 7], ["post_id", 1], ["created_at", "2018-02-14 14:31:49.194303"], ["updated_at", "2018-02-14 14:31:49.194303"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 1]]
+No serializer found for resource: #<Comment id: 1, body: "Everyone I know is riding out.", user_id: 1, post_id: 1, created_at: "2018-02-06 03:18:25", updated_at: "2018-02-06 03:18:25">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Comment::ActiveRecord_Associations_CollectionProxy (3.37ms)
+Completed 200 OK in 43ms (Views: 19.5ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-14 09:31:53 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (5.42ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/v1/posts" for 127.0.0.1 at 2018-02-14 09:32:03 -0500
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"title"=>"This is a new Post", "content"=>"All about bikes", "post"=>{"title"=>"This is a new Post", "content"=>"All about bikes"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "This is a new Post"], ["content", "All about bikes"], ["user_id", 7], ["created_at", "2018-02-14 14:32:03.544044"], ["updated_at", "2018-02-14 14:32:03.544044"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Post (0.47ms)
+Completed 200 OK in 17ms (Views: 1.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-02-14 09:32:06 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 2, email: "member@email.com", username: "Grip", moto: nil, userimage: nil, rox_count: 0, created_at: "2018-02-07 18:00:04", updated_at: "2018-02-07 21:35:27", role: "member", location: nil, lat: nil, lng: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.59ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users/1" for 127.0.0.1 at 2018-02-14 09:32:09 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.61ms)
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:32:17 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 167ms (Views: 162.6ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-02-14 09:34:29 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"l4+ckV7AYvIX0ncjyXcU5ZuuSc2WTVzME2BgRnlkpVgXy2lU1NsxqpD3s23Zg1Mbw7j+ZGp62pBTm6RcUY+bbQ=="}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 52ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:34:29 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 158ms (Views: 152.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:34:47 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:35:39 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 198ms (Views: 180.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-02-14 09:39:09 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 199ms (Views: 181.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-02-14 09:39:27 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nGrEzKDzD0jMUHsfnahik4uXPRJNn5kcGwj7x/qRMEiQ2SDGPkfpO0EjymjWuvzgxkJtFQesD4z17qOU6ofJDA==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"RogueRider", "moto"=>"Harley", "location"=>"Boston, MA"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Multi geocoding. address: Boston, MA, args []
+Google geocoding. address: Boston, MA, args []
+Google geocoding. Result: %7B%0A+++%22results%22+%3A+%5B%0A++++++%7B%0A+++++++++%22address_components%22+%3A+%5B%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Boston%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22Suffolk+County%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_2%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22Massachusetts%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22MA%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22administrative_area_level_1%22%2C+%22political%22+%5D%0A++++++++++++%7D%2C%0A++++++++++++%7B%0A+++++++++++++++%22long_name%22+%3A+%22United+States%22%2C%0A+++++++++++++++%22short_name%22+%3A+%22US%22%2C%0A+++++++++++++++%22types%22+%3A+%5B+%22country%22%2C+%22political%22+%5D%0A++++++++++++%7D%0A+++++++++%5D%2C%0A+++++++++%22formatted_address%22+%3A+%22Boston%2C+MA%2C+USA%22%2C%0A+++++++++%22geometry%22+%3A+%7B%0A++++++++++++%22bounds%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%2C%0A++++++++++++%22location%22+%3A+%7B%0A+++++++++++++++%22lat%22+%3A+42.3600825%2C%0A+++++++++++++++%22lng%22+%3A+-71.0588801%0A++++++++++++%7D%2C%0A++++++++++++%22location_type%22+%3A+%22APPROXIMATE%22%2C%0A++++++++++++%22viewport%22+%3A+%7B%0A+++++++++++++++%22northeast%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.40081989999999%2C%0A++++++++++++++++++%22lng%22+%3A+-70.749455%0A+++++++++++++++%7D%2C%0A+++++++++++++++%22southwest%22+%3A+%7B%0A++++++++++++++++++%22lat%22+%3A+42.22788%2C%0A++++++++++++++++++%22lng%22+%3A+-71.191113%0A+++++++++++++++%7D%0A++++++++++++%7D%0A+++++++++%7D%2C%0A+++++++++%22place_id%22+%3A+%22ChIJGzE9DS1l44kRoOhiASS_fHg%22%2C%0A+++++++++%22types%22+%3A+%5B+%22locality%22%2C+%22political%22+%5D%0A++++++%7D%0A+++%5D%2C%0A+++%22status%22+%3A+%22OK%22%0A%7D%0A
+  [1m[36mUser Exists (7.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (19.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "moto", "created_at", "updated_at", "location", "lat", "lng") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$11$wHAvIZfkDuiNsYy5Cw58NuYVNLTLGF4vepjQQMeXQ3ejO4HbonOUy"], ["username", "RogueRider"], ["moto", "Harley"], ["created_at", "2018-02-14 14:39:27.808305"], ["updated_at", "2018-02-14 14:39:27.808305"], ["location", "Boston, MA"], ["lat", "42.360083"], ["lng", "-71.05888"]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (26.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-02-14 14:39:27.841066"], ["last_sign_in_at", "2018-02-14 14:39:27.841066"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2018-02-14 14:39:27.843371"], ["id", 8]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 599ms (ActiveRecord: 65.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:39:27 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 93.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-02-14 09:39:47 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 2, email: "member@email.com", username: "Grip", moto: nil, userimage: nil, rox_count: 0, created_at: "2018-02-07 18:00:04", updated_at: "2018-02-07 21:35:27", role: "member", location: nil, lat: nil, lng: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (8.01ms)
+Completed 200 OK in 29ms (Views: 21.7ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-14 09:39:54 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (6.01ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/posts/1" for 127.0.0.1 at 2018-02-14 09:39:57 -0500
+Processing by Api::V1::PostsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (12.55ms)
+Completed 200 OK in 45ms (Views: 11.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-14 09:39:59 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (5.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (10.61ms)
+Completed 200 OK in 23ms (Views: 16.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-02-14 09:40:02 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 2, email: "member@email.com", username: "Grip", moto: nil, userimage: nil, rox_count: 0, created_at: "2018-02-07 18:00:04", updated_at: "2018-02-07 21:35:27", role: "member", location: nil, lat: nil, lng: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (8.08ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users/1" for 127.0.0.1 at 2018-02-14 09:40:04 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.14ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-02-14 09:40:07 -0500
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 1, title: "Babes Ride Out East Coast 2018", tags: nil, content: "You know you want to go!", user_id: 1, created_at: "2018-02-06 03:14:30", updated_at: "2018-02-06 03:14:30">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (6.45ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:40:11 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 85.0ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-02-14 09:40:18 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YbTuwksonaShxZBnTlMYO8ghjgtNtzQJ10t0cTosRettBwrI1Zx71yy2IRAFQYZIhfTeDAeEopk5rSwiKjq8rw=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 09:40:18 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 86ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+

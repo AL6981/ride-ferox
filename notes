@@ -116,4 +116,4 @@ directionsService.route(request, function(result, status) {
 
 #BF5194   pink
 
-  <i className="fa fa-sliders fa-2x"/>
+  <i className="fa fa-sliders fa-3x"/>

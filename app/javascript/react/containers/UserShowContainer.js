@@ -29,9 +29,9 @@ class UserShowContainer extends React.Component {
     return(
       <div>
       <div className="link-tabs">
-        <Link className="fa fa-map fa-2x" to={`/maps`}/>
-        <Link className="fa fa-comments fa-2x" to={`/posts`} />
-        <Link className="fa fa-users fa-2x" to={`/users`} />
+        <Link className="fa fa-map fa-3x" to={`/maps`}/>
+        <Link className="fa fa-comments fa-3x" to={`/posts`} />
+        <Link className="fa fa-users fa-3x" to={`/users`} />
       </div>
       <div className="user-show-container">
         <div className="user-show-tile">

@@ -1,6 +1,5 @@
 .nav-container {
-  max-width: 1413px;
-  max-height: 810px;
+  background-size: 100% auto;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
@@ -9,6 +8,7 @@
   border: 10px ridge grey;
   border-radius: 5px;
   font-family: 'Courgette', cursive;
+  margin-bottom: 15px;
 }
 
 .nav-logo {
@@ -27,7 +27,7 @@
 }
 
 .nav-links {
-  grid-column: span 2;
+  grid-column: span 3;
   align-self: center;
   order: 3;
   margin-left: 30px;
