@@ -1,5 +1,5 @@
 class Api::V1::CommentsController < ApiController
-
+  before_action :authenticate_user!
   def index
   end
 

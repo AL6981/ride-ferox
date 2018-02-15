@@ -31,7 +31,6 @@
   align-self: center;
   order: 3;
   margin-left: 30px;
-
 }
 
 .nav-button {
@@ -42,4 +41,27 @@
     color: white;
   }
   margin-top: 20px;
+}
+
+.nav-login {
+  margin-top: 15px;
+  text-align: center;
+  align-self: right;
+  a {
+    color: #528FD5;
+  }
+  margin-top: 20px;
+}
+
+.video-container {
+  background-color: #808080;
+  display: grid;
+  justify-content: center;
+  margin: 25px;
+}
+
+#ytplayer{
+  border: 5px ridge #528FD5;
+  padding: 5px;
+  margin: 15px;
 }

@@ -152,3 +152,6 @@ application_controller line 2
     js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1265185803624896&autoLogAppEvents=1';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
+
+
+  <iframe id="ytplayer" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/wdY9gk2NAxk?autoplay=10;rel=0&amp;showinfo=0&amp;start=1" frameborder="0" allowfullscreen></iframe>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'homes#index'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
@@ -17,14 +18,13 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :maps, only: [:index, :create]
-      resources :users, only: [:index, :show]
+      resources :users, only: [:index, :show, :edit, :update]
       resources :posts do
         resources :comments, only: [:show, :create, :edit, :update, :destroy]
       end
     end
   end
 
-  root 'homes#index'
   get "*path", to: "homes#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

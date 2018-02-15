@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import UserDetailComponent from '../components/UserDetailComponent';
-import UserEditFormContainer from './UserEditFormContainer';
+import UserFormContainer from './UserFormContainer';
 
-class UserShowContainer extends React.Component {
+class UserProfileShowContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,13 +12,12 @@ class UserShowContainer extends React.Component {
       moto: '',
       currentUserId: ''
     }
+    this.addUserInfo=this.addUserInfo.bind(this);
   }
 
   componentDidMount() {
     let userId = this.props.params.id
-    fetch(`/api/v1/users/${userId}`, {
-      credentials: 'same-origin'
-    })
+    fetch(`/api/v1/users/${userId}`)
     .then(response => response.json())
     .then(json => {
       this.setState({
@@ -30,13 +29,44 @@ class UserShowContainer extends React.Component {
     })
   }
 
+  addUserInfo(formPayload){
+    debugger
+    let userId = this.props.params.id
+    fetch(`/api/v1/users/${userId}`,
+      {
+        credentials: 'same-origin',
+        headers: {
+         'Content-Type': 'application/json',
+         'X-Requested-With': 'XMLHttpRequest'
+      },
+      method: 'POST',
+      body: JSON.stringify(formPayload)
+    })
+    .then(response => response.json())
+    .then(json => {
+      this.setState({
+        username: json.user.username,
+        location: json.use.location,
+        moto: json.user.moto
+      })
+    })
+  }
+
   render() {
+    return(
+      <UserFormContainer
+        key={this.state.id}
+        addUserInfo={this.addUserInfo}
+        username={this.state.username}
+        location={this.state.location}
+        moto={this.state.moto}
+      />
+    )
     let editLink;
     let userId = this.props.params.id
-    if (parseInt(userId) === this.state.currentUserId) {
-      editLink = <Link to={`/users/${userId}/edit`}><button>Edit</button></Link>
-    }
-
+    if (userId === this.state.currentUserId) {
+      editLink = <Link to={`/users/${props.id}/edit`}><button>Edit</button></Link>
+      }
     return(
       <div>
       <div className="link-tabs">
@@ -55,9 +85,12 @@ class UserShowContainer extends React.Component {
         </div>
       </div>
       {editLink}
+      <div>
+
+      </div>
     </div>
     )
   }
 }
 
-export default UserShowContainer;
+export default UserProfileShowContainer;
