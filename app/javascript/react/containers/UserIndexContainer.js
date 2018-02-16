@@ -12,8 +12,7 @@ class UserIndexContainer extends Component {
 
   componentDidMount() {
     fetch('/api/v1/users')
-    .then(response =>
-      response.json())
+    .then(response => { return response.json()})
     .then(body => {
       this.setState({users: body})
     })

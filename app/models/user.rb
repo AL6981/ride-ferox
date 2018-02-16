@@ -8,12 +8,13 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
 
-  acts_as_mappable :auto_geocode=>{:field=>:location, :error_message=>'Could not geocode address'}
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
+      #user.name = auth.info.name
+      #user.profile_pic = auth.info.profile_pic
     end
   end
 
