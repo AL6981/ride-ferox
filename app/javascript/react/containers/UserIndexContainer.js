@@ -40,6 +40,7 @@ class UserIndexContainer extends Component {
           <div className="users-title">FeRox Community Members</div>
             <div className="user-tile-container">
               <h5>Member List</h5>
+              <h6>Click on a bike to see information about that user.</h6>
                 {users}
             </div>
             <h5>Chat with another Roxxer</h5>

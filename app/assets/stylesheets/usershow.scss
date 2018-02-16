@@ -7,6 +7,7 @@
   margin-left: 40px;
   margin-right: 40px;
   grid-template-columns: 1fr;
+	justify-content: center;
 	button {
 		background-color: transparent;
 		font-family: 'Josefin Sans', sans-serif;
@@ -69,23 +70,3 @@ h5 {
 	font-weight: 600;
 	justify-content: center;
 }
-
-.comment-dark-container {
-  background-color: #AAAAAA;
-  border-radius: 5px;
-  padding-left: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-}
-
-.comment-lite-container {
-  background-color: #444444;
-  border-radius: 5px;
-  padding-left: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-}
-
-//New Comment Form Styling

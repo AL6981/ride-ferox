@@ -34,27 +34,27 @@ class UserShowContainer extends React.Component {
     let editLink;
     let userId = this.props.params.id
     if (parseInt(userId) === this.state.currentUserId) {
-      editLink = <Link to={`/users/${userId}/edit`}><button>Edit</button></Link>
+      editLink = <Link to={`/users/${userId}/edit`}><button className="button">Edit</button></Link>
     }
 
     return(
       <div>
-      <div className="link-tabs">
-        <Link className="fa fa-map fa-3x" to={`/maps`}/>
-        <Link className="fa fa-comments fa-3x" to={`/posts`} />
-        <Link className="fa fa-users fa-3x" to={`/users`} />
-      </div>
-      <div className="user-show-container">
-        <div className="user-show-tile">
-          <UserDetailComponent
-          key={this.state.id}
-          username={this.state.username}
-          location={this.state.location}
-          moto={this.state.moto}
-          />
+        <div className="link-tabs">
+          <Link className="fa fa-map fa-3x" to={`/maps`}/>
+          <Link className="fa fa-comments fa-3x" to={`/posts`} />
+          <Link className="fa fa-users fa-3x" to={`/users`} />
         </div>
-      </div>
-      {editLink}
+        <div className="user-show-container">
+          <div className="user-show-tile">
+            <UserDetailComponent
+            key={this.state.id}
+            username={this.state.username}
+            location={this.state.location}
+            moto={this.state.moto}
+            />
+          </div>
+          {editLink}
+        </div>
     </div>
     )
   }
