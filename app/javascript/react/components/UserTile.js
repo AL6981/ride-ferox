@@ -14,8 +14,7 @@ const UserTile = props => {
 
   return(
     <div className={usercn}>
-      <i className="fa fa-motorcycle" id={icon_color}/>
-      <Link to={`/users/${props.id}`} className="username">{props.username}</Link>
+      <div id='username'><Link className="fa fa-motorcycle" id={icon_color} to={`/users/${props.id}`}/>{props.username}</div>
     </div>
   )
 }

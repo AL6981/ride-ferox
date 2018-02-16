@@ -1,0 +1,53 @@
+//Info Form Styling
+
+.user-form-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	button {
+		background-color: transparent;
+		font-family: 'Josefin Sans', sans-serif;
+		font-weight: 600;
+		color: #694CE2;
+		border: 2px solid #528FD5;
+		border-radius: 5px;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		button:hover {
+			color: #528FD5;
+		}
+	}
+  margin-left: 40px;
+  margin-right: 80px;
+  .user-form-border {
+  	border: 3px ridge #528FD5;
+  	border-radius: 5px;
+  	padding-top: 15px;
+  	padding-left: 5px;
+  	padding-right: 5px;
+  	background-color: #AAAAAA;
+  }
+  margin-bottom: 20px;
+}
+
+.fields-container {
+	margin-left: 40px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	color: #694CE2;
+	font-size: 1.5em;
+	padding-bottom: 5px;
+}
+
+.user-form-note {
+  color: #694CE2;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	text-align: center;
+}
+
+.form-field {
+	font-family: 'Lato', sans-serif;
+}

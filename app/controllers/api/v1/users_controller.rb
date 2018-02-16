@@ -18,7 +18,6 @@ include Geokit::Geocoders
     new_attributes=user_params
     new_attributes[:lat]=geo.lat
     new_attributes[:lng]=geo.lng
-    binding.pry
     if @user.update_attributes(new_attributes)
       render json: { message: 'User info updated!'}
     else

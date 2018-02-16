@@ -65,29 +65,39 @@ class UserEditFormContainer extends React.Component {
 
   render(){
     return(
-      <div className="user-form-border">
-        <input
-          placeholder='... update your road name'
-          type='text'
-          value={this.state.username}
-          onChange={this.handleUsernameChange}
-          className="username-form"
-        />
-        <input
-          placeholder='... update your city, state'
-          type='text'
-          value={this.state.location}
-          onChange={this.handleLocationChange}
-          className="location-form"
-        />
-        <input
-          placeholder='... update your moto(s)'
-          type='text'
-          value={this.state.moto}
-          onChange={this.handleMotoChange}
-          className="moto-form"
-        />
-        <button className="button" type="submit" value="Submit" onClick={this.handleFormSubmit}>Submit</button>
+      <div>
+        <div className="link-tabs">
+          <Link className="fa fa-map fa-3x" to={`/maps`}/>
+          <Link className="fa fa-comments fa-3x" to={`/posts`} />
+          <Link className="fa fa-users fa-3x" to={`/users`} />
+        </div>
+        <div className="user-form-container">
+          <div className="user-form-note">Do not click off this page without filling out the form!</div>
+          <div className="user-form-border">
+            <input
+              placeholder='... update your road name'
+              type='text'
+              value={this.state.username}
+              onChange={this.handleUsernameChange}
+              className="username-form"
+            />
+            <input
+              placeholder='... update your city, state'
+              type='text'
+              value={this.state.location}
+              onChange={this.handleLocationChange}
+              className="location-form"
+            />
+            <input
+              placeholder='... update your moto(s)'
+              type='text'
+              value={this.state.moto}
+              onChange={this.handleMotoChange}
+              className="moto-form"
+            />
+            <button className="button" type="submit" value="Submit" onClick={this.handleFormSubmit}>Submit</button>
+          </div>
+        </div>
       </div>
     )
   }

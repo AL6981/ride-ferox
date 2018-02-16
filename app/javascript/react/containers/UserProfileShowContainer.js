@@ -65,7 +65,7 @@ class UserProfileShowContainer extends React.Component {
     let editLink;
     let userId = this.props.params.id
     if (userId === this.state.currentUserId) {
-      editLink = <Link to={`/users/${props.id}/edit`}><button>Edit</button></Link>
+      editLink = <Link className="button" to={`/users/${props.id}/edit`}><button>Edit</button></Link>
       }
     return(
       <div>
