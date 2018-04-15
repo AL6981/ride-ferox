@@ -8,13 +8,16 @@ class MapContainer extends Component {
     this.state={
      starting: '',
      ending: '',
-     userLocations: ''
+     userLocations: [],
+     marker: ''
     }
     this.initMap=this.initMap.bind(this)
     this.reInitMap=this.reInitMap.bind(this)
     this.handleCoordChange=this.handleCoordChange.bind(this)
     this.buildMap=this.buildMap.bind(this)
     this.reBuildMap=this.reBuildMap.bind(this)
+    this.makeMarkers=this.makeMarkers.bind(this)
+    this.handleUserSubmit=this.handleUserSubmit.bind(this)
   }
 
   componentDidMount() {
@@ -22,10 +25,19 @@ class MapContainer extends Component {
   }
 
   initMap() {
-    let map = new google.maps.Map(document.getElementById('map'), {
+    var mapInit = new google.maps.Map(document.getElementById('map'), {
       zoom: 12,
       center: {lat: 42.3611, lng: -71.0570}
     });
+    fetch('api/v1/users')
+    .then(response => response.json())
+    .then(body => {
+      let allUserLocations = []
+      body.forEach((user) => {
+        allUserLocations.push(user.location)
+      })
+      this.setState({ userLocations: allUserLocations })
+    })
   }
 
   buildMap(){
@@ -61,15 +73,36 @@ class MapContainer extends Component {
           directionsDisplay.setDirections(result);
         }
       });
-      fetch('api/v1/users'
+    }
+  }
+
+  makeMarkers(){
+    let userArray = this.state.userLocations
+    userArray.map(userLoc => {
+      fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${userLoc}&key=AIzaSyBO4j3Lhl6mWVDVkk07XJfYIToTGtbLe68`
       )
       .then(response => response.json())
       .then(body => {
         this.setState({
-          userLocations: body
+          marker: body.results[0].geometry.location
         })
+        let latLng = this.state.marker;
+        console.log(latLng)
+      let marker = new google.maps.Marker({
+          position: latLng,
+          title: "User"
+        });
+        debugger
+        marker.setMap(window.mapInit);
       })
-    }
+    })
+  }
+
+  handleUserSubmit(event){
+    event.preventDefault()
+    //button was clicked
+    let markers = this.makeMarkers()
+    //array of latlngs generated
   }
 
   handleCoordChange(formPayload){
@@ -107,6 +140,7 @@ class MapContainer extends Component {
         <div className="wrap-map">
           <MapFormContainer
           handleCoordChange={this.handleCoordChange}
+          handleUserSubmit={this.handleUserSubmit}
           />
           <div className="map" id='map'></div>
         </div>
