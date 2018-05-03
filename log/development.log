@@ -27895,3 +27895,1931 @@ No serializer found for resource: #<User id: 4, email: "roguerider7@aol.com", us
 Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:35:44 -0400
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 94e9ee42622887982af8
+Version: webpack 3.10.0
+Time: 3731ms
+                                  Asset       Size  Chunks                    Chunk Names
+    application-8d5ceef585d50cae658b.js    1.06 MB       0  [emitted]  [big]  application
+application-8d5ceef585d50cae658b.js.map    1.13 MB       0  [emitted]         application
+                          manifest.json  142 bytes          [emitted]         
+ [113] ./app/javascript/react/containers/PostsFormContainer.js 4.6 kB {0} [built]
+ [114] ./app/javascript/react/containers/UserEditFormContainer.js 5.78 kB {0} [built]
+ [115] ./app/javascript/packs/application.js 857 bytes {0} [built]
+ [213] ./app/javascript/react/constants/homeImages.js 893 bytes {0} [built]
+ [214] ./app/javascript/react/containers/App.js 1.34 kB {0} [built]
+ [243] ./app/javascript/react/containers/HomeIndexContainer.js 898 bytes {0} [built]
+ [245] ./app/javascript/react/containers/PostIndexContainer.js 4.32 kB {0} [built]
+ [249] ./app/javascript/react/containers/PostShowContainer.js 4.8 kB {0} [built]
+ [251] ./app/javascript/react/containers/CommentsContainer.js 463 bytes {0} [built]
+ [253] ./app/javascript/react/containers/CommentsFormContainer.js 3.88 kB {0} [built]
+ [255] ./app/javascript/react/containers/UserIndexContainer.js 3.84 kB {0} [built]
+ [257] ./app/javascript/react/containers/UserShowContainer.js 4.11 kB {0} [built]
+ [259] ./app/javascript/react/containers/MapContainer.js 239 bytes {0} [built] [failed] [1 error]
+    + 247 hidden modules
+
+ERROR in ./app/javascript/react/containers/MapContainer.js
+Module build failed: SyntaxError: Unexpected token (100:5)
+
+   98 |         marker.setMap(window.mapInit);
+   99 |       })
+> 100 |     })
+      |      ^
+  101 |   }
+  102 | 
+  103 |   handleUserSubmit(event){
+
+ @ ./app/javascript/react/containers/App.js 10:0-42
+ @ ./app/javascript/packs/application.js
+
+
+  Rendered homes/index.html.erb within layouts/application (6424.6ms)
+  [1m[36mUser Load (90.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 38937ms (Views: 38714.4ms | ActiveRecord: 217.7ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-04-26 15:37:08 -0400
+Started GET "/users/auth/facebook/callback?code=AQCAgPYqHnzM3MJznzsjDABUCrfTz97rnEU428vL3NEXSAA8urdAmbGCJuuIRLWaxDeS8KR9QLarzH4goESyt9gJYGW4P8SrgqTznV4HwPnxiMfXAI7EOj3QgYt362IH_qhVDOaNVAE_fAQr57jqphOfXOyv4ai4HLqGN-9FLgItWpEj_pyYPGaTKb_c1HgsQtX3hBw3mbJnhiORJvUKgQzUW0dQWqOZMRZfdT6HGRRYOd6IqkGMwmtFOOcZpP-GSyxMfmK2dvdaIk6JO86PZZWcHCtLJhssue8MQ8aYKojdJ5NGDrAO7Id9rHNJ3e43pmonOQcc_qgo-W6-sWBgOq7Y&state=ddd2d3c83884fc748e2487eb1aee6858c59e0a1f447bc2f3" for 127.0.0.1 at 2018-04-26 15:37:09 -0400
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCAgPYqHnzM3MJznzsjDABUCrfTz97rnEU428vL3NEXSAA8urdAmbGCJuuIRLWaxDeS8KR9QLarzH4goESyt9gJYGW4P8SrgqTznV4HwPnxiMfXAI7EOj3QgYt362IH_qhVDOaNVAE_fAQr57jqphOfXOyv4ai4HLqGN-9FLgItWpEj_pyYPGaTKb_c1HgsQtX3hBw3mbJnhiORJvUKgQzUW0dQWqOZMRZfdT6HGRRYOd6IqkGMwmtFOOcZpP-GSyxMfmK2dvdaIk6JO86PZZWcHCtLJhssue8MQ8aYKojdJ5NGDrAO7Id9rHNJ3e43pmonOQcc_qgo-W6-sWBgOq7Y", "state"=>"ddd2d3c83884fc748e2487eb1aee6858c59e0a1f447bc2f3"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "2027720310847131"], ["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "whiskyeyebrews@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (33.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "provider", "uid") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "whiskyeyebrews@gmail.com"], ["encrypted_password", "$2a$11$QHXNKQPFsijf72Apo7IdKee1i.5Abzf1e.6tU4CukZTakmaEsAOVu"], ["created_at", "2018-04-26 19:37:10.053452"], ["updated_at", "2018-04-26 19:37:10.053452"], ["provider", "facebook"], ["uid", "2027720310847131"]]
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-04-26 19:37:10.095493"], ["last_sign_in_at", "2018-04-26 19:37:10.095493"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2018-04-26 19:37:10.097114"], ["id", 13]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/13/edit
+Completed 302 Found in 300ms (ActiveRecord: 46.6ms)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2018-04-26 15:37:10 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/13/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 84.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:37:20 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 83.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:37:41 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: d9493fb74ecfb988e191
+Version: webpack 3.10.0
+Time: 3895ms
+                                  Asset       Size  Chunks                    Chunk Names
+    application-eee5a4da348d7b9bf746.js    1.06 MB       0  [emitted]  [big]  application
+application-eee5a4da348d7b9bf746.js.map    1.13 MB       0  [emitted]         application
+                          manifest.json  142 bytes          [emitted]         
+ [113] ./app/javascript/react/containers/PostsFormContainer.js 4.6 kB {0} [built]
+ [114] ./app/javascript/react/containers/UserEditFormContainer.js 5.78 kB {0} [built]
+ [115] ./app/javascript/packs/application.js 857 bytes {0} [built]
+ [213] ./app/javascript/react/constants/homeImages.js 893 bytes {0} [built]
+ [214] ./app/javascript/react/containers/App.js 1.34 kB {0} [built]
+ [243] ./app/javascript/react/containers/HomeIndexContainer.js 898 bytes {0} [built]
+ [245] ./app/javascript/react/containers/PostIndexContainer.js 4.32 kB {0} [built]
+ [249] ./app/javascript/react/containers/PostShowContainer.js 4.8 kB {0} [built]
+ [251] ./app/javascript/react/containers/CommentsContainer.js 463 bytes {0} [built]
+ [253] ./app/javascript/react/containers/CommentsFormContainer.js 3.88 kB {0} [built]
+ [255] ./app/javascript/react/containers/UserIndexContainer.js 3.84 kB {0} [built]
+ [257] ./app/javascript/react/containers/UserShowContainer.js 4.11 kB {0} [built]
+ [259] ./app/javascript/react/containers/MapContainer.js 238 bytes {0} [built] [failed] [1 error]
+    + 247 hidden modules
+
+ERROR in ./app/javascript/react/containers/MapContainer.js
+Module build failed: SyntaxError: Unexpected token (99:5)
+
+   97 |         marker.setMap(window.mapInit);
+   98 |       })
+>  99 |     })
+      |      ^
+  100 |   }
+  101 | 
+  102 |   handleUserSubmit(event){
+
+ @ ./app/javascript/react/containers/App.js 10:0-42
+ @ ./app/javascript/packs/application.js
+
+
+  Rendered homes/index.html.erb within layouts/application (7371.9ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8293ms (Views: 8274.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:38:36 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (7443.2ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8024ms (Views: 8005.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 15:38:52 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb181f7030,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb181f6f68,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.05ms)
+Completed 200 OK in 64ms (Views: 56.2ms | ActiveRecord: 7.0ms)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 15:43:01 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (8766.8ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 9503ms (Views: 9492.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 15:43:14 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb1483c9d0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb1483c908,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.44ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 15:44:08 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (8159.4ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8668ms (Views: 8650.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 15:44:20 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb0ba1f8a0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb0ba1f328,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (7.7ms)
+Completed 200 OK in 37ms (Views: 29.7ms | ActiveRecord: 6.3ms)
+
+
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:03:09 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (8041.5ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8562ms (Views: 8549.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:03:20 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb129c6258,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb129c6190,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.22ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:04:20 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (7053.8ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 7392ms (Views: 7377.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:04:30 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb15f1c088,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb17acbf68,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.16ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:05:14 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (8013.3ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8225ms (Views: 8219.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:05:24 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb0efd27e0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb0efd2718,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.93ms)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:06:05 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (6961.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 7182ms (Views: 7172.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:06:14 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb13080030,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb10ea7f30,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.72ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:06:44 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (8213.4ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8673ms (Views: 8659.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:06:55 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb0c5c49a8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb0c5c48e0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (11.28ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:07:28 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (9212.5ms)
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 9727ms (Views: 9707.3ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:07:41 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb0b897230,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb0b897140,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (9.38ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:08:26 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (8718.1ms)
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 9523ms (Views: 9508.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:08:38 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb0bbb6a60,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb0bbb6808,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.12ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:08:57 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (6789.3ms)
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 6985ms (Views: 6969.8ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:09:06 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb0ef3eb80,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb0ef3eab8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.73ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:09:27 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (7633.6ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8125ms (Views: 8115.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:09:38 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb136f6860,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb136f6798,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (8.29ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:10:11 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (7032.7ms)
+  [1m[36mUser Load (56.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 7417ms (Views: 7355.5ms | ActiveRecord: 56.7ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:10:21 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb14f2b9a8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb14f2b8e0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.44ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:20:50 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (7517.1ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 7953ms (Views: 7934.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:21:01 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb0af77628,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb0af77470,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.84ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:22:08 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (8502.2ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8894ms (Views: 8886.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:22:20 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb12008e28,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb12008ce8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.18ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (20.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:30:44 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (10751.3ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 11544ms (Views: 11281.7ms | ActiveRecord: 254.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:31:00 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb10f133c0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb10f132f8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.07ms)
+Completed 200 OK in 98ms (Views: 95.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:31:48 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (7696.6ms)
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8052ms (Views: 8039.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:31:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb16e64630,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb16e64568,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.33ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:33:59 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (8752.4ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 9172ms (Views: 9128.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:34:10 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (11.7ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 397ms (Views: 389.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:34:13 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb1698f8a8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb1698f7e0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.31ms)
+Completed 200 OK in 24ms (Views: 19.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:34:25 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (8524.7ms)
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 9060ms (Views: 9050.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:34:37 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb18892e58,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb18892d90,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (8.11ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:38:44 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (7593.7ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8095ms (Views: 8080.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:38:55 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb18045ea8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb18045de0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.14ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:39:36 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (6749.0ms)
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 7098ms (Views: 7077.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:39:46 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb17cec180,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb17cec0b8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.2ms)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:41:46 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 96d5d14b189545483068
+Version: webpack 3.10.0
+Time: 3738ms
+                                  Asset       Size  Chunks                    Chunk Names
+    application-791139c5bea4c26a1b69.js    1.06 MB       0  [emitted]  [big]  application
+application-791139c5bea4c26a1b69.js.map    1.13 MB       0  [emitted]         application
+                          manifest.json  142 bytes          [emitted]         
+ [113] ./app/javascript/react/containers/PostsFormContainer.js 4.6 kB {0} [built]
+ [114] ./app/javascript/react/containers/UserEditFormContainer.js 5.78 kB {0} [built]
+ [115] ./app/javascript/packs/application.js 857 bytes {0} [built]
+ [213] ./app/javascript/react/constants/homeImages.js 893 bytes {0} [built]
+ [214] ./app/javascript/react/containers/App.js 1.34 kB {0} [built]
+ [243] ./app/javascript/react/containers/HomeIndexContainer.js 898 bytes {0} [built]
+ [245] ./app/javascript/react/containers/PostIndexContainer.js 4.32 kB {0} [built]
+ [249] ./app/javascript/react/containers/PostShowContainer.js 4.8 kB {0} [built]
+ [251] ./app/javascript/react/containers/CommentsContainer.js 463 bytes {0} [built]
+ [253] ./app/javascript/react/containers/CommentsFormContainer.js 3.88 kB {0} [built]
+ [255] ./app/javascript/react/containers/UserIndexContainer.js 3.84 kB {0} [built]
+ [257] ./app/javascript/react/containers/UserShowContainer.js 4.11 kB {0} [built]
+ [259] ./app/javascript/react/containers/MapContainer.js 347 bytes {0} [built] [failed] [1 error]
+    + 247 hidden modules
+
+ERROR in ./app/javascript/react/containers/MapContainer.js
+Module build failed: SyntaxError: Unexpected token (86:6)
+
+  84 |     userArray.map(userLoc => {
+  85 |       debugger
+> 86 |       .then(response => response.json())
+     |       ^
+  87 |       .then(body => {
+  88 |           //here, add results to a marker array that is returned.
+  89 |           let markers = []
+
+ @ ./app/javascript/react/containers/App.js 10:0-42
+ @ ./app/javascript/packs/application.js
+
+
+  Rendered homes/index.html.erb within layouts/application (7059.5ms)
+  [1m[36mUser Load (68.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 7415ms (Views: 7336.1ms | ActiveRecord: 68.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:42:03 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: ba6343c1270d121c1a3f
+Version: webpack 3.10.0
+Time: 3701ms
+                                  Asset       Size  Chunks                    Chunk Names
+    application-764fc189c045642c64e8.js    1.06 MB       0  [emitted]  [big]  application
+application-764fc189c045642c64e8.js.map    1.13 MB       0  [emitted]         application
+                          manifest.json  142 bytes          [emitted]         
+ [113] ./app/javascript/react/containers/PostsFormContainer.js 4.6 kB {0} [built]
+ [114] ./app/javascript/react/containers/UserEditFormContainer.js 5.78 kB {0} [built]
+ [115] ./app/javascript/packs/application.js 857 bytes {0} [built]
+ [213] ./app/javascript/react/constants/homeImages.js 893 bytes {0} [built]
+ [214] ./app/javascript/react/containers/App.js 1.34 kB {0} [built]
+ [243] ./app/javascript/react/containers/HomeIndexContainer.js 898 bytes {0} [built]
+ [245] ./app/javascript/react/containers/PostIndexContainer.js 4.32 kB {0} [built]
+ [249] ./app/javascript/react/containers/PostShowContainer.js 4.8 kB {0} [built]
+ [251] ./app/javascript/react/containers/CommentsContainer.js 463 bytes {0} [built]
+ [253] ./app/javascript/react/containers/CommentsFormContainer.js 3.88 kB {0} [built]
+ [255] ./app/javascript/react/containers/UserIndexContainer.js 3.84 kB {0} [built]
+ [257] ./app/javascript/react/containers/UserShowContainer.js 4.11 kB {0} [built]
+ [259] ./app/javascript/react/containers/MapContainer.js 349 bytes {0} [built] [failed] [1 error]
+    + 247 hidden modules
+
+ERROR in ./app/javascript/react/containers/MapContainer.js
+Module build failed: SyntaxError: Unexpected token (86:6)
+
+  84 |     userArray.map(userLoc => {
+  85 |     {  debugger}
+> 86 |       .then(response => response.json())
+     |       ^
+  87 |       .then(body => {
+  88 |           //here, add results to a marker array that is returned.
+  89 |           let markers = []
+
+ @ ./app/javascript/react/containers/App.js 10:0-42
+ @ ./app/javascript/packs/application.js
+
+
+  Rendered homes/index.html.erb within layouts/application (7061.4ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 7404ms (Views: 7396.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:44:07 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (9261.6ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 9718ms (Views: 9698.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:44:21 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb0d811890,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb0d811318,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.46ms)
+Completed 200 OK in 80ms (Views: 74.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:47:23 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (7124.6ms)
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 7720ms (Views: 7701.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:47:34 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb1235b788,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb1235b6c0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.53ms)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-04-26 16:48:58 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/amylynn/challenges/ride-ferox/public/packs
+  Rendered homes/index.html.erb within layouts/application (8012.9ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8475ms (Views: 8460.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-04-26 16:49:10 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fcb178fbd78,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fcb178fbcb0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (8.63ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 13:24:21 -0400
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (75.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 8354ms (Views: 8082.0ms | ActiveRecord: 268.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 13:24:43 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 215ms (Views: 207.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 13:25:18 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654c8a440,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654c8a378,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.6ms)
+Completed 200 OK in 79ms (Views: 72.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 13:43:45 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (64.0ms)
+  [1m[36mUser Load (335.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1732ms (Views: 1387.1ms | ActiveRecord: 335.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 13:43:49 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (232.1ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 758ms (Views: 753.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 13:45:03 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (16.5ms)
+  [1m[36mUser Load (21.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 393ms (Views: 362.6ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 13:45:06 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6509e9a50,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6509e9668,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (11.73ms)
+Completed 200 OK in 66ms (Views: 55.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 13:47:05 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (28.1ms)
+  [1m[36mUser Load (108.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 942ms (Views: 827.9ms | ActiveRecord: 108.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 13:47:09 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6550d8cb8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6550d8bf0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (13.86ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 13:51:00 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (28.8ms)
+  [1m[36mUser Load (47.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1249ms (Views: 1192.7ms | ActiveRecord: 47.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 13:51:05 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6554d98d0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6554d9808,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (8.04ms)
+Completed 200 OK in 27ms (Views: 18.9ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 13:51:57 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (51.5ms)
+  [1m[36mUser Load (13.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1912ms (Views: 1885.1ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 13:52:04 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654f103e0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654f10318,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (23.88ms)
+Completed 200 OK in 107ms (Views: 96.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 13:54:18 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (39.3ms)
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 963ms (Views: 943.5ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 13:54:22 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa651d9d830,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa651d9d768,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (9.37ms)
+Completed 200 OK in 35ms (Views: 25.8ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 13:55:18 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (40.8ms)
+  [1m[36mUser Load (136.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1497ms (Views: 1347.3ms | ActiveRecord: 136.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 13:55:24 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa650c76de0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa650c76d18,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (14.3ms)
+Completed 200 OK in 91ms (Views: 88.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 13:57:11 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (32.5ms)
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1537ms (Views: 1498.1ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 13:57:15 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 676ms (Views: 668.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 13:58:01 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (20.7ms)
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 377ms (Views: 364.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:04:17 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (14.1ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 888ms (Views: 878.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:07:32 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (20.2ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 290ms (Views: 279.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:08:21 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (32.3ms)
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 781ms (Views: 764.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:08:35 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 133ms (Views: 122.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:09:02 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (24.1ms)
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 459ms (Views: 434.0ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:09:14 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 127ms (Views: 122.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:09:25 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa655abbcd0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa655abbc08,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (9.19ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:11:49 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (33.3ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1487ms (Views: 1474.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:11:56 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa655833710,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa655833648,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (8.59ms)
+Completed 200 OK in 76ms (Views: 62.0ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:12:07 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (33.6ms)
+  [1m[36mUser Load (138.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 465ms (Views: 319.4ms | ActiveRecord: 138.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:12:10 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654508848,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654508780,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.76ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:15:34 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (19.1ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 437ms (Views: 423.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:15:38 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa651a84888,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa651a846d0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (7.69ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:25:27 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (74.0ms)
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 788ms (Views: 758.5ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:25:31 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa64d4a2108,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa64d4a1dc0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (8.89ms)
+Completed 200 OK in 32ms (Views: 23.6ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:26:39 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (20.7ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 376ms (Views: 366.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:26:40 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (14.1ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 226ms (Views: 219.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:26:42 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 275ms (Views: 256.6ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:26:45 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6547b2c38,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6547b2b70,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.54ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:26:49 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 180ms (Views: 175.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:26:52 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654ce9008,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654ce8f40,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.37ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:28:22 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (20.9ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 403ms (Views: 395.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:28:26 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa650dcfc00,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa650dcfa48,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (13.81ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:28:29 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 154ms (Views: 142.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:28:31 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa64e14f7c0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa64e14f518,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.37ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:29:24 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (35.1ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 580ms (Views: 561.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:29:29 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654713458,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654713390,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.61ms)
+Completed 200 OK in 24ms (Views: 17.3ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:29:29 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 449ms (Views: 443.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:29:32 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa655332568,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6553324a0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.95ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:35:25 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (26.1ms)
+  [1m[36mUser Load (34.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1058ms (Views: 1010.5ms | ActiveRecord: 34.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:35:31 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6555e3f28,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6555e3e60,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (20.07ms)
+Completed 200 OK in 125ms (Views: 116.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:36:09 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (27.3ms)
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 443ms (Views: 429.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:36:14 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654bea698,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654bea5a8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (7.34ms)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:38:07 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (21.1ms)
+  [1m[36mUser Load (21.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 358ms (Views: 329.9ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:38:11 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa64cd78f80,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa64cd78dc8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (9.96ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:39:02 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (268.7ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 2012ms (Views: 1995.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:39:10 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa64d1ebf40,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa64d1e8b38,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (30.4ms)
+Completed 200 OK in 103ms (Views: 87.8ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:41:22 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (28.2ms)
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 740ms (Views: 719.0ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:41:27 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa651eed4b0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa651eed3e8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.07ms)
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:41:27 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 412ms (Views: 399.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:41:31 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa65500ab38,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa65500aa70,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.57ms)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:45:52 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (30.6ms)
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1178ms (Views: 1157.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:45:57 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (85.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 383ms (Views: 293.9ms | ActiveRecord: 85.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:46:00 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654210078,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6540b3f40,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.33ms)
+Completed 200 OK in 47ms (Views: 42.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:46:48 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (46.8ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1957ms (Views: 1875.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:46:53 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (30.4ms)
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1093ms (Views: 1074.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:46:58 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa64d679490,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa64d679170,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (9.11ms)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:47:51 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (32.1ms)
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1103ms (Views: 1077.6ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:47:58 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6542e09f8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6542e0930,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (43.61ms)
+Completed 200 OK in 69ms (Views: 64.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:48:11 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (24.7ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 262ms (Views: 255.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:48:14 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654d1b6c0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654d1b5f8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.73ms)
+Completed 200 OK in 21ms (Views: 16.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:51:06 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (40.4ms)
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 877ms (Views: 851.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:51:11 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa655bf13e8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa655bf12f8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (7.75ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:51:13 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (20.8ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 462ms (Views: 452.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:51:16 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654a59c48,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654a59b80,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.83ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:51:37 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (11.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 119ms (Views: 114.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:51:40 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa64cbb24a8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa64cbb23e0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.29ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:51:42 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (80.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 197ms (Views: 111.7ms | ActiveRecord: 80.7ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:51:44 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6547dac60,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6547dab98,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (3.93ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:52:35 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (94.6ms)
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 2122ms (Views: 2104.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:52:42 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa65458ab40,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa65458aa78,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (9.58ms)
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:52:42 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (19.5ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1003ms (Views: 995.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:52:46 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa655da9b68,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa655da9aa0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.69ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:53:00 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 150ms (Views: 144.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:53:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654f20a38,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654f20970,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.32ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:53:51 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (76.5ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1314ms (Views: 1292.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:53:57 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa64e5f0e50,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa64e5f0c20,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (7.04ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:53:59 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (10.3ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 242ms (Views: 234.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:54:01 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 480ms (Views: 466.3ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:54:04 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa64e7a5a48,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa64e7a5980,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.24ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:54:22 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (12.1ms)
+  [1m[36mUser Load (230.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 800ms (Views: 564.7ms | ActiveRecord: 230.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:54:25 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (11.4ms)
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 468ms (Views: 455.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:54:30 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6551b9e70,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6551b9d80,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (14.4ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:54:46 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (24.2ms)
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 582ms (Views: 561.4ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:54:51 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (20.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa655439f88,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa655439ec0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (10.37ms)
+Completed 200 OK in 46ms (Views: 25.1ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:55:43 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (28.8ms)
+  [1m[36mUser Load (105.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 782ms (Views: 668.6ms | ActiveRecord: 105.6ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:55:47 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa64e67db98,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa64e67daa8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (22.23ms)
+Completed 200 OK in 107ms (Views: 105.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:58:39 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (70.7ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1313ms (Views: 1300.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:58:44 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (27.8ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 957ms (Views: 924.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:58:46 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (59.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 510ms (Views: 442.0ms | ActiveRecord: 59.6ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 14:58:50 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (26.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa651d462b0,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa651d461c0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.76ms)
+Completed 200 OK in 41ms (Views: 14.2ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 14:59:55 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (33.9ms)
+  [1m[36mUser Load (87.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 967ms (Views: 863.5ms | ActiveRecord: 87.5ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:00:00 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (55.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6540e0ec8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6540e0e00,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.37ms)
+Completed 200 OK in 108ms (Views: 52.3ms | ActiveRecord: 55.4ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:00:02 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 246ms (Views: 229.2ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:00:05 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa65597bd70,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa65597bca8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.04ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:00:33 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (47.3ms)
+  [1m[36mUser Load (200.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 990ms (Views: 777.4ms | ActiveRecord: 200.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:00:37 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 356ms (Views: 350.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:00:39 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:00:39 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:00:39 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (49.3ms)
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (74.1ms)
+  Rendered homes/index.html.erb within layouts/application (112.0ms)
+  [1m[36mUser Load (235.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1149ms (Views: 908.8ms | ActiveRecord: 235.8ms)
+
+
+  [1m[36mUser Load (21.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1272ms (Views: 1246.5ms | ActiveRecord: 21.6ms)
+
+
+  [1m[36mUser Load (24.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 2260ms (Views: 1355.5ms | ActiveRecord: 899.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:00:43 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6541e2fd8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6541e2f10,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.56ms)
+Completed 200 OK in 125ms (Views: 123.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:01:27 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (21.5ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 420ms (Views: 408.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:01:29 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 291ms (Views: 284.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:01:32 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa655cb8cb8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa655cb8bf0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (7.3ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:01:34 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 133ms (Views: 127.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:01:37 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa651ed56a8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa651ed55e0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.4ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:03:59 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (32.2ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 644ms (Views: 625.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:04:02 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa64cbf1c98,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa64cbf1ba8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.94ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:04:07 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (25.2ms)
+  [1m[36mUser Load (203.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1111ms (Views: 902.5ms | ActiveRecord: 203.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:04:15 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (48.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6554e00b8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654097f98,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (40.8ms)
+Completed 200 OK in 222ms (Views: 166.0ms | ActiveRecord: 48.1ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:04:18 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (15.7ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 311ms (Views: 301.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:04:21 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654a10ef8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654a10e30,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (10.1ms)
+Completed 200 OK in 33ms (Views: 21.9ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:05:11 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (34.5ms)
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 565ms (Views: 532.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:05:14 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654c62198,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654c620d0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.75ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:05:54 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (28.5ms)
+  [1m[36mUser Load (39.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 1184ms (Views: 1130.4ms | ActiveRecord: 39.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:05:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa65598b9c8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa65598b900,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (16.18ms)
+Completed 200 OK in 40ms (Views: 31.9ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:05:59 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:05:59 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+Completed 200 OK in 508ms (Views: 502.6ms | ActiveRecord: 1.0ms)
+
+
+  Rendered homes/index.html.erb within layouts/application (221.4ms)
+  [1m[36mUser Load (262.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 854ms (Views: 588.1ms | ActiveRecord: 262.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:06:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa651965808,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6519656c8,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.58ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:07:20 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (33.8ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 817ms (Views: 803.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:07:24 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa651eec2b8,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa651eec1f0,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.55ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:07:29 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 182ms (Views: 177.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:07:32 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654d5a078,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654d59f88,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.74ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:07:57 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (22.2ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 386ms (Views: 373.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:07:59 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 134ms (Views: 127.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:08:01 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (83.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 372ms (Views: 283.8ms | ActiveRecord: 83.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:08:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa6551c9960,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa6551c9898,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.98ms)
+Completed 200 OK in 113ms (Views: 107.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:08:50 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (99.5ms)
+  [1m[36mUser Load (24.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 988ms (Views: 951.0ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:08:56 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa651937160,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa651937098,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (8.48ms)
+Completed 200 OK in 34ms (Views: 28.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:08:56 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (13.7ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 256ms (Views: 249.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:08:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (90.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa655c10810,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa655c10748,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.45ms)
+Completed 200 OK in 205ms (Views: 113.8ms | ActiveRecord: 90.6ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-03 15:10:16 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (55.6ms)
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 705ms (Views: 649.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-03 15:10:21 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa654943958,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa654943890,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (11.45ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 1.5ms)
+
+

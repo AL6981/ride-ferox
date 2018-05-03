@@ -9,7 +9,7 @@ class MapContainer extends Component {
      starting: '',
      ending: '',
      userLocations: [],
-     marker: ''
+     markers: []
     }
     this.initMap=this.initMap.bind(this)
     this.reInitMap=this.reInitMap.bind(this)
@@ -34,7 +34,7 @@ class MapContainer extends Component {
     .then(body => {
       let allUserLocations = []
       body.forEach((user) => {
-        allUserLocations.push(user.location)
+        allUserLocations.push([{username: user.username}, {lat: user.lat, lng: user.lng}])
       })
       this.setState({ userLocations: allUserLocations })
     })
@@ -78,25 +78,26 @@ class MapContainer extends Component {
 
   makeMarkers(){
     let userArray = this.state.userLocations
-    userArray.map(userLoc => {
-      fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${userLoc}&key=AIzaSyBO4j3Lhl6mWVDVkk07XJfYIToTGtbLe68`
-      )
-      .then(response => response.json())
-      .then(body => {
-        this.setState({
-          marker: body.results[0].geometry.location
-        })
-        let latLng = this.state.marker;
-        console.log(latLng)
+    //returns an array of usernames and lat lng arrays
+    //return an unbound list of (not set to a map) markers
+    let newMarkers = []
+    userArray.forEach(user => {
+      let lat = parseFloat(user[1].lat)
+      let lng = parseFloat(user[1].lng)
+      let latLng = new google.maps.LatLng(lat, lng)
       let marker = new google.maps.Marker({
-          position: latLng,
-          title: "User"
-        });
-        debugger
-        marker.setMap(window.mapInit);
+        position: latLng,
+        title: user[0].username
+      });
+      console.log(marker)
+      newMarkers.push(marker)
+      marker.setMap(window.mapInit);
+        //here, add results to a marker array that is returned.
       })
-    })
-  }
+      this.setState({ markers: newMarkers })
+      console.log(this.state.markers)
+    }
+
 
   handleUserSubmit(event){
     event.preventDefault()
