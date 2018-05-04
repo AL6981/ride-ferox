@@ -30028,3 +30028,11 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 1354ms (Views: 1317.0ms | ActiveRecord: 21.7ms)
 
 
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-04 12:22:39 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 8, email: "test@test.com", username: "RogueRider", moto: "Harley", userimage: nil, rox_count: 0, created_at: "2018-02-14 14:39:27", updated_at: "2018-02-14 14:39:27", role: "member", location: "Boston, MA", lat: #<BigDecimal:7fa64cb01040,'0.42360083E2',18(27)>, lng: #<BigDecimal:7fa64cb00f00,'-0.7105888E2',18(27)>, provider: nil, uid: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (12.46ms)
+Completed 200 OK in 54ms (Views: 46.4ms | ActiveRecord: 1.7ms)
+
+
