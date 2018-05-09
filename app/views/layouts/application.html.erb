@@ -11,25 +11,6 @@
 
   <body>
 
-     <nav class="nav-container">
-       <div class="nav-name">
-         <%= link_to image_tag("rideoutside.png", alt: "Ride Outside the Lines"), root_path %>
-       </div>
-       <div class="nav-logo">
-         <%= link_to image_tag("ClearFeRoxLogo", alt: "logo"), root_path %>
-       </div>
-       <div class="nav-links">
-         <% if current_user %>
-           <div class="nav-button"><%= link_to 'Logged In', ' ', class: "fa fa-check-circle fa-3x" %></div>
-           <% if current_user.admin? %>
-             <div class="nav-button"><%= link_to 'Admin', admin_root_path, class: "fa fa-lock fa-3x" %></div>
-           <% end %>
-         <% else %>
-           <div class="nav-button"><%= link_to 'Log In', user_facebook_omniauth_authorize_path, class: "fa fa-user-plus fa-3x" %></div>
-         <% end %>
-       </div>
-     </nav>
-
     <%- flash.each do |key, value| -%>
       <div class="flash flash-<%= key %>">
         <%= value %>

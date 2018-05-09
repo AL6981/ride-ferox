@@ -2,7 +2,7 @@
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(6, 1fr);
-  border: 10px ridge grey;
+  // background-color: white;
 }
 
 .home-tile {
@@ -11,13 +11,14 @@
   align-items: stretch;
   justify-content: stretch;
   overflow: hidden;
-  border: 5px solid white;
+  padding: 10px;
   border-radius: 5px;
 }
 
 .home-tile img {
   display: block;
   opacity: 0.6;
+  border-radius: 15px;
 }
 
 .home-tile:hover img{
