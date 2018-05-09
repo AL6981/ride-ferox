@@ -8,13 +8,16 @@ class MapContainer extends Component {
     this.state={
      starting: '',
      ending: '',
-     userLocations: ''
+     userLocations: [],
+     markers: []
     }
-    this.initMap=this.initMap.bind(this)
-    this.reInitMap=this.reInitMap.bind(this)
-    this.handleCoordChange=this.handleCoordChange.bind(this)
-    this.buildMap=this.buildMap.bind(this)
-    this.reBuildMap=this.reBuildMap.bind(this)
+    this.initMap = this.initMap.bind(this)
+    this.reInitMap = this.reInitMap.bind(this)
+    this.handleCoordChange = this.handleCoordChange.bind(this)
+    this.buildMap = this.buildMap.bind(this)
+    this.reBuildMap = this.reBuildMap.bind(this)
+    this.makeMarkers = this.makeMarkers.bind(this)
+    this.handleUserSubmit = this.handleUserSubmit.bind(this)
   }
 
   componentDidMount() {
@@ -22,10 +25,20 @@ class MapContainer extends Component {
   }
 
   initMap() {
-    let map = new google.maps.Map(document.getElementById('map'), {
+    this.map = new google.maps.Map(document.getElementById('map'), {
       zoom: 12,
       center: {lat: 42.3611, lng: -71.0570}
     });
+    fetch('api/v1/users')
+    .then(response => response.json())
+    .then(body => {
+      let allUserLocations = []
+      body.forEach((user) => {
+        allUserLocations.push([{username: user.username}, {lat: user.lat, lng: user.lng}])
+      })
+      this.setState({ userLocations: allUserLocations })
+      console.log(this.state.userLocations)
+    })
   }
 
   buildMap(){
@@ -45,11 +58,11 @@ class MapContainer extends Component {
       let start = this.state.starting;
       let end = this.state.ending;
       let directionsDisplay = new google.maps.DirectionsRenderer();
-      let map = new google.maps.Map(document.getElementById('map'), {
+      this.map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
         center: start
       });
-      directionsDisplay.setMap(map);
+      directionsDisplay.setMap(this.map);
       let directionsService = new google.maps.DirectionsService();
       let request = {
       origin: start,
@@ -61,15 +74,38 @@ class MapContainer extends Component {
           directionsDisplay.setDirections(result);
         }
       });
-      fetch('api/v1/users'
-      )
-      .then(response => response.json())
-      .then(body => {
-        this.setState({
-          userLocations: body
-        })
-      })
     }
+  }
+
+  makeMarkers(){
+    let userArray = this.state.userLocations
+    //returns an array of usernames and lat lng arrays
+    //return an unbound list of (not set to a map) markers
+    let newMarkers = []
+    userArray.forEach(user => {
+      let lat = parseFloat(user[1].lat)
+      let lng = parseFloat(user[1].lng)
+      let latLng = new google.maps.LatLng(lat, lng)
+      let marker = new google.maps.Marker({
+        // position: latLng,
+        position: latLng,
+        title: user[0].username
+      });
+      // console.log(marker)
+      newMarkers.push(marker)
+      marker.setMap(this.map);
+        //here, add results to a marker array that is returned.
+    })
+    this.setState({ markers: newMarkers })
+    // console.log(this.state.markers)
+  }
+
+
+  handleUserSubmit(event){
+    event.preventDefault()
+    //button was clicked
+    let markers = this.makeMarkers()
+    //array of latlngs generated
   }
 
   handleCoordChange(formPayload){
@@ -107,6 +143,7 @@ class MapContainer extends Component {
         <div className="wrap-map">
           <MapFormContainer
           handleCoordChange={this.handleCoordChange}
+          handleUserSubmit={this.handleUserSubmit}
           />
           <div className="map" id='map'></div>
         </div>

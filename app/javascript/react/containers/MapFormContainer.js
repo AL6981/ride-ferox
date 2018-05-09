@@ -47,6 +47,7 @@ class MapFormContainer extends Component {
           className="end-form"
         />
         <button className="button-sml" type="submit" value="Submit" onClick={this.handleFormSubmit}>Map Route</button>
+        <button className="button-sml" type="submit" value="Submit" onClick={this.props.handleUserSubmit}>Show Users</button>
       </div>
     )
   }

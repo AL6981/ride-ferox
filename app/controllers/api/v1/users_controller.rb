@@ -15,6 +15,7 @@ include Geokit::Geocoders
   def update
     @user = User.find(params[:id])
     geo=MultiGeocoder.geocode(user_params[:location])
+    binding.pry
     new_attributes=user_params
     new_attributes[:lat]=geo.lat
     new_attributes[:lng]=geo.lng

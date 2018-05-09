@@ -11,7 +11,6 @@ const homeImages = [
     {
       id: 3,
       image: 'https://s3.us-east-2.amazonaws.com/ride-ferox-development/corinne.jpg'
-
     },
     {
       id: 4,
