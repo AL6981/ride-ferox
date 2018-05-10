@@ -13,7 +13,7 @@
 .post-show-title {
   align-content: center;
 	text-align: center;
-  color: #694CE2;
+  color: #B87333;
 	text-shadow:
 	 0 1px 0 #ccc,
    0 2px 0 #c9c9c9,
@@ -27,7 +27,7 @@
    0 5px 10px rgba(0,0,0,.25),
    0 10px 10px rgba(0,0,0,.2),
    0 20px 20px rgba(0,0,0,.15);
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Pangolin', sans-serif;
 	font-weight: 600;
   font-size: 2em;
   padding: 10px;
@@ -36,7 +36,7 @@
 }
 
 .post-show-content {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Pangolin', sans-serif;
   border: 3px ridge #B87333;
   min-height: 4rem;
   justify-content: flex-start;
@@ -51,9 +51,9 @@
   grid-column-start: span 50%;
   .button {
 		background-color: transparent;
-		font-family: 'Josefin Sans', sans-serif;
+		font-family: 'Pangolin', sans-serif;
 		font-weight: 600;
-		color: #694CE2;
+		color: #B87333;
 		border: 1px solid #B87333;
 		border-radius: 5px;
     align-content: right;
@@ -67,8 +67,8 @@
 }
 
 h5 {
-	color: #694CE2;
-	font-family: 'Josefin Sans', sans-serif;
+	color: #B87333;
+	font-family: 'Pangolin', sans-serif;
 	font-weight: 600;
 	justify-content: center;
   margin-left: 40px;
@@ -101,9 +101,9 @@ h5 {
 	grid-template-columns: 1fr;
 	button {
 		background-color: transparent;
-		font-family: 'Josefin Sans', sans-serif;
+		font-family: 'Pangolin', sans-serif;
 		font-weight: 600;
-		color: #694CE2;
+		color: #B87333;
 		border: 2px solid #B87333;
 		border-radius: 5px;
 		padding-left: 8px;
@@ -120,9 +120,9 @@ h5 {
 .fields-container {
 	align-content: center;
 	margin-left: 40px;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Pangolin', sans-serif;
 	font-weight: 600;
-	color: #694CE2;
+	color: #B87333;
 	font-size: 1.5em;
 	padding-bottom: 5px;
 }
@@ -137,12 +137,12 @@ h5 {
 }
 
 .form-field-title {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Pangolin', sans-serif;
 	font-weight: 600;
-  color: #694CE2;
+  color: #B87333;
 	font-style: italic;
 }
 
 .form-field {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Pangolin', sans-serif;
 }

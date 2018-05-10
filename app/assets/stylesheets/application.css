@@ -18,7 +18,9 @@
  */
 
 
-/*  font-family: 'Lato', sans-serif; */
+ * {
+  font-family: 'Pangolin', sans-serif;
+ }
 
 a {
   color: #B87333;
@@ -38,11 +40,11 @@ body {
 
 .flash.flash-notice {
   color:  #B87333;
-  font-family: 'Courgette', cursive;
+  font-family: 'Pangolin', cursive;
   margin-left: 10px;
 }
 .flash.flash-alert {
   color:  #B87333;
-  font-family: 'Courgette', cursive;
+  font-family: 'Pangolin', cursive;
   margin-left: 10px;
 }
