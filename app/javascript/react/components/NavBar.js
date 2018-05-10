@@ -8,8 +8,8 @@ const NavBar = props => {
     <Navbar inverse collapseOnSelect id="nav-bar" fixedTop>
       <Navbar.Header>
         <Navbar.Brand>
-          <IndexLinkContainer to="/" id="ride-logo">
-            <p>Ride Ferox</p>
+          <IndexLinkContainer to="/">
+            <img src="/ClearFeRoxLogo.png"/>
           </IndexLinkContainer>
         </Navbar.Brand>
         <Navbar.Toggle />
