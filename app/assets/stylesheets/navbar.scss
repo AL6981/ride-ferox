@@ -1,15 +1,26 @@
-.nav-container {
-  background-size: 100% auto;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(12, 1fr);
-  background-image: url('pano.JPG');
-  background-position: center;
-  border: 10px ridge grey;
-  border-radius: 5px;
+#nav-bar {
   font-family: 'Courgette', cursive;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
+
+.fa {
+  align-self: center;
+  margin: 3px;
+  color: #B87333;
+}
+
+// .fa-comments {
+//   align-self: center;
+//   margin: 3px;
+//   color: #B87333;
+// }
+//
+// .fa-users {
+//   align-self: center;
+//   margin: 3px;
+//   color: #B87333;
+// }
 
 .nav-logo {
   margin: 5px;
@@ -48,7 +59,7 @@
   text-align: center;
   align-self: right;
   a {
-    color: #528FD5;
+    color: #B87333;
   }
   margin-top: 20px;
 }
@@ -61,7 +72,7 @@
 }
 
 #ytplayer{
-  border: 5px ridge #528FD5;
+  border: 5px ridge #B87333;
   padding: 5px;
   margin: 15px;
 }

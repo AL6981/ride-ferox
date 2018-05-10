@@ -12,8 +12,8 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
  *= require font-awesome
+ *= react-bootstrap
 
  */
 
@@ -21,20 +21,28 @@
 /*  font-family: 'Lato', sans-serif; */
 
 a {
-  color: #528FD5;
+  color: #B87333;
 }
 
 a:hover {
-  color: #694CE2;
+  color: #FFC793;
+}
+
+a:visited {
+  color: #FFC793;
+}
+
+body {
+  padding-top: 95px;
 }
 
 .flash.flash-notice {
-  color:  #694CE2;
+  color:  #B87333;
   font-family: 'Courgette', cursive;
   margin-left: 10px;
 }
 .flash.flash-alert {
-  color:  #694CE2;
+  color:  #B87333;
   font-family: 'Courgette', cursive;
   margin-left: 10px;
 }
