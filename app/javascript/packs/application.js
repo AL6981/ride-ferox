@@ -10,6 +10,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import homeImages from '../react/constants/homeImages'
 import App from '../react/containers/App'
+import { LinkContainer } from "react-router-bootstrap";
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
