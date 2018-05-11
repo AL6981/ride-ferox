@@ -9,7 +9,7 @@ const NavBar = props => {
       <Navbar.Header>
         <Navbar.Brand>
           <IndexLinkContainer to="/">
-            <img src="/ClearFeRoxLogo.png"/>
+            <img src="/ClearFeRoxLogo.png" id="logo"/>
           </IndexLinkContainer>
         </Navbar.Brand>
         <Navbar.Toggle />
@@ -37,10 +37,19 @@ const NavBar = props => {
             </IndexLinkContainer>
           </NavItem>
         </Nav>
+        <Nav>
+          <NavItem className="ferox-title">
+            <h1>Ride FeRox</h1>
+          </NavItem>
+        </Nav>
         <Nav pullRight>
           <NavItem eventKey={1} >
-            <IndexLinkContainer to='/users/:id'>
-              <p className="fa fa-user fa-2x"> </p>
+            <IndexLinkContainer to={`/users/${window.currentUser ? window.currentUser.id : 'me'}`} className="fa fa-user fa-2x">
+            </IndexLinkContainer>
+          </NavItem>s
+          <NavItem eventKey={2} >
+            <IndexLinkContainer to={'/users/:id'}>
+              <p className="fa fa-sign-in fa-2x"> </p>
             </IndexLinkContainer>
           </NavItem>
         </Nav>

@@ -30,7 +30,6 @@ class UserProfileShowContainer extends React.Component {
   }
 
   addUserInfo(formPayload){
-    debugger
     let userId = this.props.params.id
     fetch(`/api/v1/users/${userId}`,
       {

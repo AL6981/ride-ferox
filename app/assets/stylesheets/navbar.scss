@@ -1,67 +1,22 @@
 #nav-bar {
   font-family: 'Pangolin', cursive;
-  padding-bottom: 15px;
-  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+#logo {
+  height: 125px;
 }
 
 .fa {
   align-self: center;
-  margin: 3px;
   color: #B87333;
+
+  padding-top: 15px;
 }
 
-// .fa-comments {
-//   align-self: center;
-//   margin: 3px;
-//   color: #B87333;
-// }
-//
-// .fa-users {
-//   align-self: center;
-//   margin: 3px;
-//   color: #B87333;
-// }
-
-.nav-logo {
-  margin: 5px;
-  grid-column: span 3;
-  align-self: center;
-  order: 1;
-}
-
-.nav-name {
-  margin: 5px;
-  grid-column: span 6;
-  text-align: center;
-  align-self: center;
-  order: 2;
-}
-
-.nav-links {
-  grid-column: span 3;
-  align-self: center;
-  order: 3;
-  margin-left: 30px;
-}
-
-.nav-button {
-  margin-top: 15px;
-  text-align: center;
-  align-self: right;
-  a {
-    color: white;
-  }
-  margin-top: 20px;
-}
-
-.nav-login {
-  margin-top: 15px;
-  text-align: center;
-  align-self: right;
-  a {
-    color: #B87333;
-  }
-  margin-top: 20px;
+.ferox-title {
+  margin-left: 20px;
 }
 
 .video-container {
