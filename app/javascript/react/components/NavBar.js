@@ -43,6 +43,11 @@ const NavBar = props => {
               <p className="fa fa-user fa-2x"> </p>
             </IndexLinkContainer>
           </NavItem>
+          <NavItem eventKey={2} >
+            <IndexLinkContainer to='/users'>
+              <p className="fa fa-sign-in fa-2x"> </p>
+            </IndexLinkContainer>
+          </NavItem>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
