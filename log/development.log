@@ -30036,3 +30036,277 @@ No serializer found for resource: #<User id: 8, email: "test@test.com", username
 Completed 200 OK in 54ms (Views: 46.4ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-17 10:43:08 -0400
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 8453ms (Views: 8448.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-17 10:43:26 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (11.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 4, email: "roguerider7@aol.com", username: "Test Rider 4", moto: "Suzuki ", userimage: nil, rox_count: 0, created_at: "2018-03-09 16:12:02", updated_at: "2018-03-09 16:12:29", role: "member", location: "Shapleigh, ME", lat: #<BigDecimal:7fa02b0307f0,'0.43540636E2',18(27)>, lng: #<BigDecimal:7fa02b030660,'-0.70848116E2',18(27)>, provider: "facebook", uid: "10156094418872512">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.83ms)
+Completed 200 OK in 136ms (Views: 95.1ms | ActiveRecord: 40.4ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-17 10:47:23 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 149ms (Views: 140.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-17 10:47:25 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 4, email: "roguerider7@aol.com", username: "Test Rider 4", moto: "Suzuki ", userimage: nil, rox_count: 0, created_at: "2018-03-09 16:12:02", updated_at: "2018-03-09 16:12:29", role: "member", location: "Shapleigh, ME", lat: #<BigDecimal:7fa02931ab70,'0.43540636E2',18(27)>, lng: #<BigDecimal:7fa02931aa58,'-0.70848116E2',18(27)>, provider: "facebook", uid: "10156094418872512">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (8.22ms)
+Completed 200 OK in 46ms (Views: 36.8ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-17 10:47:30 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 72ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-17 10:47:31 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 4, email: "roguerider7@aol.com", username: "Test Rider 4", moto: "Suzuki ", userimage: nil, rox_count: 0, created_at: "2018-03-09 16:12:02", updated_at: "2018-03-09 16:12:29", role: "member", location: "Shapleigh, ME", lat: #<BigDecimal:7fa025ff2928,'0.43540636E2',18(27)>, lng: #<BigDecimal:7fa025ff27e8,'-0.70848116E2',18(27)>, provider: "facebook", uid: "10156094418872512">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.86ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/maps" for 127.0.0.1 at 2018-05-17 10:47:32 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"maps"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 108ms (Views: 104.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-17 10:47:33 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 4, email: "roguerider7@aol.com", username: "Test Rider 4", moto: "Suzuki ", userimage: nil, rox_count: 0, created_at: "2018-03-09 16:12:02", updated_at: "2018-03-09 16:12:29", role: "member", location: "Shapleigh, ME", lat: #<BigDecimal:7fa025c89c28,'0.43540636E2',18(27)>, lng: #<BigDecimal:7fa025c89b10,'-0.70848116E2',18(27)>, provider: "facebook", uid: "10156094418872512">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (6.67ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/users/:id" for 127.0.0.1 at 2018-05-17 10:47:44 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 401 Unauthorized in 43ms (ActiveRecord: 7.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=:id):
+  
+app/controllers/api/v1/users_controller.rb:8:in `show'
+Started GET "/" for 127.0.0.1 at 2018-05-17 10:56:30 -0400
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 5429ms (Views: 5423.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 10:57:35 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 209ms (Views: 199.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 10:57:56 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 145ms (Views: 141.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 10:58:08 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 382ms (Views: 377.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users/sign_in" for 127.0.0.1 at 2018-05-17 10:58:22 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"sign_in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 401 Unauthorized in 55ms (ActiveRecord: 32.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_in):
+  
+app/controllers/api/v1/users_controller.rb:8:in `show'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 10:59:07 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 291ms (Views: 193.3ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:00:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 642ms (Views: 603.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:00:21 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 103ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:01:11 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 121ms (Views: 113.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:01:12 -0400
+Processing by Devise::SessionsController#new as HTML
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:01:12 -0400
+  Rendering devise/sessions/new.html.erb within layouts/application
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (0.7ms)
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 284ms (Views: 279.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 444ms (Views: 439.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:03:47 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 173ms (Views: 151.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:03:50 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 135ms (Views: 129.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:04:36 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 157ms (Views: 151.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users/sign_in" for 127.0.0.1 at 2018-05-17 11:04:39 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"sign_in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 401 Unauthorized in 13ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_in):
+  
+app/controllers/api/v1/users_controller.rb:8:in `show'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:05:23 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 1060ms (Views: 1037.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users/sign_in" for 127.0.0.1 at 2018-05-17 11:05:27 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"sign_in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_in):
+  
+app/controllers/api/v1/users_controller.rb:8:in `show'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:06:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 391ms (Views: 386.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:06:33 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 116ms (Views: 111.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:06:35 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:06:35 -0400
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:06:35 -0400
+Processing by Devise::SessionsController#new as HTML
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (89.8ms)
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (18.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (55.1ms)
+Completed 200 OK in 293ms (Views: 289.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 377ms (Views: 374.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 368ms (Views: 365.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 11:08:02 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 115ms (Views: 111.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:08:26 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 349ms (Views: 344.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-17 11:08:42 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 124ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users/sign_in" for 127.0.0.1 at 2018-05-17 11:08:44 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"sign_in"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 401 Unauthorized in 13ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_in):
+  
+app/controllers/api/v1/users_controller.rb:8:in `show'
