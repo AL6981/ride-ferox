@@ -7,6 +7,7 @@ import PostsFormContainer from './PostsFormContainer';
 import UserIndexContainer from './UserIndexContainer';
 import UserShowContainer from './UserShowContainer';
 import UserEditFormContainer from './UserEditFormContainer';
+import UserFormContainer from './UserFormContainer';
 import MapContainer from './MapContainer';
 import NavBar from '../components/NavBar';
 
@@ -14,7 +15,8 @@ const App = props => {
   return (
       <Router history={browserHistory}>
         <Route path='/' component={NavBar}>
-          <IndexRoute component={() => (<HomeIndexContainer homeImages={props.homeImages} />)}/>
+          <IndexRoute component={UserFormContainer}/>
+          <Route path='/home' component={() => (<HomeIndexContainer homeImages={props.homeImages} />)}/>
           <Route path='/posts' component={PostIndexContainer}/>
           <Route path='/posts/:id' component={PostShowContainer} />
           <Route path='/users' component={UserIndexContainer}/>

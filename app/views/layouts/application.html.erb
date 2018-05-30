@@ -19,6 +19,11 @@
 
     <%= yield %>
 
+    <% if current_user %>
+      <script type="text/javascript">
+        window.user = <%== current_user.to_json %>
+      </script>
+    <% end %>
     <%= javascript_include_tag 'application' %>
 
     <%= yield :extra_footer %>

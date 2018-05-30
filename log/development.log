@@ -30310,3 +30310,1060 @@ Completed 401 Unauthorized in 13ms (ActiveRecord: 1.8ms)
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_in):
   
 app/controllers/api/v1/users_controller.rb:8:in `show'
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-05-17 11:32:00 -0400
+Started GET "/users/auth/facebook/callback?code=AQC1qdlgoQKYVQnxcvwnOYct7O89bFER-Rvnh4LWLX5R7Hxued_wmNBM9JF670z4jkqrVS2foX64RH9MCwohZXXqFQUx9gcgwJpUTFMjXaHeq-bjB7W4LmR3oVPlNZ0RRbSCiYFoU35RrjlUUQRFm_HS3C_p6Iu0LkROxppu9SoJUB5NE1K9pe7P1hZpqZe3Fe8oVQ0t9uDtX0hi2gv0Ql4wN1r_7BdgMqgCnIEqG3jKcr16et19087ATbsmuQUhufrzoHaEyQK4ZQefSETU1MYUeVpsnLQl8KMa-e5iU97o1Cw_zqCFJZlXTNRK_-pHQ_erijrrD9DU_UFo8kFlh-YKgV5EDyQmCX0QKj1APefmPA&state=126f0f81e76b2fb240bf2d3f954b1a10aa14e9c16bf02f87" for 127.0.0.1 at 2018-05-17 11:32:01 -0400
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQC1qdlgoQKYVQnxcvwnOYct7O89bFER-Rvnh4LWLX5R7Hxued_wmNBM9JF670z4jkqrVS2foX64RH9MCwohZXXqFQUx9gcgwJpUTFMjXaHeq-bjB7W4LmR3oVPlNZ0RRbSCiYFoU35RrjlUUQRFm_HS3C_p6Iu0LkROxppu9SoJUB5NE1K9pe7P1hZpqZe3Fe8oVQ0t9uDtX0hi2gv0Ql4wN1r_7BdgMqgCnIEqG3jKcr16et19087ATbsmuQUhufrzoHaEyQK4ZQefSETU1MYUeVpsnLQl8KMa-e5iU97o1Cw_zqCFJZlXTNRK_-pHQ_erijrrD9DU_UFo8kFlh-YKgV5EDyQmCX0QKj1APefmPA", "state"=>"126f0f81e76b2fb240bf2d3f954b1a10aa14e9c16bf02f87"}
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10156094418872512"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2018-05-17 15:32:01.968675"], ["sign_in_count", 2], ["updated_at", "2018-05-17 15:32:01.973202"], ["id", 4]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 132ms (ActiveRecord: 43.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 11:32:02 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 312ms (Views: 308.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 14:19:04 -0400
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 6155ms (Views: 6099.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-05-18 14:19:19 -0400
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (15.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 2, title: "New Post about Bikes", tags: "bikes, harley", content: "I like to ride bikes and stuff. Vroom.", user_id: 2, created_at: "2018-01-29 21:01:22", updated_at: "2018-01-29 21:01:22">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (0.91ms)
+Completed 200 OK in 122ms (Views: 52.2ms | ActiveRecord: 53.5ms)
+
+
+Started POST "/api/v1/posts" for 127.0.0.1 at 2018-05-18 14:19:23 -0400
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"title"=>"", "content"=>"", "post"=>{"title"=>"", "content"=>""}}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Post (0.36ms)
+Completed 200 OK in 94ms (Views: 4.9ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 14:49:12 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 348ms (Views: 332.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:10:46 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 732ms (Views: 708.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:12:50 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 99ms (Views: 95.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:13:05 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 497ms (Views: 491.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:13:47 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 201ms (Views: 189.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:14:16 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 486ms (Views: 478.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:18:32 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 3238ms (Views: 3230.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:19:02 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 674ms (Views: 662.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:50:46 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (115.0ms)
+Completed 200 OK in 1689ms (Views: 1656.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:51:02 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (70.4ms)
+Completed 200 OK in 1499ms (Views: 1452.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:52:06 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 692ms (Views: 671.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:52:46 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 690ms (Views: 675.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:53:02 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 189ms (Views: 184.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:54:44 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 695ms (Views: 685.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:55:27 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 1685ms (Views: 1671.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:55:52 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 355ms (Views: 342.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:56:19 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 359ms (Views: 354.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:56:39 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 260ms (Views: 248.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:56:46 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 636ms (Views: 631.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:57:24 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 797ms (Views: 786.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users/:id" for 127.0.0.1 at 2018-05-18 15:57:38 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (22.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 401 Unauthorized in 203ms (ActiveRecord: 40.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=:id):
+  
+app/controllers/api/v1/users_controller.rb:8:in `show'
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:58:18 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 126ms (Views: 120.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:58:30 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 84ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:58:47 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 339ms (Views: 323.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:59:04 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 520ms (Views: 460.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:59:15 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 89ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:59:47 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 315ms (Views: 309.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:59:53 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 412ms (Views: 407.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 15:59:57 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 323ms (Views: 318.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:00:18 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 170ms (Views: 167.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:00:36 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 257ms (Views: 244.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:00:48 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 171ms (Views: 167.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:02:31 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 807ms (Views: 794.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:04:05 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 515ms (Views: 506.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-18 16:04:23 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (22.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 5, email: "whiskyeyebrews@gmail.com", username: "Truble", moto: "1972 Honda CB200", userimage: nil, rox_count: 0, created_at: "2018-04-11 21:41:10", updated_at: "2018-04-11 21:41:44", role: "member", location: "Sanford, ME", lat: #<BigDecimal:7ff13cfade50,'0.43439163E2',18(27)>, lng: #<BigDecimal:7ff13cfadc98,'-0.7077428E2',18(27)>, provider: "facebook", uid: "2027720310847131">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (14.65ms)
+Completed 200 OK in 227ms (Views: 203.2ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-05-18 16:04:24 -0400
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (4.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 2, title: "New Post about Bikes", tags: "bikes, harley", content: "I like to ride bikes and stuff. Vroom.", user_id: 2, created_at: "2018-01-29 21:01:22", updated_at: "2018-01-29 21:01:22">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (1.56ms)
+Completed 200 OK in 12ms (Views: 6.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-18 16:04:25 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 5, email: "whiskyeyebrews@gmail.com", username: "Truble", moto: "1972 Honda CB200", userimage: nil, rox_count: 0, created_at: "2018-04-11 21:41:10", updated_at: "2018-04-11 21:41:44", role: "member", location: "Sanford, ME", lat: #<BigDecimal:7ff13ce6e648,'0.43439163E2',18(27)>, lng: #<BigDecimal:7ff13ce6e210,'-0.7077428E2',18(27)>, provider: "facebook", uid: "2027720310847131">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (7.03ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-18 16:05:25 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 1371ms (Views: 1362.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-18 16:05:29 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 5, email: "whiskyeyebrews@gmail.com", username: "Truble", moto: "1972 Honda CB200", userimage: nil, rox_count: 0, created_at: "2018-04-11 21:41:10", updated_at: "2018-04-11 21:41:44", role: "member", location: "Sanford, ME", lat: #<BigDecimal:7ff141b6f488,'0.43439163E2',18(27)>, lng: #<BigDecimal:7ff141b6f2d0,'-0.7077428E2',18(27)>, provider: "facebook", uid: "2027720310847131">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (9.02ms)
+Completed 200 OK in 42ms (Views: 29.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:08:42 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 514ms (Views: 498.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:09:44 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 296ms (Views: 277.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:11:23 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 361ms (Views: 352.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:11:53 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 599ms (Views: 584.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/posts" for 127.0.0.1 at 2018-05-18 16:12:33 -0400
+Processing by Api::V1::PostsController#index as */*
+  [1m[36mPost Load (11.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+No serializer found for resource: #<Post id: 2, title: "New Post about Bikes", tags: "bikes, harley", content: "I like to ride bikes and stuff. Vroom.", user_id: 2, created_at: "2018-01-29 21:01:22", updated_at: "2018-01-29 21:01:22">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Post::ActiveRecord_Relation (5.84ms)
+Completed 200 OK in 84ms (Views: 65.9ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/api/v1/posts/2" for 127.0.0.1 at 2018-05-18 16:12:34 -0400
+Processing by Api::V1::PostsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (11.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mComment Load (11.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (167.88ms)
+Completed 200 OK in 392ms (Views: 88.6ms | ActiveRecord: 130.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:13:18 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 124ms (Views: 119.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-18 16:16:08 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 37ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:16:08 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 137ms (Views: 132.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-05-18 16:16:41 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/1/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 85ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-05-18 16:16:58 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/1/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (38.6ms)
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-05-18 16:16:58 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/1/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 1455ms (Views: 1430.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1147ms (Views: 1142.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-18 16:16:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 5, email: "whiskyeyebrews@gmail.com", username: "Truble", moto: "1972 Honda CB200", userimage: nil, rox_count: 0, created_at: "2018-04-11 21:41:10", updated_at: "2018-04-11 21:41:44", role: "member", location: "Sanford, ME", lat: #<BigDecimal:7ff144c20230,'0.43439163E2',18(27)>, lng: #<BigDecimal:7ff144c20168,'-0.7077428E2',18(27)>, provider: "facebook", uid: "2027720310847131">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (12.24ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:17:06 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 129ms (Views: 123.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:17:46 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:21:39 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 563ms (Views: 535.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:21:44 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 163ms (Views: 157.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:21:45 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 642ms (Views: 637.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-05-18 16:22:42 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/1/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 103ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-05-18 16:23:05 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/1/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 142ms (Views: 138.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-05-18 16:23:18 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/1/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 157ms (Views: 153.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-05-18 16:23:30 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/1/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 257ms (Views: 249.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-18 16:23:54 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 5, email: "whiskyeyebrews@gmail.com", username: "Truble", moto: "1972 Honda CB200", userimage: nil, rox_count: 0, created_at: "2018-04-11 21:41:10", updated_at: "2018-04-11 21:41:44", role: "member", location: "Sanford, ME", lat: #<BigDecimal:7ff14449c3d8,'0.43439163E2',18(27)>, lng: #<BigDecimal:7ff14449c310,'-0.7077428E2',18(27)>, provider: "facebook", uid: "2027720310847131">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.05ms)
+Completed 200 OK in 31ms (Views: 21.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/api/v1/users/5" for 127.0.0.1 at 2018-05-18 16:23:59 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.25ms)
+Completed 200 OK in 20ms (Views: 1.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-18 16:24:01 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 5, email: "whiskyeyebrews@gmail.com", username: "Truble", moto: "1972 Honda CB200", userimage: nil, rox_count: 0, created_at: "2018-04-11 21:41:10", updated_at: "2018-04-11 21:41:44", role: "member", location: "Sanford, ME", lat: #<BigDecimal:7ff144942428,'0.43439163E2',18(27)>, lng: #<BigDecimal:7ff144942310,'-0.7077428E2',18(27)>, provider: "facebook", uid: "2027720310847131">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (5.5ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users/2" for 127.0.0.1 at 2018-05-18 16:24:02 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.53ms)
+Completed 200 OK in 15ms (Views: 4.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-18 16:24:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 5, email: "whiskyeyebrews@gmail.com", username: "Truble", moto: "1972 Honda CB200", userimage: nil, rox_count: 0, created_at: "2018-04-11 21:41:10", updated_at: "2018-04-11 21:41:44", role: "member", location: "Sanford, ME", lat: #<BigDecimal:7ff13d779cb0,'0.43439163E2',18(27)>, lng: #<BigDecimal:7ff13d779be8,'-0.7077428E2',18(27)>, provider: "facebook", uid: "2027720310847131">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (3.9ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/users/3" for 127.0.0.1 at 2018-05-18 16:24:05 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.65ms)
+Completed 200 OK in 17ms (Views: 5.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-18 16:24:06 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 5, email: "whiskyeyebrews@gmail.com", username: "Truble", moto: "1972 Honda CB200", userimage: nil, rox_count: 0, created_at: "2018-04-11 21:41:10", updated_at: "2018-04-11 21:41:44", role: "member", location: "Sanford, ME", lat: #<BigDecimal:7ff13d59a520,'0.43439163E2',18(27)>, lng: #<BigDecimal:7ff13d59a458,'-0.7077428E2',18(27)>, provider: "facebook", uid: "2027720310847131">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.53ms)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/v1/users/6" for 127.0.0.1 at 2018-05-18 16:24:07 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.36ms)
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-18 16:24:08 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 5, email: "whiskyeyebrews@gmail.com", username: "Truble", moto: "1972 Honda CB200", userimage: nil, rox_count: 0, created_at: "2018-04-11 21:41:10", updated_at: "2018-04-11 21:41:44", role: "member", location: "Sanford, ME", lat: #<BigDecimal:7ff13d3fd3c0,'0.43439163E2',18(27)>, lng: #<BigDecimal:7ff13d3fd208,'-0.7077428E2',18(27)>, provider: "facebook", uid: "2027720310847131">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (3.84ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/users/4" for 127.0.0.1 at 2018-05-18 16:24:10 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.41ms)
+Completed 200 OK in 15ms (Views: 4.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-05-18 16:24:13 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 5, email: "whiskyeyebrews@gmail.com", username: "Truble", moto: "1972 Honda CB200", userimage: nil, rox_count: 0, created_at: "2018-04-11 21:41:10", updated_at: "2018-04-11 21:41:44", role: "member", location: "Sanford, ME", lat: #<BigDecimal:7ff141d2df90,'0.43439163E2',18(27)>, lng: #<BigDecimal:7ff141d2ddd8,'-0.7077428E2',18(27)>, provider: "facebook", uid: "2027720310847131">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (4.36ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users/5" for 127.0.0.1 at 2018-05-18 16:24:14 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.73ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2018-05-18 16:24:56 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/5"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 286ms (Views: 281.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users/5" for 127.0.0.1 at 2018-05-18 16:24:59 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (13.45ms)
+Completed 200 OK in 55ms (Views: 22.8ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-18 16:26:52 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 20ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:26:52 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 415ms (Views: 409.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:29:44 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 472ms (Views: 460.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:35:13 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 858ms (Views: 847.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:39:33 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 372ms (Views: 362.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:44:26 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 261ms (Views: 256.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:44:48 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 492ms (Views: 485.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:45:38 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 262ms (Views: 250.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:50:34 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 130ms (Views: 125.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:51:36 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 292ms (Views: 277.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:53:56 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 293ms (Views: 279.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:54:58 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 148ms (Views: 141.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 12:26:10 -0400
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 10449ms (Views: 10442.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 12:26:38 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 190ms (Views: 180.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:04:59 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 217ms (Views: 212.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:05:56 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 291ms (Views: 278.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:06:23 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 343ms (Views: 336.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:08:28 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (21.3ms)
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 1015ms (Views: 791.9ms | ActiveRecord: 211.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:08:31 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (18.8ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 254ms (Views: 248.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:08:38 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 106.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:09:48 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (37.4ms)
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 677ms (Views: 660.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:09:53 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 120ms (Views: 114.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:10:47 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 153ms (Views: 149.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:11:38 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 840ms (Views: 824.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:11:42 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 368ms (Views: 363.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:11:44 -0400
+Processing by HomesController#index as HTML
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:11:44 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.7ms)
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:11:44 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (78.7ms)
+  Rendered homes/index.html.erb within layouts/application (118.3ms)
+Completed 200 OK in 501ms (Views: 497.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 600ms (Views: 595.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 500ms (Views: 496.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:12:35 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 454ms (Views: 443.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:12:42 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 154ms (Views: 150.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:13:04 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 448ms (Views: 429.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:13:06 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 530ms (Views: 522.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:13:12 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 171ms (Views: 166.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-05-23 13:13:21 -0400
+Started GET "/users/auth/facebook/callback?code=AQCPwt2jCfwyvtqTOcF0BKXptLPxzMPG3ctWjmJepPcB6GHEoRmNu4K4F2FzJxAcvaU_0yjBOWJzTL8uAs8sbw7UNqGEDJPMDqs9K7Yz89XOV9PQPnlruwtIRm-bnLTxBimbMsK9kPNz5Boln2VjfDCD6cDNPggwDNzxd_RD4Y2S1bS8Ueke1O2cvispFPbISW3bl2Ix6rqMT6p2JAQpdIcKPisQ_O2rbxiF_j0aKxFdVuqko-f7Zl9GEMJCi3vsUvfbz1n3tzpE1jcB5-yYCGpaCd7uZYRIoqKTK17sRoJvY03W0H9KcbYo5VPdHirKqL7n1EEbkC9MuApqbN-IKv7D-M6bm0NIpax_bj8FpN2jow&state=85f7cec8290d4220e82a26b8bd2a5e9ca7bfda711fb2d7e8" for 127.0.0.1 at 2018-05-23 13:13:21 -0400
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCPwt2jCfwyvtqTOcF0BKXptLPxzMPG3ctWjmJepPcB6GHEoRmNu4K4F2FzJxAcvaU_0yjBOWJzTL8uAs8sbw7UNqGEDJPMDqs9K7Yz89XOV9PQPnlruwtIRm-bnLTxBimbMsK9kPNz5Boln2VjfDCD6cDNPggwDNzxd_RD4Y2S1bS8Ueke1O2cvispFPbISW3bl2Ix6rqMT6p2JAQpdIcKPisQ_O2rbxiF_j0aKxFdVuqko-f7Zl9GEMJCi3vsUvfbz1n3tzpE1jcB5-yYCGpaCd7uZYRIoqKTK17sRoJvY03W0H9KcbYo5VPdHirKqL7n1EEbkC9MuApqbN-IKv7D-M6bm0NIpax_bj8FpN2jow", "state"=>"85f7cec8290d4220e82a26b8bd2a5e9ca7bfda711fb2d7e8"}
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10156094418872512"], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (16.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-05-23 17:13:21.896207"], ["last_sign_in_at", "2018-05-17 15:32:01.968675"], ["sign_in_count", 3], ["updated_at", "2018-05-23 17:13:21.901182"], ["id", 4]]
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 66ms (ActiveRecord: 40.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:13:21 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 93.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:17:35 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (12.2ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 540ms (Views: 432.3ms | ActiveRecord: 97.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:20:25 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (68.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 411ms (Views: 307.0ms | ActiveRecord: 96.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:20:29 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 89.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:21:03 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 376ms (Views: 361.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 13:21:07 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 340ms (Views: 335.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-05-23 13:21:11 -0400
+Started GET "/users/auth/facebook/callback?code=AQCAuoiLlJ8fXlsO6nrinNKRTK9ev7whIxRsvJClCCnc-YCc5dd3vybuCPWC_DW6y3g_j9GZpxxTf_f1pb9NdMB-zyt4RMYHpHcQRUNQIPTGdQw-RAQw09Qbsmj9OtBGhxiT84bLsFsr34UZUZZiH6XNv18sDLzrCDV-kjqHbPLboccrJF9SXOqIlqWpfN6NKaqpCcEOHzz_-K0izQ8bYJpKxZ3Qi2HfJKTbrj09d-jC716M2Yu2gArtb3t3gl3up_m9Bkz3FhBO3cXn0Tf8CrQ-inKMK7tBsUoGvcY5qFfoZED61CEMbeIK4RZK4K7fv1zJSdMVihsti8jdFwYcdiSU_DXunxXt-22IUNCE4iuUpA&state=e0da8033c45c242cd1af25edeeec902fcef1fde4c21fd085" for 127.0.0.1 at 2018-05-23 13:21:11 -0400
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCAuoiLlJ8fXlsO6nrinNKRTK9ev7whIxRsvJClCCnc-YCc5dd3vybuCPWC_DW6y3g_j9GZpxxTf_f1pb9NdMB-zyt4RMYHpHcQRUNQIPTGdQw-RAQw09Qbsmj9OtBGhxiT84bLsFsr34UZUZZiH6XNv18sDLzrCDV-kjqHbPLboccrJF9SXOqIlqWpfN6NKaqpCcEOHzz_-K0izQ8bYJpKxZ3Qi2HfJKTbrj09d-jC716M2Yu2gArtb3t3gl3up_m9Bkz3FhBO3cXn0Tf8CrQ-inKMK7tBsUoGvcY5qFfoZED61CEMbeIK4RZK4K7fv1zJSdMVihsti8jdFwYcdiSU_DXunxXt-22IUNCE4iuUpA", "state"=>"e0da8033c45c242cd1af25edeeec902fcef1fde4c21fd085"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10156094418872512"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-05-23 17:21:12.368134"], ["last_sign_in_at", "2018-05-23 17:13:21.896207"], ["sign_in_count", 4], ["updated_at", "2018-05-23 17:21:12.372784"], ["id", 4]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/4/edit
+Completed 302 Found in 29ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-05-23 13:21:12 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/4/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 277ms (Views: 262.5ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-05-23 13:24:12 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/4/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 253ms (Views: 249.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-05-23 13:24:17 -0400
+Started GET "/users/auth/facebook/callback?code=AQAmHKgjEGGSujwVHXkECpfMgWkWgbHILGhjaPNMd53yn_Lvz1BlFiaYRsSyarbf-V6BaB6xYWuboMgHAUUZp7fttSYYNr6GTmj-S8-PGZ22y4TC11PD1oC6OQ_vSXozZ9qjBngU76ZNLMVQLdTIjI_EXA5Rd11cBqGbsAwRCyWE3MWxjx3hxR7IzJaZvGL4LiqS8dSwZShQJM9c_OEz5scc8q4qEnqEjbQHMbks7PSs6VrCBorXe0NsM_zbfyBgOz-aNpzUuZyTg2B68_IgclhhJsUykvuGSczNcDWcOkyeU4BzphhUZ_YoUJIkp4lxu_-alzT-6eQkNZ-mMXfDifzQ3Cx_74121jDEodTr-aQbUg&state=8459bf1a1e7af64422db1d9fef330aa30d7b7bda2c98e42a" for 127.0.0.1 at 2018-05-23 13:24:17 -0400
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAmHKgjEGGSujwVHXkECpfMgWkWgbHILGhjaPNMd53yn_Lvz1BlFiaYRsSyarbf-V6BaB6xYWuboMgHAUUZp7fttSYYNr6GTmj-S8-PGZ22y4TC11PD1oC6OQ_vSXozZ9qjBngU76ZNLMVQLdTIjI_EXA5Rd11cBqGbsAwRCyWE3MWxjx3hxR7IzJaZvGL4LiqS8dSwZShQJM9c_OEz5scc8q4qEnqEjbQHMbks7PSs6VrCBorXe0NsM_zbfyBgOz-aNpzUuZyTg2B68_IgclhhJsUykvuGSczNcDWcOkyeU4BzphhUZ_YoUJIkp4lxu_-alzT-6eQkNZ-mMXfDifzQ3Cx_74121jDEodTr-aQbUg", "state"=>"8459bf1a1e7af64422db1d9fef330aa30d7b7bda2c98e42a"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10156094418872512"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-05-23 17:25:52.509364"], ["last_sign_in_at", "2018-05-23 17:21:12.368134"], ["sign_in_count", 5], ["updated_at", "2018-05-23 17:25:52.522061"], ["id", 4]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/4/edit
+Completed 302 Found in 94368ms (ActiveRecord: 31.1ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-05-23 13:25:52 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/4/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (14.9ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 345ms (Views: 317.0ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-05-23 13:25:58 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/4/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 247ms (Views: 242.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-05-23 13:26:30 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/4/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 104ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-05-23 13:26:35 -0400
+Started GET "/users/auth/facebook/callback?code=AQDtaaM1eO-0TkFey3aNJXV4x8_hVUEd7s1NadnF14OwEVcmpja2DzDHneb8Gz9pGBEDGvKeAS5JCh5nJwt7ntuQN_YLmpwglEoxKmN9iQ3wZXtpT5gTe8QR1iKiPCrn24VkX2zT_wCwSJBvn5JqCURa-rFVbhBekBk4031kvK5dYw23mGpdOebZXvgh1ggTxVfDV2l-ZTSQrHMJt7UHlzIbnaftwKW82pSQGSdjR1dTnUzgE9rIsLJOxK5mp-C5C9oxndwHYg3t1vjHWRMwKccsn1uGXpO2JeVYTRsO6jjN1YlaGp84jy20lEWLv0Fy0kajYINXAdtTOE2w4oGgaaiP6SiX6_d-jeErpPUfgJkFtg&state=d625e628ef8e1ab3ec5f66ff0f01bb84ac197f8be3e27fa0" for 127.0.0.1 at 2018-05-23 13:26:35 -0400
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDtaaM1eO-0TkFey3aNJXV4x8_hVUEd7s1NadnF14OwEVcmpja2DzDHneb8Gz9pGBEDGvKeAS5JCh5nJwt7ntuQN_YLmpwglEoxKmN9iQ3wZXtpT5gTe8QR1iKiPCrn24VkX2zT_wCwSJBvn5JqCURa-rFVbhBekBk4031kvK5dYw23mGpdOebZXvgh1ggTxVfDV2l-ZTSQrHMJt7UHlzIbnaftwKW82pSQGSdjR1dTnUzgE9rIsLJOxK5mp-C5C9oxndwHYg3t1vjHWRMwKccsn1uGXpO2JeVYTRsO6jjN1YlaGp84jy20lEWLv0Fy0kajYINXAdtTOE2w4oGgaaiP6SiX6_d-jeErpPUfgJkFtg", "state"=>"d625e628ef8e1ab3ec5f66ff0f01bb84ac197f8be3e27fa0"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10156094418872512"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-05-23 17:26:49.606451"], ["last_sign_in_at", "2018-05-23 17:25:52.509364"], ["sign_in_count", 6], ["updated_at", "2018-05-23 17:26:49.613488"], ["id", 4]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/4/edit
+Completed 302 Found in 13998ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-05-23 13:26:49 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/4/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 330ms (Views: 303.9ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-05-23 13:27:01 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/4/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-05-23 13:27:08 -0400
+Started GET "/users/auth/facebook/callback?code=AQDKvKEJkj1WDHBAiySTdyHGo7b0av6knSEMquzRAx2lMNixK0j-OdM-7UYGcvoIq6gjE4T-FTfdOziP_Vme0poRtd44UVZmGOxe6u77GJej4C5BquO846GBGbEtIY1DUCJ072cjJe9A-t3lbrtUOpfL9WwfFBNDpnO_gpY9NsY8jakJzlHzEuB3df3YeyB8a02ZHRmI5KuAA-3wUXvqYO9jFOMil0Ty88pyMqo_lSDmXEOBsUVO2Fi_Tgj2KYmuqGHKfwo0I1Deo8kQin2TL-nKSR5W3x0BneGoMzkZ_uOpBk70_9i5d4qTwZLJidO1ltB7CVvFz6xIYV4ogJkwGQ8AY7i6qxLRF1tEPUJOPnZrcQ&state=3f59496b417c9c34f3b3d2d15dffbac8384783c4eaf8e03e" for 127.0.0.1 at 2018-05-23 13:27:08 -0400
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDKvKEJkj1WDHBAiySTdyHGo7b0av6knSEMquzRAx2lMNixK0j-OdM-7UYGcvoIq6gjE4T-FTfdOziP_Vme0poRtd44UVZmGOxe6u77GJej4C5BquO846GBGbEtIY1DUCJ072cjJe9A-t3lbrtUOpfL9WwfFBNDpnO_gpY9NsY8jakJzlHzEuB3df3YeyB8a02ZHRmI5KuAA-3wUXvqYO9jFOMil0Ty88pyMqo_lSDmXEOBsUVO2Fi_Tgj2KYmuqGHKfwo0I1Deo8kQin2TL-nKSR5W3x0BneGoMzkZ_uOpBk70_9i5d4qTwZLJidO1ltB7CVvFz6xIYV4ogJkwGQ8AY7i6qxLRF1tEPUJOPnZrcQ", "state"=>"3f59496b417c9c34f3b3d2d15dffbac8384783c4eaf8e03e"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10156094418872512"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-05-23 17:27:08.515554"], ["last_sign_in_at", "2018-05-23 17:26:49.606451"], ["sign_in_count", 7], ["updated_at", "2018-05-23 17:27:08.518196"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/4/edit
+Completed 302 Found in 14ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-05-23 13:27:08 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/4/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 88.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-05-23 13:29:04 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/4/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 393ms (Views: 388.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-05-23 13:29:22 -0400
+Started GET "/users/auth/facebook/callback?code=AQD17L2SH01us4dY6WSlEiFtma1S7rVOq9BzVd0QdAX4xW34uAB4fvt1Ad7NAMzunEVumzi9C3Y93Psy3XwoQTAlboO4If8JUhcB8lfSZoIfqcpd6aPqueDdOyxJJtgYm2WgaROzyZux3LmPLSWmmJNfyBveV2SfoeWmvCMSkX5F8IH8aE_K5yYqYo2ekYnQ53d7zEkT_h-uMAkKlj-v-EqXSMIDvzx5LoOTZU_d2bW0YKSQXRYkdQEb1vW2DYdcot5u6R-VFbR2rQso3fNm4oRYG9T8qvAIhY3GJ12q5D4ceKVs15XtjqVTo-QTynuxwZDMhIIh78kdVqROSqk9s2fDEe1Wksd3nt94lWdRHWY60Q&state=32e31dafa65bc0e98874893cbac9fdb6b62fa9192af80c2f" for 127.0.0.1 at 2018-05-23 13:29:23 -0400
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQD17L2SH01us4dY6WSlEiFtma1S7rVOq9BzVd0QdAX4xW34uAB4fvt1Ad7NAMzunEVumzi9C3Y93Psy3XwoQTAlboO4If8JUhcB8lfSZoIfqcpd6aPqueDdOyxJJtgYm2WgaROzyZux3LmPLSWmmJNfyBveV2SfoeWmvCMSkX5F8IH8aE_K5yYqYo2ekYnQ53d7zEkT_h-uMAkKlj-v-EqXSMIDvzx5LoOTZU_d2bW0YKSQXRYkdQEb1vW2DYdcot5u6R-VFbR2rQso3fNm4oRYG9T8qvAIhY3GJ12q5D4ceKVs15XtjqVTo-QTynuxwZDMhIIh78kdVqROSqk9s2fDEe1Wksd3nt94lWdRHWY60Q", "state"=>"32e31dafa65bc0e98874893cbac9fdb6b62fa9192af80c2f"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "10156094418872512"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "userimage" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["userimage", "http://graph.facebook.com/v2.6/10156094418872512/picture"], ["updated_at", "2018-05-23 17:29:23.665606"], ["id", 4]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 8], ["current_sign_in_at", "2018-05-23 17:29:23.675306"], ["last_sign_in_at", "2018-05-23 17:27:08.515554"], ["updated_at", "2018-05-23 17:29:23.677242"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/4/edit
+Completed 302 Found in 94ms (ActiveRecord: 22.9ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-05-23 13:29:23 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"users/4/edit"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 134ms (Views: 128.2ms | ActiveRecord: 1.0ms)
+
+

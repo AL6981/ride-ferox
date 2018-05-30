@@ -1,8 +1,10 @@
 import React from 'react';
 import { IndexLinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import Facebook from '../components/Facebook';
 
 const NavBar = props => {
+
   return(
   <div>
     <Navbar inverse collapseOnSelect id="nav-bar" fixedTop>
@@ -38,21 +40,7 @@ const NavBar = props => {
           </NavItem>
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={1} >
-            <IndexLinkContainer to='/users/:id'>
-              <p className="fa fa-user fa-2x"> </p>
-            </IndexLinkContainer>
-          </NavItem>
-          <NavItem eventKey={2} >
-            <IndexLinkContainer to='/users/auth/facebook'>
-              <p className="fa fa-user-plus fa-2x"> </p>
-            </IndexLinkContainer>
-          </NavItem>
-          <NavItem eventKey={3} >
-            <IndexLinkContainer to='/users/sign_in'>
-              <p className="fa fa-sign-in fa-2x"> </p>
-            </IndexLinkContainer>
-          </NavItem>
+              <Facebook />
         </Nav>
       </Navbar.Collapse>
     </Navbar>

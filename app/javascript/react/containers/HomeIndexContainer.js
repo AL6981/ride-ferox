@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import HomeTile from '../components/HomeTile'
+import Facebook from '../components/Facebook';
 
 const HomeIndexContainer = props => {
   let homeImages = props.homeImages.map(homeImage => {

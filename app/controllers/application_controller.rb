@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(resource)
-    if current_user.location
+    if current_user.has_completed_profile?
       request.env['omniauth.origin'] || root_path
     else
       "/users/#{current_user.id}/edit"
